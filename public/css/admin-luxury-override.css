@@ -1,6 +1,6 @@
 
 /* ==========================================================================
-   HIGH-FASHION LUXURY ADMIN PANEL OVERRIDES
+   HIGH-FASHION LUXURY ADMIN PANEL OVERRIDES (FIXED LAYOUTS)
    ========================================================================== */
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 
@@ -9,7 +9,7 @@ body, .page-content, #container, .boxed, #content-container {
     background-color: #f9f8f6 !important; /* Ivory */
 }
 
-/* Header */
+/* ================= HEADER & SIDEBAR ================= */
 #navbar {
     background-color: #050505 !important;
     border-bottom: 2px solid #c5a059 !important;
@@ -25,8 +25,6 @@ body, .page-content, #container, .boxed, #content-container {
     color: #c5a059 !important;
     background-color: #1a1a1a !important;
 }
-
-/* Sidebar Menu */
 #mainnav-container {
     background-color: #050505 !important;
 }
@@ -47,68 +45,141 @@ body, .page-content, #container, .boxed, #content-container {
     letter-spacing: 1px;
 }
 
-/* Cards & Panels */
-.panel {
+/* ================= DASHBOARD WIDGETS & PALETTES ================= */
+/* Active-shop uses colorful backgrounds for dashboard widgets. We turn them into luxury white cards with gold icons. */
+.panel-colorful, .dashboard-widget, .bg-primary, .bg-info, .bg-success, .bg-warning, .bg-danger, .bg-dark, .panel-primary, .panel-info, .panel-success, .panel-warning, .panel-danger {
     background: #ffffff !important;
-    border: 1px solid #eeeeee !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
-    border-radius: 0 !important;
-}
-.panel-heading {
-    background: #ffffff !important;
-    border-bottom: 2px solid #c5a059 !important;
+    border: 1px solid #eaeaea !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02) !important;
     color: #050505 !important;
+    border-radius: 6px !important;
 }
-.panel-title {
+.panel-colorful i, .dashboard-widget i, .bg-primary i, .bg-info i, .bg-success i, .bg-warning i, .bg-danger i {
+    color: #c5a059 !important;
+}
+.panel-colorful p, .dashboard-widget p {
+    color: #757575 !important;
+    font-size: 13px !important;
+}
+.panel-colorful h2, .panel-colorful h3, .panel-colorful .text-2x, .dashboard-widget h2 {
+    color: #050505 !important;
+    font-weight: 800 !important;
+}
+/* Ensure widget text alignments are proper */
+.pad-all { padding: 20px !important; }
+
+/* ================= PANELS & CARDS ================= */
+.panel, .card {
+    background: #ffffff !important;
+    border: 1px solid #eaeaea !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02) !important;
+    border-radius: 6px !important;
+    margin-bottom: 25px;
+}
+.panel-heading, .card-header {
+    background: #ffffff !important;
+    border-bottom: 1px solid #eaeaea !important;
+    padding: 12px 20px !important;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+.panel-title, .card-title {
     font-family: 'Vazirmatn', sans-serif !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: #050505 !important;
+    font-size: 15px !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
-.page-title {
-    color: #050505 !important;
-    font-weight: 800 !important;
+.panel-body, .card-body {
+    padding: 20px !important;
 }
 
-/* Buttons */
-.btn-primary, .btn-info, .btn-success, .btn-danger, .btn-warning {
+/* ================= TABLES (FIX ALIGNMENT & SIZES) ================= */
+.table {
+    margin-bottom: 0 !important;
+}
+.table th {
+    background-color: #fcfcfc !important;
+    color: #050505 !important;
+    font-weight: 700 !important;
+    border-bottom: 2px solid #eaeaea !important;
+    padding: 12px 15px !important;
+    vertical-align: middle !important;
+}
+.table td {
+    border-color: #eaeaea !important;
+    color: #555555 !important;
+    padding: 12px 15px !important;
+    vertical-align: middle !important;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ================= BUTTONS (FIX OVERFLOW & GRID BREAKING) ================= */
+.btn {
+    font-family: 'Vazirmatn', sans-serif !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease;
+}
+/* Main action buttons (Submit, Add) */
+.btn-primary, .btn-info, .btn-success, .btn-warning {
     background-color: #c5a059 !important;
     border-color: #c5a059 !important;
     color: #050505 !important;
-    border-radius: 2px !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     font-weight: 700 !important;
-    font-family: 'Vazirmatn', sans-serif !important;
-    transition: all 0.3s ease;
 }
-.btn-primary:hover, .btn-info:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover {
+.btn-primary:hover, .btn-info:hover, .btn-success:hover, .btn-warning:hover {
     background-color: #050505 !important;
     border-color: #050505 !important;
     color: #c5a059 !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
 }
-.btn-default {
-    border-radius: 0 !important;
-    border: 1px solid #eeeeee !important;
-    background: transparent !important;
-    color: #050505 !important;
+/* Danger buttons */
+.btn-danger {
+    background-color: #1a1a1a !important;
+    border-color: #1a1a1a !important;
+    color: #ffffff !important;
 }
-.btn-default:hover {
-    background: #f9f8f6 !important;
-    border-color: #c5a059 !important;
-    color: #c5a059 !important;
+.btn-danger:hover {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+/* Small buttons & Icon buttons in tables (CRITICAL FOR LAYOUT) */
+.btn-sm, .btn-xs {
+    padding: 4px 10px !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+.btn-icon {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.btn-icon i {
+    font-size: 16px !important;
 }
 
-/* Form Controls */
-.form-control, .select2-container .select2-choice, input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea {
-    border-radius: 2px !important;
+/* ================= FORM CONTROLS (FIX HEIGHTS) ================= */
+.form-control, .select2-container .select2-choice, input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    border-radius: 4px !important;
     border: 1px solid #e0e0e0 !important;
     background-color: #fcfcfc !important;
     color: #050505 !important;
-    padding: 10px 15px !important;
-    height: auto !important;
+    height: 38px !important; /* Fixed height so it doesn't break input-groups */
+    padding: 6px 12px !important;
+    font-size: 14px !important;
     box-shadow: none !important;
     transition: all 0.3s ease;
+}
+textarea.form-control {
+    height: auto !important; /* Textareas can expand */
 }
 .form-control:focus, input:focus, textarea:focus {
     border-color: #c5a059 !important;
@@ -120,57 +191,16 @@ body, .page-content, #container, .boxed, #content-container {
     color: #333333 !important;
     margin-bottom: 8px;
 }
-
-/* Panels (پلت ها / پنل ها) */
-.panel, .card {
-    background: #ffffff !important;
-    border: 1px solid #eaeaea !important;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.02) !important;
-    border-radius: 4px !important; /* Slight radius to fix messiness */
-    margin-bottom: 25px;
-}
-.panel-heading, .card-header {
-    background: #ffffff !important;
-    border-bottom: 1px solid #eaeaea !important;
-    padding: 15px 20px !important;
-    position: relative;
-}
-.panel-heading::after, .card-header::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    right: 20px;
-    width: 60px;
-    height: 2px;
-    background: #c5a059;
-}
-.panel-title, .card-title {
-    font-family: 'Vazirmatn', sans-serif !important;
-    font-weight: 700 !important;
-    color: #050505 !important;
-    font-size: 16px !important;
-    margin: 0 !important;
-}
-.panel-body, .card-body {
-    padding: 20px !important;
+.input-group-addon {
+    border: 1px solid #e0e0e0;
+    background: #f9f8f6;
+    border-radius: 4px 0 0 4px;
 }
 
-/* Tables */
-
-.table th {
-    background-color: #f9f8f6 !important;
-    color: #050505 !important;
-    font-weight: 800 !important;
-    border-bottom: 2px solid #eeeeee !important;
-}
-.table td {
-    border-color: #eeeeee !important;
-    color: #757575 !important;
-}
-
-/* Badges / Labels */
+/* ================= BADGES & LABELS ================= */
 .label-primary, .badge-primary, .label-info, .badge-info, .label-success, .badge-success {
     background-color: #c5a059 !important;
     color: #050505 !important;
-    border-radius: 0 !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
 }
