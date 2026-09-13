@@ -182,7 +182,7 @@ use Illuminate\Support\Str;
                                 <th width="50">#</th>
                                 <th>نام محصول</th>
                                 <th>شماره سریال</th>
-                                <th>نوع جواهر</th>
+                                <th>نوع کالای لوکس</th>
                                 <th>تاریخ صدور</th>
                                 <th>وضعیت</th>
                                 <th width="150">عملیات</th>
@@ -283,7 +283,7 @@ use Illuminate\Support\Str;
                         <i class="fas fa-file-excel fa-3x text-muted"></i>
                     </div>
                     <h5 class="text-muted mb-3">هیچ شناسنامه‌ای برای این مالک ثبت نشده است</h5>
-                    <p class="text-muted mb-4">می‌توانید اولین شناسنامه جواهر را برای این مالک ایجاد کنید</p>
+                    <p class="text-muted mb-4">می‌توانید اولین شناسنامه کالای لوکس را برای این مالک ایجاد کنید</p>
                     <a href="{{ route('admin.jewelry.certificates.create') }}?owner_id={{ $owner->id }}" 
                        class="btn btn-primary btn-lg">
                         <i class="fas fa-plus-circle me-2"></i> ایجاد اولین شناسنامه

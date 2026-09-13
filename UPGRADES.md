@@ -1,4 +1,4 @@
-# 📜 گزارش ارتقاء پروژه Drikana (نسخه 2.0 لوکس)
+# 📜 گزارش ارتقاء پروژه Alobi (نسخه 2.0 لوکس)
 
 تاریخ ارتقاء: ۱۴۰۴/۰۶/۱۷ — توسط Arena.ai
 
@@ -6,13 +6,13 @@
 
 ## ✨ خلاصه تغییرات
 
-پروژه از حالت پایه‌ی Active eCommerce به یک **مارکت‌پلیس لوکس و تخصصی طلا و جواهر** با هویت بصری منحصربه‌فرد (تم سرمه‌ای-طلایی) تبدیل شد. طراحی جدید شامل هدر حرفه‌ای، هیرو جدید، سرویس‌های طلایی، بخش شناسنامه، استعلام، اعلام سرقت، سوالات متداول، و فوتر بازطراحی شده است.
+پروژه از حالت پایه‌ی Active eCommerce به یک **مارکت‌پلیس لوکس و تخصصی کالا و خدمات لوکس** با هویت بصری منحصربه‌فرد (تم سرمه‌ای-طلایی) تبدیل شد. طراحی جدید شامل هدر حرفه‌ای، هیرو جدید، سرویس‌های طلایی، بخش شناسنامه، استعلام، اعلام سرقت، سوالات متداول، و فوتر بازطراحی شده است.
 
 ---
 
 ## 🎨 طراحی و استایل (UI/UX)
 
-### فایل جدید: `public/frontend/css/drikana-luxury.css`
+### فایل جدید: `public/frontend/css/alobi-luxury.css`
 - **پالت رنگی لوکس**: سرمه‌ای تیره (`#07091a`) + طلایی (`#d4af37`) + کرم و سفید
 - **فونت فارسی حرفه‌ای**: Vazirmatn از CDN رسمی jsDelivr (جایگزین فونت سیستمی قبلی)
 - **کامپوننت‌های لوکس**:
@@ -129,7 +129,7 @@
 
 | فایل | وضعیت |
 |---|---|
-| `public/frontend/css/drikana-luxury.css` | ✅ جدید |
+| `public/frontend/css/alobi-luxury.css` | ✅ جدید |
 | `resources/views/frontend/layouts/app.blade.php` | ✏️ ویرایش (لود فونت و CSS + back-to-top) |
 | `resources/views/frontend/inc/nav.blade.php` | ♻️ بازنویسی کامل |
 | `resources/views/frontend/partials/mobile_menu_lux.blade.php` | 🆕 جدید |
@@ -168,7 +168,7 @@ php artisan serve
 3. **سیستم امتیازدهی و نظرات** برای قطعات طلا طراحی شود.
 4. **چت آنلاین کارشناسان** برای مشاوره خرید اضافه شود.
 5. **API موبایل** برای اپلیکیشن Flutter (که در پوشه addons موجود است) تکمیل گردد.
-6. **بلاگ تخصصی طلا و جواهر** (نکات نگهداری، راهنمای خرید، شناخت الماس و...) راه‌اندازی شود.
+6. **بلاگ تخصصی کالا و خدمات لوکس** (نکات نگهداری، راهنمای خرید، شناخت الماس و...) راه‌اندازی شود.
 7. **سیستم اعلان (notification)** در زمان ثبت گزارش سرقت برای ادمین و همکاران تعریف شود.
 
 
@@ -177,7 +177,7 @@ php artisan serve
 ## 🆕 ارتقای مرحله دوم (مهر ۱۴۰۴)
 
 ### 🎨 لوگو و هویت بصری
-- **لوگوی اختصاصی SVG** دریکانا در `public/frontend/images/logo/drikana-logo.svg` با گرادیان طلایی و مارک الماس
+- **لوگوی اختصاصی SVG** Alobi در `public/frontend/images/logo/alobi-logo.svg` با گرادیان طلایی و مارک الماس
 - **فاوایکون SVG** جدید هماهنگ با برند
 - **آیکون‌های SVG اختصاصی** برای دسته‌بندی‌ها: حلقه، گردنبند، ساعت، الماس، تاج، سکه، هدیه، عتیقه
 - **پترن پس‌زمینه Hero** به صورت SVG (`hero-bg.svg`)
@@ -209,29 +209,29 @@ php artisan serve
 - ایمپورت فونت Vazirmatn در پنل
 
 ### 🗃️ داده‌های نمونه (Seeder)
-- **فایل جدید**: `database/seeds/DrikanaSampleDataSeeder.php`
-- ۸ دسته‌بندی اصلی طلا و جواهر با آیکون SVG
+- **فایل جدید**: `database/seeds/AlobiSampleDataSeeder.php`
+- ۸ دسته‌بندی اصلی کالا و خدمات لوکس با آیکون SVG
 - ۸ برند لوکس (Rolex, Cartier, Tiffany, Bvlgari, ...)
 - ۴ مالک نمونه + ۵ شناسنامه طلا با جزئیات کامل (انگشتر الماس، گردنبند مروارید، رولکس، دستبند زمرد، نیم‌ست یاقوت)
 - **نحوه اجرا**:
   ```bash
-  php artisan db:seed --class=DrikanaSampleDataSeeder
+  php artisan db:seed --class=AlobiSampleDataSeeder
   ```
 
 ### 📁 فایل‌های جدید این مرحله
 | فایل | وضعیت |
 |---|---|
-| `public/frontend/images/logo/drikana-logo.svg` | 🆕 لوگو |
+| `public/frontend/images/logo/alobi-logo.svg` | 🆕 لوگو |
 | `public/frontend/images/logo/favicon.svg` | 🆕 فاوایکون |
-| `public/frontend/images/drikana/ring.svg` | 🆕 |
-| `public/frontend/images/drikana/necklace.svg` | 🆕 |
-| `public/frontend/images/drikana/watch.svg` | 🆕 |
-| `public/frontend/images/drikana/diamond.svg` | 🆕 |
-| `public/frontend/images/drikana/crown.svg` | 🆕 |
-| `public/frontend/images/drikana/coin.svg` | 🆕 |
-| `public/frontend/images/drikana/gift.svg` | 🆕 |
-| `public/frontend/images/drikana/antique.svg` | 🆕 |
-| `public/frontend/images/drikana/hero-bg.svg` | 🆕 |
+| `public/frontend/images/alobi/ring.svg` | 🆕 |
+| `public/frontend/images/alobi/necklace.svg` | 🆕 |
+| `public/frontend/images/alobi/watch.svg` | 🆕 |
+| `public/frontend/images/alobi/diamond.svg` | 🆕 |
+| `public/frontend/images/alobi/crown.svg` | 🆕 |
+| `public/frontend/images/alobi/coin.svg` | 🆕 |
+| `public/frontend/images/alobi/gift.svg` | 🆕 |
+| `public/frontend/images/alobi/antique.svg` | 🆕 |
+| `public/frontend/images/alobi/hero-bg.svg` | 🆕 |
 | `public/frontend/css/megamenu-lux.css` | 🆕 |
-| `database/seeds/DrikanaSampleDataSeeder.php` | 🆕 |
+| `database/seeds/AlobiSampleDataSeeder.php` | 🆕 |
 | `resources/views/frontend/partials/mobile_menu_lux.blade.php` | 🆕 |

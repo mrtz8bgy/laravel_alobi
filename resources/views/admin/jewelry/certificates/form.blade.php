@@ -15,7 +15,7 @@
             </div>
             <div class="card-body">
                 <div class="mb-3">
-                    <label for="owner_id" class="form-label">مالک جواهر <span class="text-danger">*</span></label>
+                    <label for="owner_id" class="form-label">مالک کالای لوکس <span class="text-danger">*</span></label>
                     <select class="form-control @error('owner_id') is-invalid @enderror" 
                             id="owner_id" 
                             name="owner_id" 
@@ -123,7 +123,7 @@
         <!-- مشخصات فنی -->
         <div class="card mb-4">
             <div class="card-header bg-warning text-dark">
-                💎 مشخصات فنی جواهر
+                💎 مشخصات فنی کالای لوکس
             </div>
             <div class="card-body">
                 <div class="row">
@@ -219,7 +219,7 @@
                               id="description" 
                               name="description" 
                               rows="4"
-                              placeholder="هرگونه توضیح اضافی درباره جواهر، طرح، ویژگی‌های خاص، تاریخچه، etc.">{{ old('description', isset($certificate) ? $certificate->description : '') }}</textarea>
+                              placeholder="هرگونه توضیح اضافی درباره کالای لوکس، طرح، ویژگی‌های خاص، تاریخچه، etc.">{{ old('description', isset($certificate) ? $certificate->description : '') }}</textarea>
                     @error('description')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -345,7 +345,7 @@
                 const metalType = document.getElementById('metal_type')?.value;
                 
                 if (!ownerId) {
-                    alert('لطفا مالک جواهر را انتخاب کنید.');
+                    alert('لطفا مالک کالای لوکس را انتخاب کنید.');
                     e.preventDefault();
                     return false;
                 }

@@ -339,7 +339,7 @@
                         <i class="fas fa-certificate fa-4x text-muted"></i>
                     </div>
                     <h5 class="text-muted mb-3">هیچ شناسنامه‌ای ثبت نشده است</h5>
-                    <p class="text-muted mb-4">می‌توانید اولین شناسنامه جواهر را ایجاد کنید</p>
+                    <p class="text-muted mb-4">می‌توانید اولین شناسنامه کالای لوکس را ایجاد کنید</p>
                     <a href="{{ route('admin.jewelry.certificates.create') }}" 
                        class="btn btn-primary btn-lg">
                         <i class="fas fa-plus-circle me-2"></i> ایجاد اولین شناسنامه

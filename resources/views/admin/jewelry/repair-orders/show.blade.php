@@ -182,12 +182,12 @@
                     @endif
                 </div>
 
-                {{-- ستون چپ: اطلاعات قطعه و مالک --}}
+                {{-- ستون چپ: اطلاعات کالا و مالک --}}
                 <div class="col-md-6">
-                    {{-- کارت اطلاعات قطعه --}}
+                    {{-- کارت اطلاعات کالا --}}
                     <div class="card mb-4">
                         <div class="card-header bg-secondary text-white">
-                            <h5 class="mb-0"><i class="fas fa-gem me-2"></i>اطلاعات قطعه</h5>
+                            <h5 class="mb-0"><i class="fas fa-gem me-2"></i>اطلاعات کالا</h5>
                         </div>
                         <div class="card-body">
                             @if(!empty($repairOrder->jewelry))
@@ -203,7 +203,7 @@
                                             @endphp
                                             @if($isImage)
                                                 <img src="{{ asset('storage/' . $jewelry->certificate_file) }}" 
-                                                     alt="تصویر قطعه" 
+                                                     alt="تصویر کالا" 
                                                      class="img-fluid img-thumbnail mb-2"
                                                      style="max-height: 120px; cursor: pointer;"
                                                      onclick="openImageModal('{{ asset('storage/' . $jewelry->certificate_file) }}')">
@@ -227,7 +227,7 @@
                                     <div class="col-md-8">
                                         <table class="table table-bordered table-sm">
                                             <tr>
-                                                <th>نام قطعه</th>
+                                                <th>نام کالا</th>
                                                 <td>{{ $jewelry->product_name ?? '---' }}</td>
                                             </tr>
                                             <tr>
@@ -255,7 +255,7 @@
                                                 <td>{{ !empty($jewelry->issued_at) ? jdate($jewelry->issued_at)->format('Y/m/d') : '---' }}</td>
                                             </tr>
                                             <tr>
-                                                <th>وضعیت قطعه</th>
+                                                <th>وضعیت کالا</th>
                                                 <td>
                                                     @if(!empty($jewelry->is_active) && $jewelry->is_active)
                                                         <span class="badge bg-success">فعال</span>
@@ -270,7 +270,7 @@
                             @else
                                 <div class="alert alert-warning mb-0">
                                     <i class="fas fa-exclamation-triangle me-2"></i>
-                                    اطلاعات قطعه برای این سفارش یافت نشد.
+                                    اطلاعات کالا برای این سفارش یافت نشد.
                                 </div>
                             @endif
                         </div>
@@ -321,7 +321,7 @@
                             @else
                                 <div class="alert alert-warning mb-0">
                                     <i class="fas fa-exclamation-triangle me-2"></i>
-                                    اطلاعات مالک برای این قطعه یافت نشد.
+                                    اطلاعات مالک برای این کالا یافت نشد.
                                 </div>
                             @endif
                         </div>
@@ -531,7 +531,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">تصویر قطعه</h5>
+                <h5 class="modal-title">تصویر کالا</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">

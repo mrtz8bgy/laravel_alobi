@@ -676,7 +676,7 @@
     </style>
 
     <style>
-        /* ====== تم طلایی-سرمه‌ای دریکانا برای پنل جواهرات ====== */
+        /* ====== تم طلایی-سرمه‌ای Alobi برای پنل کالای لوکس ====== */
         @import url('https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css');
         :root { --jg:#d4af37; --jg-light:#f4d47c; --jg-dark:#07091a; --jg-navy:#12173a; }
         body { background:#f3efe6; font-family:'Vazirmatn',Tahoma,sans-serif !important; }

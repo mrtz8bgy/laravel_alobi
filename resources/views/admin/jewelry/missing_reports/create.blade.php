@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header bg-warning text-white">
-                    <h4>ثبت سرقت یا مفقودی طلا و جواهر</h4>
+                    <h4>ثبت سرقت یا مفقودی کالا و خدمات لوکس</h4>
                 </div>
 
                 <div class="card-body">
@@ -27,9 +27,9 @@
                     <form method="POST" action="{{ route('admin.jewelry.missing_reports.store') }}">
                         @csrf
                         
-                        {{-- انتخاب قطعه --}}
+                        {{-- انتخاب کالا --}}
                         <div class="form-group">
-                            <label>انتخاب قطعه *</label>
+                            <label>انتخاب کالا *</label>
                             <select name="jewelry_id" id="jewelry_id" class="form-control @error('jewelry_id') is-invalid @enderror" required>
                                 <option value="">انتخاب کنید</option>
                                 @foreach($jewelries as $jewelry)
@@ -44,15 +44,15 @@
                             @enderror
                         </div>
                         
-                        {{-- نمایش اطلاعات کامل قطعه و مالک --}}
+                        {{-- نمایش اطلاعات کامل کالا و مالک --}}
                         <div id="jewelry_info" class="alert alert-info" style="display:none;">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h5 class="mb-3">📋 اطلاعات قطعه انتخاب شده:</h5>
+                                    <h5 class="mb-3">📋 اطلاعات کالا انتخاب شده:</h5>
                                     
-                                    {{-- تصویر قطعه (اگر وجود داشته باشد) --}}
+                                    {{-- تصویر کالا (اگر وجود داشته باشد) --}}
                                     <div id="jewelry_image_container" style="display:none;" class="text-center mb-3">
-                                        <img id="jewelry_image" src="" alt="تصویر قطعه" class="img-thumbnail" style="max-height: 150px;">
+                                        <img id="jewelry_image" src="" alt="تصویر کالا" class="img-thumbnail" style="max-height: 150px;">
                                     </div>
                                     
                                     {{-- اطلاعات جزئی --}}
@@ -139,12 +139,12 @@ document.getElementById('jewelry_id').addEventListener('change', function() {
                         <div class="col-md-6">
                             <div class="card mb-2">
                                 <div class="card-header bg-info text-white py-2">
-                                    <strong>🏷️ مشخصات قطعه</strong>
+                                    <strong>🏷️ مشخصات کالا</strong>
                                 </div>
                                 <div class="card-body py-2">
                                     <table class="table table-sm table-bordered mb-0">
                                         <tr>
-                                            <th width="120">نام قطعه:</th>
+                                            <th width="120">نام کالا:</th>
                                             <td>${data.name}</td>
                                         </tr>
                                         <tr>

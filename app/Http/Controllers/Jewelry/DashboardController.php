@@ -12,7 +12,7 @@ use App\Models\JewelryTransfer;
 class DashboardController extends Controller
 {
     /**
-     * نمایش داشبورد مدیریت جواهرات کاربر (صفحه ادمین)
+     * نمایش داشبورد مدیریت کالای لوکس کاربر (صفحه ادمین)
      */
     public function index()
     {

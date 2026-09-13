@@ -30,7 +30,7 @@
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="{{ config('app.name', 'Laravel') }}">
     <meta itemprop="description" content="{{ $seoDescription }}">
-    <meta itemprop="image" content="{{ asset(($generalSetting && $generalSetting->logo) ? $generalSetting->logo : 'frontend/images/logo/drikana-logo.svg') }}">
+    <meta itemprop="image" content="{{ asset(($generalSetting && $generalSetting->logo) ? $generalSetting->logo : 'frontend/images/logo/alobi-logo.svg') }}">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="product">
@@ -38,13 +38,13 @@
     <meta name="twitter:title" content="{{ config('app.name', 'Laravel') }}">
     <meta name="twitter:description" content="{{ $seoDescription }}">
     <meta name="twitter:creator" content="@author_handle">
-    <meta name="twitter:image" content="{{ asset(($generalSetting && $generalSetting->logo) ? $generalSetting->logo : 'frontend/images/logo/drikana-logo.svg') }}">
+    <meta name="twitter:image" content="{{ asset(($generalSetting && $generalSetting->logo) ? $generalSetting->logo : 'frontend/images/logo/alobi-logo.svg') }}">
 
     <!-- Open Graph data -->
     <meta property="og:title" content="{{ config('app.name', 'Laravel') }}" />
     <meta property="og:type" content="Ecommerce Site" />
     <meta property="og:url" content="{{ route('home') }}" />
-    <meta property="og:image" content="{{ asset(($generalSetting && $generalSetting->logo) ? $generalSetting->logo : 'frontend/images/logo/drikana-logo.svg') }}" />
+    <meta property="og:image" content="{{ asset(($generalSetting && $generalSetting->logo) ? $generalSetting->logo : 'frontend/images/logo/alobi-logo.svg') }}" />
     <meta property="og:description" content="{{ $seoDescription }}" />
     <meta property="og:site_name" content="{{ env('APP_NAME') }}" />
 @endif
@@ -56,8 +56,8 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 
-<!-- تم لوکس Drikana Gold & Jewelry -->
-<link type="text/css" href="{{ asset('frontend/css/drikana-luxury.css') }}" rel="stylesheet" media="all">
+<!-- تم لوکس Alobi Gold & Jewelry -->
+<link type="text/css" href="{{ asset('frontend/css/alobi-luxury.css') }}" rel="stylesheet" media="all">
 <link type="text/css" href="{{ asset('frontend/css/megamenu-lux.css') }}" rel="stylesheet" media="all">
 
 <!-- Bootstrap -->

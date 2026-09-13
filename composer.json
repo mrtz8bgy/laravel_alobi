@@ -54,7 +54,7 @@
             "App\\": "app/"
         },
         "files": [
-            "app/Helpers/drikana_helpers.php",
+            "app/Helpers/alobi_helpers.php",
             "app/Http/Helpers.php"
         ]
     },

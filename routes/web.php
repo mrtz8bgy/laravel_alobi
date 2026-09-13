@@ -334,14 +334,14 @@ Route::get('/addresses/set_default/{id}', 'AddressController@set_default')->name
 
 
 // ============================================
-// مدیریت جواهرات (Jewelry Management)
-// تمام روت‌های جواهرات برای کاربران لاگین کرده
+// مدیریت کالای لوکس (Jewelry Management)
+// تمام روت‌های کالای لوکس برای کاربران لاگین کرده
 Route::middleware(['auth'])->prefix('admin/jewelry')->name('admin.jewelry.')->group(function () {
 
     // داشبورد
     Route::get('/dashboard', 'Jewelry\DashboardController@index')->name('dashboard');
 
-    // مالکان جواهرات (Owners)
+    // مالکان کالای لوکس (Owners)
     Route::resource('owners', 'Jewelry\JewelryOwnerController');
 
     // جستجو و انتخاب مالکان (AJAX)
@@ -360,7 +360,7 @@ Route::middleware(['auth'])->prefix('admin/jewelry')->name('admin.jewelry.')->gr
     // سفارشات تعمیر (Repair Orders)
     Route::resource('repair-orders', 'Jewelry\RepairOrderController');
 
-    // انتقال جواهرات (Transfers)
+    // انتقال کالای لوکس (Transfers)
     Route::get('transfers/create', 'Jewelry\JewelryTransferController@create')->name('transfers.create');
     Route::get('transfers/create/certificate/{certificate}', 'Jewelry\JewelryTransferController@createForCertificate')
         ->name('transfers.createForCertificate');
@@ -393,7 +393,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function() {
         Route::get('missing_reports/{id}/print', 'MissingReportController@print')
              ->name('missing_reports.print');
         
-        // روت برای دریافت اطلاعات قطعه (AJAX)
+        // روت برای دریافت اطلاعات کالا (AJAX)
         Route::get('missing_reports/get-jewelry-info/{id}', 'MissingReportController@getJewelryInfo')
              ->name('missing_reports.get_info');
     });
@@ -413,7 +413,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function() {
         Route::post('repair-orders/{id}/status', 'Jewelry\Admin\RepairOrderController@updateStatus')
              ->name('repair-orders.update_status');
         
-        // روت برای دریافت سابقه تعمیرات قطعه
+        // روت برای دریافت سابقه تعمیرات کالا
         Route::get('repair-orders/jewelry/{jewelryId}/history', 'Jewelry\Admin\RepairOrderController@jewelryHistory')
              ->name('repair-orders.jewelry_history');
     });
@@ -455,7 +455,7 @@ Route::get('/products/womens-jewelry', [ProductController::class, 'womens_jewelr
 
 
 // ==========================================
-// روت‌های عمومی مارکت‌پلیس طلا و جواهر دریکانا
+// روت‌های عمومی مارکت‌پلیس کالا و خدمات لوکس Alobi
 // ==========================================
 
 // استعلام عمومی شناسنامه طلا (بدون نیاز به ورود)

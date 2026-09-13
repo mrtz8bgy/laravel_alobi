@@ -5,13 +5,13 @@
  Source Server Type    : MySQL
  Source Server Version : 100411 (10.4.11-MariaDB)
  Source Host           : localhost:3306
- Source Schema         : drikana-db
+ Source Schema         : alobi-db
 
  Target Server Type    : MySQL
  Target Server Version : 100411 (10.4.11-MariaDB)
  File Encoding         : 65001
 
- Date: 13/09/2026 16:26:01
+ Date: 09/09/2026 17:51:42
 */
 
 SET NAMES utf8mb4;
@@ -163,7 +163,7 @@ CREATE TABLE `brands`  (
 INSERT INTO `brands` VALUES (5, 'طلای ایران', 'uploads/brands/aAP9dcYBg53UtesQgACZqKYEPbRw9g6Trrq3vJVD.webp', 1, 'tala-iran', 'طلای ایران', NULL, '2020-07-04 13:20:03', '2025-12-31 14:00:47');
 INSERT INTO `brands` VALUES (6, 'کیمیا گلد', 'uploads/brands/zDZtQiAKOH3ApOK3DvZHUAXeixHqEIML19U4Ukru.webp', 1, 'kimia-gold', 'کیمیا گلد', NULL, '2020-07-05 11:04:22', '2025-12-31 14:00:33');
 INSERT INTO `brands` VALUES (7, 'سکه طلا', 'uploads/brands/NZJLl1tV3PDmlPF94VZQgWTr8KhNtZLXxWOcpf55.webp', 1, 'seke-tala', 'سکه طلا', NULL, '2020-07-05 11:04:35', '2025-12-31 14:00:18');
-INSERT INTO `brands` VALUES (8, 'طلا و جواهرات زرین', 'uploads/brands/XgXxQnLxl0TOM3JUsT3iA7hV1dTLt7nzYeykbNDn.webp', 1, 'zarine', 'طلا و جواهرات زرین', NULL, '2020-07-08 05:02:31', '2025-12-31 13:59:57');
+INSERT INTO `brands` VALUES (8, 'کالا و خدمات لوکسات زرین', 'uploads/brands/XgXxQnLxl0TOM3JUsT3iA7hV1dTLt7nzYeykbNDn.webp', 1, 'zarine', 'کالا و خدمات لوکسات زرین', NULL, '2020-07-08 05:02:31', '2025-12-31 13:59:57');
 INSERT INTO `brands` VALUES (9, 'الماس گستر', 'uploads/brands/tPgqbixPY4qulaRqelfoTqPBBQ9McAzMHHPLSFq9.webp', 0, 'almas-gostar', 'الماس گستر', NULL, '2020-07-18 05:03:58', '2025-12-31 13:59:35');
 INSERT INTO `brands` VALUES (10, 'زرین گلد', 'uploads/brands/JgiuSN3fCYzyQcqX30a6ZiZRvbUXgJCJJUEIIIVX.webp', 1, 'zaringold', 'زرین گلد', NULL, '2020-07-18 05:04:35', '2025-12-31 13:58:55');
 INSERT INTO `brands` VALUES (11, 'طلای ملی', 'uploads/brands/YhtBVqP88kePXc7ITm0rQCeH3rsSk5pkfX58HQZo.webp', 0, 'tala-melli', 'طلای ملی', NULL, '2020-07-18 05:05:19', '2025-12-31 13:58:42');
@@ -1013,7 +1013,7 @@ CREATE TABLE `general_settings`  (
 -- ----------------------------
 -- Records of general_settings
 -- ----------------------------
-INSERT INTO `general_settings` VALUES (1, '2', 'uploads/logo/pfdIuiMeXGkDAIpPEUrvUCbQrOHu484nbGfz77zB.png', 'uploads/admin_logo/wCgHrz0Q5QoL1yu4vdrNnQIr4uGuNL48CXfcxOuS.png', NULL, NULL, 'uploads/favicon/uHdGidSaRVzvPgDj6JFtntMqzJkwDk9659233jrb.png', 'پلتفرم اختصاصی طلا و جواهرات', 'تهران خیابان جمهوری', 'کلیه حقوق محفوظ و متعلق به سامانه دریک سرویس میباشد', '09104927131', 'edeban.almas@gmail.com', 'https://www.facebook.com', 'https://www.instagram.com', 'https://www.twitter.com', 'https://www.youtube.com', 'https://www.googleplus.com', '2025-12-22 15:33:35', '2025-12-22 12:03:35');
+INSERT INTO `general_settings` VALUES (1, '2', 'uploads/logo/pfdIuiMeXGkDAIpPEUrvUCbQrOHu484nbGfz77zB.png', 'uploads/admin_logo/wCgHrz0Q5QoL1yu4vdrNnQIr4uGuNL48CXfcxOuS.png', NULL, NULL, 'uploads/favicon/uHdGidSaRVzvPgDj6JFtntMqzJkwDk9659233jrb.png', 'پلتفرم اختصاصی کالا و خدمات لوکسات', 'تهران خیابان جمهوری', 'کلیه حقوق محفوظ و متعلق به سامانه دریک سرویس میباشد', '09104927131', 'edeban.almas@gmail.com', 'https://www.facebook.com', 'https://www.instagram.com', 'https://www.twitter.com', 'https://www.youtube.com', 'https://www.googleplus.com', '2025-12-22 15:33:35', '2025-12-22 12:03:35');
 
 -- ----------------------------
 -- Table structure for home_categories
@@ -1058,7 +1058,7 @@ CREATE TABLE `jewelry_certificates`  (
   UNIQUE INDEX `serial_number`(`serial_number` ASC) USING BTREE,
   INDEX `owner_id`(`owner_id` ASC) USING BTREE,
   CONSTRAINT `jewelry_certificates_ibfk_1` FOREIGN KEY (`owner_id`) REFERENCES `jewelry_owners` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of jewelry_certificates
@@ -1066,7 +1066,6 @@ CREATE TABLE `jewelry_certificates`  (
 INSERT INTO `jewelry_certificates` VALUES (1, 4, 'انگشتر طلای مصری', 'طلا', '18', 100.00, NULL, '202020', '2026-02-02', 'jewelry-certificates/hX14111HOQ24K6MF3q0p4DGCRjHg8qnBD5v7SXCp.jpg', NULL, 0, NULL, '2026-02-02 19:45:33', '2026-02-04 23:12:28');
 INSERT INTO `jewelry_certificates` VALUES (2, 5, 'دستبند پلاتین', 'پلاتین', '26', 40.00, 'سایر', '202210', '2026-02-02', 'jewelry-certificates/pCZppsVdq5XoLlqe18qNFtadREogR3uN7CQHvI5B.jpg', 'این یک دستبند عتیقه هست', 0, NULL, '2026-02-02 20:11:22', '2026-02-04 23:36:38');
 INSERT INTO `jewelry_certificates` VALUES (3, 3, 'گردنبند پلاتین نقره ای زنانه', 'پلاتین', '26', 10.00, 'الماس', '042101010', '2026-02-04', 'jewelry-certificates/hTiFsHoN8yhoSB7vB7CRYHvMPDobLeRcuz8gZ1TK.jpg', 'این گردنبند عتیقه هست', 0, NULL, '2026-02-04 23:17:10', '2026-02-04 23:17:10');
-INSERT INTO `jewelry_certificates` VALUES (4, 1, 'انگشتر طلا', 'طلا', '18', 7.00, 'عقیق', '2679427981', '2026-09-10', 'jewelry-certificates/kSpgT0S1dyt8KLQwK4jjuibthyQObrGiUSdJEEaG.jpg', 'کلاسیک 21*25 میلیمتر - نوع گوهر عقیق قیمت 140 میلیون تومان -', 0, NULL, '2026-09-10 09:19:24', '2026-09-10 09:19:24');
 
 -- ----------------------------
 -- Table structure for jewelry_owners
@@ -1085,13 +1084,11 @@ CREATE TABLE `jewelry_owners`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `jewelry_owners_user_id_national_id_unique`(`user_id` ASC, `national_id` ASC) USING BTREE,
   INDEX `jewelry_owners_user_id_index`(`user_id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of jewelry_owners
 -- ----------------------------
-INSERT INTO `jewelry_owners` VALUES (1, 4, 'مریم رونقی', '2679427981', '09306225854', 'تهران میدان فردوسی دروازه دولت کوچه میرجانی پلاک 17 واحد 2', 'maryam@gmail.com', '2026-09-10 09:11:42', '2026-09-10 09:11:42');
-INSERT INTO `jewelry_owners` VALUES (2, 4, 'مریم بنی عباسی', '0066406811', '09359390912', 'تهران صادقیه خسرو شمالی پلاک 46 طبقه 9 واحد 6', 'maryambaniabbasi@gmail.com', '2026-09-10 09:15:05', '2026-09-10 09:15:05');
 
 -- ----------------------------
 -- Table structure for jewelry_transfers
@@ -1166,7 +1163,7 @@ CREATE TABLE `migrations`  (
 -- ----------------------------
 -- Records of migrations
 -- ----------------------------
-INSERT INTO `migrations` VALUES (1, '2026_09_07_100001_create_drikana_core_ecommerce_tables', 1);
+INSERT INTO `migrations` VALUES (1, '2026_09_07_100001_create_alobi_core_ecommerce_tables', 1);
 INSERT INTO `migrations` VALUES (2, '2026_09_07_100002_align_seo_settings_columns', 2);
 INSERT INTO `migrations` VALUES (3, '2014_10_12_000000_create_users_table', 3);
 INSERT INTO `migrations` VALUES (4, '2026_02_16_151319_create_missing_reports_table', 3);
@@ -1199,12 +1196,11 @@ CREATE TABLE `missing_reports`  (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of missing_reports
 -- ----------------------------
-INSERT INTO `missing_reports` VALUES (1, 4, 4, 'theft', 'ورامین میدان رازی خ دانشگاه', 'یک ادم سیاه پوش به من حمله کرد و انگشتر من را ربود', 'found', '2026-09-10 09:23:00', '2026-09-10 09:49:12');
 
 -- ----------------------------
 -- Table structure for oauth_access_tokens
@@ -1790,7 +1786,7 @@ CREATE TABLE `seo_settings`  (
 -- ----------------------------
 -- Records of seo_settings
 -- ----------------------------
-INSERT INTO `seo_settings` VALUES (1, 'پلتفرم اختصاصی طلا و جواهرات', 'پلتفرم اختصاصی طلا و جواهرات', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-09-07 09:06:26', '2026-09-07 09:06:26', '', 'پلتفرم اختصاصی طلا و جواهرات', 7, NULL, 'پلتفرم اختصاصی طلا و جواهرات');
+INSERT INTO `seo_settings` VALUES (1, 'پلتفرم اختصاصی کالا و خدمات لوکسات', 'پلتفرم اختصاصی کالا و خدمات لوکسات', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-09-07 09:06:26', '2026-09-07 09:06:26', '', 'پلتفرم اختصاصی کالا و خدمات لوکسات', 7, NULL, 'پلتفرم اختصاصی کالا و خدمات لوکسات');
 
 -- ----------------------------
 -- Table structure for shops
@@ -2223,7 +2219,7 @@ CREATE TABLE `users`  (
 INSERT INTO `users` VALUES (1, NULL, NULL, 'admin', 'مدیر سیستم', 'admin@example.com', 'admin', NULL, '$2y$10$vyiEytr3RPcwh.VE/DrqQOcHwi9lJr/0wc0eoIowXfDgPxkMZdYCG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, NULL, 0, '2026-08-22 21:38:12', '2026-08-22 21:38:12');
 INSERT INTO `users` VALUES (2, NULL, NULL, 'customer', 'تکنسین نمونه', 'tech@example.com', 'technician', NULL, '$2y$10$vyiEytr3RPcwh.VE/DrqQOcHwi9lJr/0wc0eoIowXfDgPxkMZdYCG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, NULL, 0, '2026-08-22 21:38:12', '2026-08-22 21:38:12');
 INSERT INTO `users` VALUES (3, NULL, NULL, 'customer', 'مشتری نمونه', 'customer@example.com', 'customer', NULL, '$2y$10$vyiEytr3RPcwh.VE/DrqQOcHwi9lJr/0wc0eoIowXfDgPxkMZdYCG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, NULL, 0, '2026-08-22 21:38:12', '2026-08-22 21:38:12');
-INSERT INTO `users` VALUES (4, NULL, NULL, 'admin', 'مدیریت دریکانا', 'admin@drikana.com', 'admin', '2026-09-07 03:55:52', '$2y$10$vyiEytr3RPcwh.VE/DrqQOcHwi9lJr/0wc0eoIowXfDgPxkMZdYCG', NULL, NULL, NULL, 'تهران، بازار بزرگ طلا و جواهر', NULL, 'تهران', NULL, '09120000000', NULL, NULL, 0.00, NULL, NULL, 0, '2026-09-07 03:55:52', '2026-09-07 03:55:52');
+INSERT INTO `users` VALUES (4, NULL, NULL, 'admin', 'مدیریت Alobi', 'admin@alobi.com', 'admin', '2026-09-07 03:55:52', '$2y$10$vyiEytr3RPcwh.VE/DrqQOcHwi9lJr/0wc0eoIowXfDgPxkMZdYCG', NULL, NULL, NULL, 'تهران، بازار بزرگ کالا و خدمات لوکس', NULL, 'تهران', NULL, '09120000000', NULL, NULL, 0.00, NULL, NULL, 0, '2026-09-07 03:55:52', '2026-09-07 03:55:52');
 
 -- ----------------------------
 -- Table structure for wallets

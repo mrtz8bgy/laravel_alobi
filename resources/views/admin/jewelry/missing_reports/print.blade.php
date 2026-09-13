@@ -121,12 +121,12 @@
     </div>
     
     <div class="header">
-        <h1 class="title">گزارش سرقت/مفقودی طلا و جواهر</h1>
+        <h1 class="title">گزارش سرقت/مفقودی کالا و خدمات لوکس</h1>
         <div class="report-number">شماره گزارش: {{ $report->id }}</div>
         <p class="subtitle">تاریخ چاپ: {{ jdate(now())->format('Y/m/d H:i') }}</p>
     </div>
     
-    {{-- نمایش تصویر قطعه (در صورت وجود) --}}
+    {{-- نمایش تصویر کالا (در صورت وجود) --}}
     @if($report->jewelry->certificate_file)
         @php
             $extension = pathinfo($report->jewelry->certificate_file, PATHINFO_EXTENSION);
@@ -136,7 +136,7 @@
         @if($isImage)
             <div class="image-container">
                 <img src="{{ asset('storage/' . $report->jewelry->certificate_file) }}" 
-                     alt="تصویر قطعه" 
+                     alt="تصویر کالا" 
                      class="jewelry-image">
             </div>
         @endif
@@ -219,11 +219,11 @@
     </div>
     
     <div class="section">
-        <h3 class="section-header">مشخصات قطعه</h3>
+        <h3 class="section-header">مشخصات کالا</h3>
         <div class="section-body">
             <table>
                 <tr>
-                    <th>نام قطعه</th>
+                    <th>نام کالا</th>
                     <td>{{ $report->jewelry->product_name ?? '---' }}</td>
                 </tr>
                 <tr>
@@ -251,7 +251,7 @@
                     <td>{{ $report->jewelry->issued_at ? jdate($report->jewelry->issued_at)->format('Y/m/d') : '---' }}</td>
                 </tr>
                 <tr>
-                    <th>وضعیت قطعه</th>
+                    <th>وضعیت کالا</th>
                     <td>
                         @if($report->jewelry->is_active)
                             <span class="badge" style="background: #27ae60; color: white;">فعال</span>
@@ -262,7 +262,7 @@
                 </tr>
                 @if($report->jewelry->description)
                 <tr>
-                    <th>توضیحات قطعه</th>
+                    <th>توضیحات کالا</th>
                     <td>{{ $report->jewelry->description }}</td>
                 </tr>
                 @endif
@@ -293,7 +293,7 @@
     @endif
     
     <div class="footer">
-        <p>این سند توسط سامانه مدیریت طلا و جواهر تولید شده است.</p>
+        <p>این سند توسط سامانه مدیریت کالا و خدمات لوکس تولید شده است.</p>
         <p>تاریخ چاپ: {{ jdate(now())->format('Y/m/d H:i') }}</p>
     </div>
 </body>

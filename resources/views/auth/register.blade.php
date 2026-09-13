@@ -10,7 +10,7 @@
     
     <style>
         /* ================================================
-           فونت و استایل‌های پایه – هماهنگ با قالب دریکانا
+           فونت و استایل‌های پایه – هماهنگ با قالب Alobi
            ================================================ */
         @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
         
@@ -777,17 +777,17 @@
                             @if($generalsetting && $generalsetting->logo != null)
                                 <img src="{{ asset($generalsetting->logo) }}" alt="{{ config('app.name') }}">
                             @else
-                                <h2 style="color: var(--gold-primary); font-size: 2rem;">دریکانا</h2>
+                                <h2 style="color: var(--gold-primary); font-size: 2rem;">Alobi</h2>
                             @endif
                         </div>
                         
-                        <h1>به خانواده دریکانا بپیوندید</h1>
-                        <p>سیستم جامع مدیریت و فروش طلا و جواهر با معماری امن و پیشرفته</p>
+                        <h1>به خانواده Alobi بپیوندید</h1>
+                        <p>سیستم جامع مدیریت و فروش کالا و خدمات لوکس با معماری امن و پیشرفته</p>
                         
                         <div class="sidebar-stats">
                             <div class="stat-item">
                                 <span class="stat-number">۱۰۰۰+</span>
-                                <span class="stat-label">قطعه ثبت‌شده</span>
+                                <span class="stat-label">کالا ثبت‌شده</span>
                             </div>
                             <div class="stat-item">
                                 <span class="stat-number">۵۰۰+</span>
@@ -827,7 +827,7 @@
                             @if($generalsetting && $generalsetting->logo != null)
                                 <img src="{{ asset($generalsetting->logo) }}" alt="{{ config('app.name') }}">
                             @else
-                                <h2 style="color: var(--gold-primary);">دریکانا</h2>
+                                <h2 style="color: var(--gold-primary);">Alobi</h2>
                             @endif
                         </div>
                         <h2>ایجاد حساب کاربری جدید</h2>

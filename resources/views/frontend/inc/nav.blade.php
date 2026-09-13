@@ -5,7 +5,7 @@
             <div class="d-topbar-inner">
                 <div class="d-contact-info">
                     <span><i class="la la-phone"></i> پشتیبانی ۲۴ ساعته: {{ \App\GeneralSetting::first()->phone ?? '۰۲۱-۱۲۳۴۵۶۷۸' }}</span>
-                    <span><i class="la la-envelope"></i> {{ \App\GeneralSetting::first()->email ?? 'info@drikana.com' }}</span>
+                    <span><i class="la la-envelope"></i> {{ \App\GeneralSetting::first()->email ?? 'info@alobi.com' }}</span>
                     <span><i class="la la-map-marker"></i> تهران، بازار بزرگ طلا</span>
                 </div>
                 <ul class="d-top-links">
@@ -37,15 +37,15 @@
                 <a href="{{ route('home') }}" class="d-logo">
                     @php
                         $gs = \App\GeneralSetting::first();
-                        $logoUrl = ($gs && $gs->logo && file_exists(public_path($gs->logo))) ? asset($gs->logo) : asset('frontend/images/logo/drikana-logo.svg');
+                        $logoUrl = ($gs && $gs->logo && file_exists(public_path($gs->logo))) ? asset($gs->logo) : asset('frontend/images/logo/alobi-logo.svg');
                     @endphp
-                    <img src="{{ $logoUrl }}" alt="Drikana" style="height:48px;" onerror="this.src='{{ asset('frontend/images/logo/drikana-logo.svg') }}'">
+                    <img src="{{ $logoUrl }}" alt="Alobi" style="height:48px;" onerror="this.src='{{ asset('frontend/images/logo/alobi-logo.svg') }}'">
                 </a>
 
                 <!-- Search -->
                 <div class="d-search">
                     <form action="{{ route('search') }}" method="GET" class="d-search-form">
-                        <input type="text" id="search" name="q" placeholder="جستجوی طلا، جواهر، ساعت، سنگ قیمتی..." autocomplete="off" required>
+                        <input type="text" id="search" name="q" placeholder="جستجوی طلا، کالای لوکس، ساعت، سنگ قیمتی..." autocomplete="off" required>
                         <button type="submit" aria-label="جستجو"><i class="la la-search la-flip-horizontal"></i></button>
                         <div class="typed-search-box d-none">
                             <div class="search-preloader"><div class="loader"><div></div><div></div><div></div></div></div>
@@ -91,7 +91,7 @@
                 </a>
                 <ul class="d-nav-links">
                     <li class="{{ request()->routeIs('home') ? 'active' : '' }}"><a href="{{ route('home') }}"><i class="la la-home"></i> خانه</a></li>
-                    <li><a href="#"><i class="la la-diamond"></i> طلا و جواهر</a></li>
+                    <li><a href="#"><i class="la la-diamond"></i> کالا و خدمات لوکس</a></li>
                     <li><a href="#"><i class="la la-clock-o"></i> ساعت</a></li>
                     <li><a href="#"><i class="la la-gem"></i> سنگ‌های قیمتی</a></li>
                     <li><a href="{{ route('jewelry.certificates.verify_page') }}"><i class="la la-certificate"></i> استعلام شناسنامه</a></li>
@@ -119,11 +119,11 @@
             : collect();
     } catch (\Exception $e) { $luxMegaCategories = collect(); }
     $luxCatIcons = [
-        'انگشتر' => 'drikana/ring.svg', 'حلقه' => 'drikana/ring.svg', 'ring' => 'drikana/ring.svg',
-        'گردنبند' => 'drikana/necklace.svg', 'ساعت' => 'drikana/watch.svg', 'watch' => 'drikana/watch.svg',
-        'الماس' => 'drikana/diamond.svg', 'سنگ' => 'drikana/diamond.svg', 'تاج' => 'drikana/crown.svg',
-        'سکه' => 'drikana/coin.svg', 'شمش' => 'drikana/coin.svg', 'طلا' => 'drikana/coin.svg',
-        'هدیه' => 'drikana/gift.svg', 'عتیقه' => 'drikana/antique.svg',
+        'انگشتر' => 'alobi/ring.svg', 'حلقه' => 'alobi/ring.svg', 'ring' => 'alobi/ring.svg',
+        'گردنبند' => 'alobi/necklace.svg', 'ساعت' => 'alobi/watch.svg', 'watch' => 'alobi/watch.svg',
+        'الماس' => 'alobi/diamond.svg', 'سنگ' => 'alobi/diamond.svg', 'تاج' => 'alobi/crown.svg',
+        'سکه' => 'alobi/coin.svg', 'شمش' => 'alobi/coin.svg', 'طلا' => 'alobi/coin.svg',
+        'هدیه' => 'alobi/gift.svg', 'عتیقه' => 'alobi/antique.svg',
     ];
 @endphp
 <section class="lux-mega-section">
@@ -131,7 +131,7 @@
         <div class="lux-mega-trigger" id="luxMegaTrigger">
             <a href="#" class="lux-cat-btn" aria-expanded="false">
                 <i class="la la-bars"></i>
-                <span>همه دسته‌بندی‌های طلا و جواهر</span>
+                <span>همه دسته‌بندی‌های کالا و خدمات لوکس</span>
                 <i class="la la-angle-down"></i>
             </a>
             <ul class="lux-mega-list" id="luxMegaList">
@@ -182,7 +182,7 @@
                                     @endforeach
                                 </div>
                                 <a href="{{ route('products.category', $cat->slug) }}" class="lux-mega-banner" style="text-decoration:none;">
-                                    <img src="{{ asset('frontend/images/drikana/diamond.svg') }}" alt="">
+                                    <img src="{{ asset('frontend/images/alobi/diamond.svg') }}" alt="">
                                     <div class="lux-mega-banner-text">
                                         <strong>مشاهده همه {{ $cat->name }}</strong>
                                         <span>جدیدترین مدل‌ها با بهترین قیمت و شناسنامه معتبر</span>

@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
-@section('meta_title', 'استعلام اصالت شناسنامه طلا و جواهر | دریکانا')
-@section('meta_description', 'با وارد کردن شماره سریال شناسنامه، اصالت طلا، جواهر، ساعت و اشیاء قیمتی خود را در سامانه دریکانا استعلام کنید.')
+@section('meta_title', 'استعلام اصالت شناسنامه کالا و خدمات لوکس | Alobi')
+@section('meta_description', 'با وارد کردن شماره سریال شناسنامه، اصالت کالای لوکس و ارزشمند خود را در سامانه Alobi استعلام کنید.')
 
 @section('content')
 <style>
@@ -104,8 +104,8 @@
 <section class="verify-hero">
     <div class="container">
         <span class="kicker"><i class="la la-shield"></i> سامانه اصالت‌سنجی</span>
-        <h1>استعلام <span class="gold">شناسنامه طلا</span> و جواهرات</h1>
-        <p>با وارد کردن شماره سریال حک شده روی شناسنامه یا قطعه، از اصالت کالا، مشخصات فنی، وضعیت مالکیت و سابقه آن در سامانه ملی دریکانا مطلع شوید.</p>
+        <h1>استعلام <span class="gold">شناسنامه طلا</span> و کالای لوکس</h1>
+        <p>با وارد کردن شماره سریال حک شده روی شناسنامه یا کالا، از اصالت کالا، مشخصات فنی، وضعیت مالکیت و سابقه آن در سامانه ملی Alobi مطلع شوید.</p>
     </div>
 </section>
 
@@ -118,7 +118,7 @@
                 <button type="submit"><i class="la la-check-circle"></i> استعلام</button>
             </form>
             <p style="margin:14px 0 0; font-size:12px; color:var(--d-gray-500); text-align:center;">
-                <i class="la la-info-circle"></i> شماره سریال روی بدنه شناسنامه یا حک شده روی قطعه قابل مشاهده است.
+                <i class="la la-info-circle"></i> شماره سریال روی بدنه شناسنامه یا حک شده روی کالا قابل مشاهده است.
             </p>
         </div>
     </div>
@@ -153,9 +153,9 @@
                         <i class="la la-exclamation-triangle" style="font-size:26px; color:#ef4444;"></i>
                         <div>
                             <strong style="display:block; font-size:15px; margin-bottom:4px;">
-                                ⚠ هشدار! این قطعه در سامانه به عنوان «{{ $missingReport->type == 'theft' ? 'مسروقه' : 'مفقودی' }}» ثبت شده است.
+                                ⚠ هشدار! این کالا در سامانه به عنوان «{{ $missingReport->type == 'theft' ? 'مسروقه' : 'مفقودی' }}» ثبت شده است.
                             </strong>
-                            <span style="font-size:13px; opacity:.85;">در صورت مشاهده این قطعه، لطفاً مراتب را در اسرع وقت به پلیس و پشتیبانی دریکانا اطلاع دهید.</span>
+                            <span style="font-size:13px; opacity:.85;">در صورت مشاهده این کالا، لطفاً مراتب را در اسرع وقت به پلیس و پشتیبانی Alobi اطلاع دهید.</span>
                         </div>
                     </div>
                 @endif
@@ -164,7 +164,7 @@
                     <div class="cert-header">
                         <span class="cert-badge">Certificate of Authenticity</span>
                         <h3>گواهی اصالت کالا</h3>
-                        <p>Drikana Jewelry Authority · {{ $certificate->issued_at ? $certificate->issued_at->format('Y/m/d') : '---' }}</p>
+                        <p>Alobi Jewelry Authority · {{ $certificate->issued_at ? $certificate->issued_at->format('Y/m/d') : '---' }}</p>
                     </div>
 
                     <div class="cert-meta-grid">
@@ -212,7 +212,7 @@
                         @if(!$missingReport)
                             <span class="cert-status-badge verified"><i class="la la-check-circle"></i> این شناسنامه معتبر است</span>
                         @else
-                            <span class="cert-status-badge rejected"><i class="la la-exclamation-triangle"></i> این قطعه در لیست مفقودی/سرقت قرار دارد</span>
+                            <span class="cert-status-badge rejected"><i class="la la-exclamation-triangle"></i> این کالا در لیست مفقودی/سرقت قرار دارد</span>
                         @endif
                     </div>
 
@@ -253,12 +253,12 @@
                 <div class="feature-box">
                     <div class="fb-icon"><i class="la la-history"></i></div>
                     <h5>تاریخچه کامل</h5>
-                    <p>سوابق انتقال مالکیت، تعمیرات و کارشناسی در پرونده هر قطعه ثبت می‌شود.</p>
+                    <p>سوابق انتقال مالکیت، تعمیرات و کارشناسی در پرونده هر کالا ثبت می‌شود.</p>
                 </div>
                 <div class="feature-box">
                     <div class="fb-icon"><i class="la la-bullhorn"></i></div>
                     <h5>اعلام سرقت</h5>
-                    <p>در صورت سرقت یا مفقودی، قطعه بلافاصله در سامانه به‌عنوان ممنوع‌المعامله ثبت می‌شود.</p>
+                    <p>در صورت سرقت یا مفقودی، کالا بلافاصله در سامانه به‌عنوان ممنوع‌المعامله ثبت می‌شود.</p>
                 </div>
                 <div class="feature-box">
                     <div class="fb-icon"><i class="la la-globe"></i></div>

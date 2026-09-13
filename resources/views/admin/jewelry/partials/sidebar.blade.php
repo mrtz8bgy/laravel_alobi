@@ -1,8 +1,8 @@
 <ul class="sidebar-menu">
-    <li><a href="{{ route('admin.jewelry.dashboard') }}">داشبورد جواهرات</a></li>
+    <li><a href="{{ route('admin.jewelry.dashboard') }}">داشبورد کالای لوکس</a></li>
 
     <li class="treeview">
-        <a href="#">مالکان جواهرات</a>
+        <a href="#">مالکان کالای لوکس</a>
         <ul class="treeview-menu">
             <li><a href="{{ route('admin.jewelry.owners.index') }}">لیست مالکان</a></li>
             <li><a href="{{ route('admin.jewelry.owners.create') }}">افزودن مالک جدید</a></li>
@@ -26,7 +26,7 @@
     </li>
 
     <li class="treeview">
-        <a href="#">انتقال جواهرات</a>
+        <a href="#">انتقال کالای لوکس</a>
         <ul class="treeview-menu">
             <li><a href="{{ route('admin.jewelry.transfers.create') }}">ایجاد انتقال</a></li>
         </ul>

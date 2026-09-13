@@ -4,29 +4,29 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class DrikanaCoreInstallSeeder extends Seeder
+class AlobiCoreInstallSeeder extends Seeder
 {
     public function run()
     {
         // ══════════════════════════════════════════════
         // 1) Admin user
         // ══════════════════════════════════════════════
-        if (DB::table('users')->where('email', 'admin@drikana.com')->doesntExist()) {
+        if (DB::table('users')->where('email', 'admin@alobi.com')->doesntExist()) {
             DB::table('users')->insert([
-                'name'              => 'مدیریت دریکانا',
-                'email'             => 'admin@drikana.com',
+                'name'              => 'مدیریت Alobi',
+                'email'             => 'admin@alobi.com',
                 'password'          => Hash::make('123456'),
                 'user_type'         => 'admin',
                 'role'              => 'admin',
                 'email_verified_at' => now(),
                 'phone'             => '09120000000',
                 'city'              => 'تهران',
-                'address'           => 'تهران، بازار بزرگ طلا و جواهر',
+                'address'           => 'تهران، بازار بزرگ کالا و خدمات لوکس',
                 'created_at'        => now(),
                 'updated_at'        => now(),
             ]);
         }
-        $adminId = DB::table('users')->where('email', 'admin@drikana.com')->value('id');
+        $adminId = DB::table('users')->where('email', 'admin@alobi.com')->value('id');
 
         // ══════════════════════════════════════════════
         // 2) Default currency (Iranian Toman)
@@ -54,19 +54,19 @@ class DrikanaCoreInstallSeeder extends Seeder
         // ══════════════════════════════════════════════
         if (DB::table('general_settings')->count() === 0) {
             DB::table('general_settings')->insert([
-                'site_name'  => 'دریکانا | بازار آنلاین طلا و جواهر',
+                'site_name'  => 'Alobi | بازار آنلاین کالا و خدمات لوکس',
                 'address'    => 'تهران، بازار بزرگ طلا، پلاک ۱',
                 'phone'      => '021-88776655',
-                'email'      => 'info@drikana.com',
+                'email'      => 'info@alobi.com',
                 'facebook'   => '#',
                 'instagram'  => '#',
                 'twitter'    => '#',
                 'youtube'    => '#',
-                'logo'       => 'frontend/images/logo/drikana-logo.svg',
+                'logo'       => 'frontend/images/logo/alobi-logo.svg',
                 'favicon'    => 'frontend/images/logo/favicon.svg',
-                'admin_logo' => 'frontend/images/logo/drikana-logo.svg',
-                'meta_title'       => 'دریکانا | مرجع تخصصی خرید، فروش و استعلام طلا، جواهر و ساعت لوکس',
-                'meta_description' => 'دریکانا، بازار آنلاین تخصصی طلا، جواهر، سنگ‌های قیمتی، ساعت‌های لوکس و سکه. استعلام اصالت شناسنامه، رهگیری و گزارش سرقت جواهرات.',
+                'admin_logo' => 'frontend/images/logo/alobi-logo.svg',
+                'meta_title'       => 'Alobi | مرجع تخصصی خرید، فروش و استعلام کالاهای لوکس و خدمات پریمیوم',
+                'meta_description' => 'Alobi، بازار آنلاین تخصصی انواع کالاهای لوکس، پوشاک، دیجیتال و خدمات ویژه. استعلام اصالت شناسنامه، رهگیری و گزارش سرقت کالای لوکس.',
                 'system_default_currency' => 'IRT',
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -133,9 +133,9 @@ class DrikanaCoreInstallSeeder extends Seeder
         // ══════════════════════════════════════════════
         if (DB::table('seo_settings')->count() === 0) {
             DB::table('seo_settings')->insert([
-                'meta_title' => 'دریکانا | بازار تخصصی طلا، جواهر و ساعت لوکس',
-                'meta_description' => 'خرید و فروش امن طلا، جواهر، الماس، ساعت‌های لوکس، سکه و نقره با استعلام اصالت آنلاین.',
-                'meta_keywords' => 'طلا،جواهر،الماس،ساعت لوکس،سکه،نقره،انگشتر عقد،گردنبند،دریکانا',
+                'meta_title' => 'Alobi | بازار تخصصی کالاهای لوکس و خدمات پریمیوم',
+                'meta_description' => 'خرید و فروش امن طلا، کالای لوکس، الماس، ساعت‌های لوکس، سکه و نقره با استعلام اصالت آنلاین.',
+                'meta_keywords' => 'کالای لوکس,خدمات,پوشاک برند,دیجیتال,ساعت,خودرو لوکس،Alobi',
                 'created_at' => now(), 'updated_at' => now(),
             ]);
         }
@@ -146,12 +146,12 @@ class DrikanaCoreInstallSeeder extends Seeder
         if (DB::table('shops')->count() === 0) {
             DB::table('shops')->insert([
                 'user_id'   => $adminId,
-                'name'      => 'گالری رسمی دریکانا',
-                'logo'      => 'frontend/images/logo/drikana-logo.svg',
-                'slug'      => 'drikana-official',
+                'name'      => 'گالری رسمی Alobi',
+                'logo'      => 'frontend/images/logo/alobi-logo.svg',
+                'slug'      => 'alobi-official',
                 'address'   => 'تهران، بازار بزرگ طلا، پلاک ۱',
-                'meta_title'=> 'گالری رسمی دریکانا',
-                'meta_description' => 'گالری رسمی و شعبه مرکزی دریکانا، ارائه دهنده طلا، جواهر و ساعت‌های لوکس اصل.',
+                'meta_title'=> 'گالری رسمی Alobi',
+                'meta_description' => 'گالری رسمی و شعبه مرکزی Alobi، ارائه دهنده کالاها و خدمات لوکس اصل.',
                 'created_at' => now(), 'updated_at' => now(),
             ]);
         }
@@ -174,12 +174,12 @@ class DrikanaCoreInstallSeeder extends Seeder
             DB::table('sliders')->insert([
                 [
                     'position' => 0,
-                    'photo' => 'frontend/images/drikana/hero-bg.svg',
+                    'photo' => 'frontend/images/alobi/hero-bg.svg',
                     'link'  => '#categories',
                     'published' => 1,
-                    'heading_text' => 'مجموعه‌ای بی‌نظیر از طلا و جواهرات اصل',
+                    'heading_text' => 'مجموعه‌ای بی‌نظیر از کالا و خدمات لوکسات اصل',
                     'heading_text_color' => '#ffffff',
-                    'subheading_text' => 'استعلام اصالت آنلاین، رهگیری هوشمند و خرید امن از بازار تخصصی دریکانا',
+                    'subheading_text' => 'استعلام اصالت آنلاین، رهگیری هوشمند و خرید امن از بازار تخصصی Alobi',
                     'subheading_text_color' => '#d4af37',
                     'button_text' => 'مشاهده محصولات',
                     'button_text_color' => '#07091a',
@@ -189,12 +189,12 @@ class DrikanaCoreInstallSeeder extends Seeder
                 ],
                 [
                     'position' => 1,
-                    'photo' => 'frontend/images/drikana/hero-bg.svg',
+                    'photo' => 'frontend/images/alobi/hero-bg.svg',
                     'link'  => route('frontend.jewelry.verify', [], false),
                     'published' => 1,
                     'heading_text' => 'استعلام اصالت شناسنامه طلا',
                     'heading_text_color' => '#ffffff',
-                    'subheading_text' => 'با وارد کردن کد شناسنامه، اصالت قطعه طلا یا جواهر را بررسی کنید',
+                    'subheading_text' => 'با وارد کردن کد شناسنامه، اصالت کالا طلا یا کالای لوکس را بررسی کنید',
                     'subheading_text_color' => '#d4af37',
                     'button_text' => 'استعلام آنلاین',
                     'button_text_color' => '#07091a',
@@ -204,12 +204,12 @@ class DrikanaCoreInstallSeeder extends Seeder
                 ],
                 [
                     'position' => 2,
-                    'photo' => 'frontend/images/drikana/hero-bg.svg',
+                    'photo' => 'frontend/images/alobi/hero-bg.svg',
                     'link'  => route('frontend.jewelry.report_stolen', [], false),
                     'published' => 1,
-                    'heading_text' => 'گزارش سرقت یا مفقودی جواهر',
+                    'heading_text' => 'گزارش سرقت یا مفقودی کالای لوکس',
                     'heading_text_color' => '#ffffff',
-                    'subheading_text' => 'با ثبت جواهر مفقودی خود به شبکه سراسری رهگیری دریکانا بپیوندید',
+                    'subheading_text' => 'با ثبت کالای لوکس مفقودی خود به شبکه سراسری رهگیری Alobi بپیوندید',
                     'subheading_text_color' => '#d4af37',
                     'button_text' => 'ثبت گزارش',
                     'button_text_color' => '#07091a',
@@ -225,7 +225,7 @@ class DrikanaCoreInstallSeeder extends Seeder
         // ══════════════════════════════════════════════
         if (DB::table('links')->count() === 0) {
             DB::table('links')->insert([
-                ['name' => 'درباره دریکانا', 'url' => '/pages/about',     'position' => 1, 'created_at' => now(), 'updated_at' => now()],
+                ['name' => 'درباره Alobi', 'url' => '/pages/about',     'position' => 1, 'created_at' => now(), 'updated_at' => now()],
                 ['name' => 'قوانین استفاده', 'url' => '/pages/terms',     'position' => 2, 'created_at' => now(), 'updated_at' => now()],
                 ['name' => 'حریم خصوصی',     'url' => '/pages/privacy',   'position' => 3, 'created_at' => now(), 'updated_at' => now()],
                 ['name' => 'تماس با ما',      'url' => '/pages/contact',   'position' => 4, 'created_at' => now(), 'updated_at' => now()],
@@ -240,9 +240,9 @@ class DrikanaCoreInstallSeeder extends Seeder
         if (DB::table('policies')->count() === 0) {
             DB::table('policies')->insert([
                 ['name' => 'return_policy',   'content' => 'در صورت مغایرت با شناسنامه، بازگشت وجه تا ۷ روز.', 'created_at' => now(), 'updated_at' => now()],
-                ['name' => 'support_policy',  'content' => 'پشتیبانی ۲۴ ساعته دریکانا.', 'created_at' => now(), 'updated_at' => now()],
+                ['name' => 'support_policy',  'content' => 'پشتیبانی ۲۴ ساعته Alobi.', 'created_at' => now(), 'updated_at' => now()],
                 ['name' => 'privacy_policy',  'content' => 'اطلاعات کاربران شما نزد ما محفوظ است.', 'created_at' => now(), 'updated_at' => now()],
-                ['name' => 'terms_conditions','content' => 'قوانین کلی استفاده از بازار دریکانا.', 'created_at' => now(), 'updated_at' => now()],
+                ['name' => 'terms_conditions','content' => 'قوانین کلی استفاده از بازار Alobi.', 'created_at' => now(), 'updated_at' => now()],
                 ['name' => 'seller_policy',   'content' => 'فروشندگان منتخب پس از احراز هویت.', 'created_at' => now(), 'updated_at' => now()],
             ]);
         }

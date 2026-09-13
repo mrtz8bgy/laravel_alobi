@@ -110,7 +110,7 @@
                                     @else
                                         <div class="alert alert-warning">
                                             <i class="fas fa-exclamation-triangle"></i>
-                                            اطلاعات مالک برای این قطعه یافت نشد.
+                                            اطلاعات مالک برای این کالا یافت نشد.
                                         </div>
                                     @endif
                                 </div>
@@ -118,10 +118,10 @@
                         </div>
                     </div>
                     
-                    {{-- اطلاعات قطعه با تصویر --}}
+                    {{-- اطلاعات کالا با تصویر --}}
                     <div class="card mb-3">
                         <div class="card-header bg-secondary text-white">
-                            <h5>اطلاعات قطعه</h5>
+                            <h5>اطلاعات کالا</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -136,12 +136,12 @@
                                         @if($isImage)
                                             <div class="card">
                                                 <div class="card-header bg-light">
-                                                    <strong>تصویر قطعه</strong>
+                                                    <strong>تصویر کالا</strong>
                                                 </div>
                                                 <div class="card-body text-center">
                                                     <a href="{{ asset('storage/' . $report->jewelry->certificate_file) }}" target="_blank">
                                                         <img src="{{ asset('storage/' . $report->jewelry->certificate_file) }}" 
-                                                             alt="تصویر قطعه" 
+                                                             alt="تصویر کالا" 
                                                              class="img-fluid img-thumbnail" 
                                                              style="max-height: 200px; cursor: pointer;"
                                                              onclick="openImageModal(this.src)">
@@ -175,11 +175,11 @@
                                     @else
                                         <div class="card">
                                             <div class="card-header bg-light">
-                                                <strong>تصویر قطعه</strong>
+                                                <strong>تصویر کالا</strong>
                                             </div>
                                             <div class="card-body text-center">
                                                 <i class="fas fa-image fa-4x text-muted mb-3"></i>
-                                                <p class="text-muted">تصویری برای این قطعه وجود ندارد</p>
+                                                <p class="text-muted">تصویری برای این کالا وجود ندارد</p>
                                             </div>
                                         </div>
                                     @endif
@@ -191,7 +191,7 @@
                                         <div class="col-md-6">
                                             <table class="table table-bordered table-striped">
                                                 <tr>
-                                                    <th width="200">نام قطعه</th>
+                                                    <th width="200">نام کالا</th>
                                                     <td>{{ $report->jewelry->product_name ?? '---' }}</td>
                                                 </tr>
                                                 <tr>
@@ -243,7 +243,7 @@
                                 <div class="col-md-12">
                                     <div class="card">
                                         <div class="card-header bg-light">
-                                            <strong>توضیحات قطعه</strong>
+                                            <strong>توضیحات کالا</strong>
                                         </div>
                                         <div class="card-body">
                                             {{ $report->jewelry->description }}
@@ -288,7 +288,7 @@
                                 <form action="{{ route('admin.jewelry.missing_reports.update_status', $report->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     <input type="hidden" name="status" value="found">
-                                    <button type="submit" class="btn btn-success" onclick="return confirm('آیا از پیدا شدن قطعه اطمینان دارید؟')">
+                                    <button type="submit" class="btn btn-success" onclick="return confirm('آیا از پیدا شدن کالا اطمینان دارید؟')">
                                         <i class="fas fa-check"></i> ثبت به عنوان پیدا شده
                                     </button>
                                 </form>
@@ -316,7 +316,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-info text-white">
-                <h5 class="modal-title" id="imageModalLabel">تصویر قطعه</h5>
+                <h5 class="modal-title" id="imageModalLabel">تصویر کالا</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -349,7 +349,7 @@
                 <p>آیا می‌خواهید گزارش را چاپ کنید؟</p>
                 <div class="alert alert-info">
                     <i class="fas fa-info-circle"></i>
-                    این گزارش شامل اطلاعات کامل قطعه و مشخصات مالک می‌باشد.
+                    این گزارش شامل اطلاعات کامل کالا و مشخصات مالک می‌باشد.
                 </div>
             </div>
             <div class="modal-footer">

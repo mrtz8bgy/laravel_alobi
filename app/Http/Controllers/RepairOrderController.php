@@ -107,7 +107,7 @@ class RepairOrderController extends Controller
             'notes' => 'nullable|string|max:1000',
         ]);
         
-        // چک مالکیت قطعه
+        // چک مالکیت کالا
         $jewelry = JewelryCertificate::whereHas('owner', function($query) {
                                          $query->where('user_id', Auth::id());
                                      })
@@ -203,7 +203,7 @@ class RepairOrderController extends Controller
             'notes' => 'nullable|string',
         ]);
         
-        // بررسی مالکیت قطعه
+        // بررسی مالکیت کالا
         $jewelry = JewelryCertificate::whereHas('owner', function($query) use ($order) {
                                          $query->where('user_id', $order->user_id);
                                      })
@@ -278,7 +278,7 @@ class RepairOrderController extends Controller
     }
     
     /**
-     * دریافت لیست سفارشات برای یک قطعه (سابقه تعمیرات)
+     * دریافت لیست سفارشات برای یک کالا (سابقه تعمیرات)
      */
     public function jewelryHistory($jewelryId)
     {

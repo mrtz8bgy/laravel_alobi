@@ -1660,7 +1660,7 @@ a:hover {
 </section>
 
 <!-- ============================================ -->
-<!-- HERO لوکس جدید دریکانا -->
+<!-- HERO لوکس جدید Alobi -->
 <!-- ============================================ -->
 <section class="d-hero">
     <div class="container">
@@ -1668,18 +1668,18 @@ a:hover {
             <div class="d-hero-content">
                 <span class="d-hero-badge">
                     <span class="dot"></span>
-                    معتبرترین مارکت‌پلیس طلا و جواهر ایران
+                    معتبرترین مارکت‌پلیس کالا و خدمات لوکس ایران
                 </span>
                 <h1>
                     درخشش <span class="gold-line">اعتماد</span>
-                    در هر <span class="gold-line">قطعه</span>
+                    در هر <span class="gold-line">کالا</span>
                 </h1>
                 <p>
-                    خرید و فروش طلا، جواهرات، ساعت‌های لوکس و سنگ‌های قیمتی با
+                    خرید و فروش طلا، کالای لوکس، ساعت‌های لوکس و سنگ‌های قیمتی با
                     <strong style="color:var(--d-gold);">شناسنامه معتبر</strong>،
                     <strong style="color:var(--d-gold);">ضمانت اصالت</strong> و
                     <strong style="color:var(--d-gold);">امکان رهگیری دائمی</strong>.
-                    دریکانا، جایی که ارزش‌ها ماندگارند.
+                    Alobi، جایی که ارزش‌ها ماندگارند.
                 </p>
                 <div class="d-hero-cta">
                     <a href="{{ route('categories.all') }}" class="btn-lux btn-lux-primary">
@@ -1696,7 +1696,7 @@ a:hover {
                     </div>
                     <div class="d-hero-stat">
                         <strong>+۵۰K</strong>
-                        <span>قطعه شناسنامه‌دار</span>
+                        <span>کالا شناسنامه‌دار</span>
                     </div>
                     <div class="d-hero-stat">
                         <strong>۱۰۰٪</strong>
@@ -1753,7 +1753,7 @@ a:hover {
             <div class="d-service-card">
                 <div class="d-service-icon">📜</div>
                 <h5>شناسنامه رسمی</h5>
-                <p>هر قطعه دارای شناسنامه معتبر با شماره سریال یکتا و قابل استعلام است.</p>
+                <p>هر کالا دارای شناسنامه معتبر با شماره سریال یکتا و قابل استعلام است.</p>
             </div>
             <div class="d-service-card">
                 <div class="d-service-icon">🚨</div>
@@ -1768,7 +1768,7 @@ a:hover {
             <div class="d-service-card">
                 <div class="d-service-icon">💎</div>
                 <h5>تنوع بی‌نظیر</h5>
-                <p>بیش از ده‌ها هزار مدل طلا، جواهر، ساعت لوکس و سنگ قیمتی.</p>
+                <p>بیش از ده‌ها هزار مدل طلا، کالای لوکس، ساعت لوکس و سنگ قیمتی.</p>
             </div>
             <div class="d-service-card">
                 <div class="d-service-icon">🔧</div>
@@ -2237,7 +2237,45 @@ a:hover {
 <div id="section_best_sellers"></div>
 
 <!-- ============================================ -->
-<!-- بخش دسته‌بندی‌های طلا و جواهر -->
+<!-- Banners Section -->
+<section class="d-banners" style="padding: 40px 0;">
+    <div class="container">
+        <div class="row">
+            @if(isset($banners_1) && count($banners_1) > 0)
+                @foreach ($banners_1 as $key => $banner)
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ $banner->url }}" class="d-block" style="border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: block; position: relative; transition: transform 0.3s;">
+                            <img src="{{ asset($banner->photo) }}" alt="Banner" style="width: 100%; object-fit: cover; aspect-ratio: 21/9; display: block;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div>
+                        </a>
+                    </div>
+                @endforeach
+            @else
+                <!-- Mock Banners for Preview if empty -->
+                <div class="col-md-6 mb-3">
+                    <a href="#" class="d-block d-banner-card">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop" alt="Premium Shoes">
+                        <div class="d-banner-overlay">
+                            <h3>کالکشن جدید کفش‌های لوکس</h3>
+                            <span>مشاهده محصولات &larr;</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <a href="#" class="d-block d-banner-card">
+                        <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=800&auto=format&fit=crop" alt="Luxury Watches">
+                        <div class="d-banner-overlay">
+                            <h3>ساعت‌های لاکچری سوییسی</h3>
+                            <span>تخفیف ویژه &larr;</span>
+                        </div>
+                    </a>
+                </div>
+            @endif
+        </div>
+    </div>
+</section>
+
+<!-- بخش دسته‌بندی‌های کالا و خدمات لوکس -->
 <!-- ============================================ -->
 <section class="d-categories">
     <div class="container">
@@ -2249,42 +2287,42 @@ a:hover {
         </div>
         <div class="d-cat-grid">
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/drikana/ring.svg') }}" alt="حلقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/ring.svg') }}" alt="حلقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
                 <h4>حلقه و انگشتر</h4>
                 <span class="cat-count">۲,۴۰۰+ مدل</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/drikana/necklace.svg') }}" alt="گردنبند" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/necklace.svg') }}" alt="گردنبند" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
                 <h4>گردنبند و آویز</h4>
                 <span class="cat-count">طلای ظریف</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/drikana/watch.svg') }}" alt="ساعت" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/watch.svg') }}" alt="ساعت" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
                 <h4>ساعت لوکس</h4>
                 <span class="cat-count">رولکس، پتک و...</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/drikana/diamond.svg') }}" alt="الماس" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(110,180,230,.4));">
+                <img src="{{ asset('frontend/images/alobi/diamond.svg') }}" alt="الماس" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(110,180,230,.4));">
                 <h4>الماس و سنگ قیمتی</h4>
                 <span class="cat-count">قیمتی و نیمه‌قیمتی</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/drikana/crown.svg') }}" alt="تاج" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
-                <h4>جواهرات سلطنتی</h4>
+                <img src="{{ asset('frontend/images/alobi/crown.svg') }}" alt="تاج" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <h4>کالای لوکس سلطنتی</h4>
                 <span class="cat-count">کلکسیون ویژه</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/drikana/coin.svg') }}" alt="سکه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/coin.svg') }}" alt="سکه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
                 <h4>شمش و سکه</h4>
                 <span class="cat-count">سرمایه‌گذاری</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/drikana/gift.svg') }}" alt="هدیه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(200,30,60,.4));">
+                <img src="{{ asset('frontend/images/alobi/gift.svg') }}" alt="هدیه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(200,30,60,.4));">
                 <h4>پک هدیه لوکس</h4>
                 <span class="cat-count">بسته‌بندی ویژه</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/drikana/antique.svg') }}" alt="عتیقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(200,160,80,.4));">
+                <img src="{{ asset('frontend/images/alobi/antique.svg') }}" alt="عتیقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(200,160,80,.4));">
                 <h4>اشیاء عتیقه</h4>
                 <span class="cat-count">کلکسیونرها</span>
             </a>
@@ -2303,10 +2341,10 @@ a:hover {
                     CERTIFICATE & SECURITY
                 </span>
                 <h2 style="font-size:clamp(24px,3vw,38px); font-weight:800; margin:10px 0 20px; line-height:1.4;">
-                    هر قطعه، یک <span style="background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">شناسنامه معتبر</span>؛ آرامش خاطر شما
+                    هر کالا، یک <span style="background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">شناسنامه معتبر</span>؛ آرامش خاطر شما
                 </h2>
                 <p style="color:var(--d-gray-300); font-size:15px; line-height:2.1; margin-bottom:0;">
-                    سامانه شناسنامه دیجیتال دریکانا، سندی رسمی و غیرقابل جعل است که تمامی مشخصات فنی، عیار، وزن، سنگ‌های به‌کاررفته و تاریخچه مالکیت قطعه را در خود جای می‌دهد. هرگونه نقل و انتقال، تعمیر یا تغییر وضعیت در پرونده قطعه به صورت دائمی ثبت می‌شود.
+                    گواهی اصالت دیجیتال Alobi، سندی رسمی و غیرقابل جعل است که تمامی مشخصات فنی، جزئیات دقیق، متریال، برند و تاریخچه مالکیت کالا را در خود جای می‌دهد. هرگونه نقل و انتقال، تعمیر یا تغییر وضعیت در پرونده کالا به صورت دائمی ثبت می‌شود.
                 </p>
                 <div class="d-trust-features">
                     <div class="d-trust-feature">
@@ -2334,7 +2372,7 @@ a:hover {
                         <div class="tf-icon"><i class="la la-bell"></i></div>
                         <div>
                             <h5>هشدار سرقت لحظه‌ای</h5>
-                            <p>در صورت اعلام سرقت، تمام همکاران و مراکز از ممنوع‌المعامله بودن قطعه آگاه می‌شوند.</p>
+                            <p>در صورت اعلام سرقت، تمام همکاران و مراکز از ممنوع‌المعامله بودن کالا آگاه می‌شوند.</p>
                         </div>
                     </div>
                 </div>
@@ -2375,10 +2413,10 @@ a:hover {
         <div class="d-verify-box">
             <div class="d-verify-icon"><i class="la la-certificate"></i></div>
             <h2 style="font-size:clamp(22px,3vw,34px); font-weight:800; margin:0 0 12px;">
-                همین حالا <span style="background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">اصالت</span> قطعه خود را بررسی کنید
+                همین حالا <span style="background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">اصالت</span> کالا خود را بررسی کنید
             </h2>
             <p style="color:var(--d-gray-300); margin:0;">
-                با وارد کردن شماره سریال شناسنامه، از مشخصات، اصالت و وضعیت قطعه خود مطلع شوید.
+                با وارد کردن شماره سریال شناسنامه، از مشخصات، اصالت و وضعیت کالا خود مطلع شوید.
             </p>
             <form method="GET" action="{{ route('jewelry.certificates.verify_page') }}" class="d-verify-form">
                 <input type="text" name="serial" placeholder="شماره سریال شناسنامه را وارد کنید..." required>
@@ -2396,7 +2434,7 @@ a:hover {
         <div class="section-heading">
             <span class="kicker">FAQ</span>
             <h2>سوالات <span class="gold">متداول</span></h2>
-            <p>پاسخ به مهم‌ترین پرسش‌های شما درباره خرید طلا، شناسنامه و خدمات دریکانا.</p>
+            <p>پاسخ به مهم‌ترین پرسش‌های شما درباره خرید طلا، شناسنامه و خدمات Alobi.</p>
             <span class="divider-gold"></span>
         </div>
         <div class="d-faq-list">
@@ -2405,28 +2443,28 @@ a:hover {
                     <span>شناسنامه طلا چیست و چرا اهمیت دارد؟</span>
                     <i class="la la-angle-down"></i>
                 </div>
-                <div class="d-faq-a"><p>شناسنامه طلا سندی رسمی و دیجیتال است که مشخصات فنی قطعه شامل وزن، عیار، نوع و مشخصات سنگ، مالک و تاریخچه آن را ثبت می‌کند. با شناسنامه، اصالت قطعه قابل پیگیری و انتقال مالکیت به صورت شفاف و امن انجام می‌شود.</p></div>
+                <div class="d-faq-a"><p>شناسنامه طلا سندی رسمی و دیجیتال است که مشخصات فنی کالا شامل وزن، عیار، نوع و مشخصات سنگ، مالک و تاریخچه آن را ثبت می‌کند. با شناسنامه، اصالت کالا قابل پیگیری و انتقال مالکیت به صورت شفاف و امن انجام می‌شود.</p></div>
             </div>
             <div class="d-faq-item">
                 <div class="d-faq-q">
                     <span>چگونه از اصالت کالایی که می‌خرم مطمئن شوم؟</span>
                     <i class="la la-angle-down"></i>
                 </div>
-                <div class="d-faq-a"><p>تمام محصولات دریکانا قبل از درج توسط کارشناسان رسمی ارزیابی شده و دارای شناسنامه معتبر با شماره سریال یکتا هستند. شما می‌توانید در هر لحظه با وارد کردن شماره سریال در صفحه «استعلام شناسنامه»، اصالت و وضعیت قطعه را بررسی کنید.</p></div>
+                <div class="d-faq-a"><p>تمام محصولات Alobi قبل از درج توسط کارشناسان رسمی ارزیابی شده و دارای شناسنامه معتبر با شماره سریال یکتا هستند. شما می‌توانید در هر لحظه با وارد کردن شماره سریال در صفحه «استعلام شناسنامه»، اصالت و وضعیت کالا را بررسی کنید.</p></div>
             </div>
             <div class="d-faq-item">
                 <div class="d-faq-q">
                     <span>در صورت سرقت یا مفقودی طلا چه کار باید بکنم؟</span>
                     <i class="la la-angle-down"></i>
                 </div>
-                <div class="d-faq-a"><p>بلافاصله از پنل کاربری خود وارد بخش «اعلام سرقت/مفقودی» شوید و گزارش را ثبت کنید. قطعه شما ظرف چند دقیقه در شبکه همکاران، مراکز خریدوفروش، تعمیرگاه‌ها و لیست ممنوع‌المعامله دریکانا قرار می‌گیرد.</p></div>
+                <div class="d-faq-a"><p>بلافاصله از پنل کاربری خود وارد بخش «اعلام سرقت/مفقودی» شوید و گزارش را ثبت کنید. کالا شما ظرف چند دقیقه در شبکه همکاران، مراکز خریدوفروش، تعمیرگاه‌ها و لیست ممنوع‌المعامله Alobi قرار می‌گیرد.</p></div>
             </div>
             <div class="d-faq-item">
                 <div class="d-faq-q">
-                    <span>آیا امکان فروش طلای کارکرده در دریکانا وجود دارد؟</span>
+                    <span>آیا امکان فروش طلای کارکرده در Alobi وجود دارد؟</span>
                     <i class="la la-angle-down"></i>
                 </div>
-                <div class="d-faq-a"><p>بله. شما می‌توانید با ثبت‌نام به عنوان فروشنده یا از بخش «فروش طلای من» درخواست کارشناسی رایگان قطعه خود را ثبت کنید. پس از ارزیابی توسط کارشناسان، قطعه با شناسنامه جدید در مارکت‌پلیس عرضه می‌شود.</p></div>
+                <div class="d-faq-a"><p>بله. شما می‌توانید با ثبت‌نام به عنوان فروشنده یا از بخش «فروش طلای من» درخواست کارشناسی رایگان کالا خود را ثبت کنید. پس از ارزیابی توسط کارشناسان، کالا با شناسنامه جدید در مارکت‌پلیس عرضه می‌شود.</p></div>
             </div>
             <div class="d-faq-item">
                 <div class="d-faq-q">
@@ -2440,7 +2478,7 @@ a:hover {
                     <span>هزینه صدور شناسنامه جدید چقدر است؟</span>
                     <i class="la la-angle-down"></i>
                 </div>
-                <div class="d-faq-a"><p>برای قطعاتی که از دریکانا خریداری می‌شوند، صدور شناسنامه کاملاً رایگان است. برای قطعات متفرقه، هزینه کارشناسی و صدور شناسنامه بر اساس وزن و نوع قطعه محاسبه می‌شود.</p></div>
+                <div class="d-faq-a"><p>برای قطعاتی که از Alobi خریداری می‌شوند، صدور شناسنامه کاملاً رایگان است. برای قطعات متفرقه، هزینه کارشناسی و صدور شناسنامه بر اساس وزن و نوع کالا محاسبه می‌شود.</p></div>
             </div>
         </div>
     </div>

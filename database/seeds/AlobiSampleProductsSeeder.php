@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class DrikanaSampleProductsSeeder extends Seeder
+class AlobiSampleProductsSeeder extends Seeder
 {
     /**
      * محصولات نمونه عمومی برای نمایش در صفحه اصلی بازار چندفروشنده‌ای
@@ -15,7 +15,7 @@ class DrikanaSampleProductsSeeder extends Seeder
             return;
         }
 
-        $admin = DB::table('users')->where('email','admin@drikana.com')->first();
+        $admin = DB::table('users')->where('email','admin@alobi.com')->first();
         $adminId = $admin ? $admin->id : 1;
 
         $categorySlugs = ['mobile', 'laptops', 'clothing', 'home-appliances', 'beauty', 'sports', 'books', 'jewelry', 'tools', 'digital-products'];
@@ -41,8 +41,8 @@ class DrikanaSampleProductsSeeder extends Seeder
                 'name' => 'گوشی هوشمند مدل X10',
                 'category_id' => ($selectedCategories['mobile'] ?? $fallbackCategory)->id ?? null,
                 'brand_id' => $brandId,
-                'thumbnail_img' => 'frontend/images/drikana/diamond.svg',
-                'photos' => 'frontend/images/drikana/diamond.svg',
+                'thumbnail_img' => 'frontend/images/alobi/diamond.svg',
+                'photos' => 'frontend/images/alobi/diamond.svg',
                 'unit_price' => 24500000,
                 'purchase_price' => 22000000,
                 'discount' => 8, 'discount_type' => 'percent',
@@ -56,8 +56,8 @@ class DrikanaSampleProductsSeeder extends Seeder
                 'name' => 'لپ‌تاپ سبک و حرفه‌ای Pro 14',
                 'category_id' => ($selectedCategories['laptops'] ?? $fallbackCategory)->id ?? null,
                 'brand_id' => $brandId,
-                'thumbnail_img' => 'frontend/images/drikana/watch.svg',
-                'photos' => 'frontend/images/drikana/watch.svg',
+                'thumbnail_img' => 'frontend/images/alobi/watch.svg',
+                'photos' => 'frontend/images/alobi/watch.svg',
                 'unit_price' => 41000000,
                 'purchase_price' => 37500000,
                 'discount' => 10, 'discount_type' => 'percent',
@@ -71,8 +71,8 @@ class DrikanaSampleProductsSeeder extends Seeder
                 'name' => 'پیراهن مردانه کتان کلاسیک',
                 'category_id' => ($selectedCategories['clothing'] ?? $fallbackCategory)->id ?? null,
                 'brand_id' => $brandId,
-                'thumbnail_img' => 'frontend/images/drikana/necklace.svg',
-                'photos' => 'frontend/images/drikana/necklace.svg',
+                'thumbnail_img' => 'frontend/images/alobi/necklace.svg',
+                'photos' => 'frontend/images/alobi/necklace.svg',
                 'unit_price' => 1800000,
                 'purchase_price' => 1500000,
                 'discount' => 12, 'discount_type' => 'percent',
@@ -86,8 +86,8 @@ class DrikanaSampleProductsSeeder extends Seeder
                 'name' => 'یخچال کم‌مصرف 320 لیتری',
                 'category_id' => ($selectedCategories['home-appliances'] ?? $fallbackCategory)->id ?? null,
                 'brand_id' => $brandId,
-                'thumbnail_img' => 'frontend/images/drikana/crown.svg',
-                'photos' => 'frontend/images/drikana/crown.svg',
+                'thumbnail_img' => 'frontend/images/alobi/crown.svg',
+                'photos' => 'frontend/images/alobi/crown.svg',
                 'unit_price' => 34500000,
                 'purchase_price' => 31000000,
                 'discount' => 0, 'discount_type' => 'amount',
@@ -101,8 +101,8 @@ class DrikanaSampleProductsSeeder extends Seeder
                 'name' => 'کیت مراقبت پوست Daily Glow',
                 'category_id' => ($selectedCategories['beauty'] ?? $fallbackCategory)->id ?? null,
                 'brand_id' => $brandId,
-                'thumbnail_img' => 'frontend/images/drikana/ring.svg',
-                'photos' => 'frontend/images/drikana/ring.svg',
+                'thumbnail_img' => 'frontend/images/alobi/ring.svg',
+                'photos' => 'frontend/images/alobi/ring.svg',
                 'unit_price' => 3700000,
                 'purchase_price' => 3200000,
                 'discount' => 15, 'discount_type' => 'percent',
@@ -116,8 +116,8 @@ class DrikanaSampleProductsSeeder extends Seeder
                 'name' => 'دوچرخه شهری مدل Urban Ride',
                 'category_id' => ($selectedCategories['sports'] ?? $fallbackCategory)->id ?? null,
                 'brand_id' => $brandId,
-                'thumbnail_img' => 'frontend/images/drikana/coin.svg',
-                'photos' => 'frontend/images/drikana/coin.svg',
+                'thumbnail_img' => 'frontend/images/alobi/coin.svg',
+                'photos' => 'frontend/images/alobi/coin.svg',
                 'unit_price' => 18500000,
                 'purchase_price' => 16500000,
                 'discount' => 5, 'discount_type' => 'percent',

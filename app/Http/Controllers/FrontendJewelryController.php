@@ -60,7 +60,7 @@ class FrontendJewelryController extends Controller
             ->first();
 
         if (!$jewelry) {
-            return back()->withErrors(['jewelry_id' => 'شما مالک این قطعه نیستید.'])->withInput();
+            return back()->withErrors(['jewelry_id' => 'شما مالک این کالا نیستید.'])->withInput();
         }
 
         // بررسی گزارش تکراری
@@ -68,7 +68,7 @@ class FrontendJewelryController extends Controller
             ->where('status', 'pending')
             ->first();
         if ($existing) {
-            return back()->with('warning', 'قبلاً یک گزارش فعال برای این قطعه ثبت شده است. کد پیگیری: #' . $existing->id);
+            return back()->with('warning', 'قبلاً یک گزارش فعال برای این کالا ثبت شده است. کد پیگیری: #' . $existing->id);
         }
 
         $report = MissingReport::create([
@@ -85,7 +85,7 @@ class FrontendJewelryController extends Controller
     }
 
     /**
-     * رهگیری عمومی قطعه با سریال
+     * رهگیری عمومی کالا با سریال
      */
     public function track(Request $request, $serial = null)
     {

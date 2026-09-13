@@ -1,4 +1,4 @@
-{{-- Mobile Menu (Luxury Drikana) --}}
+{{-- Mobile Menu (Luxury Alobi) --}}
 <div class="mobile-side-menu d-lg-none" id="mobileSideMenu">
     <div class="side-menu-overlay" onclick="this.parentElement.classList.remove('open');"></div>
     <div class="side-menu-wrap">

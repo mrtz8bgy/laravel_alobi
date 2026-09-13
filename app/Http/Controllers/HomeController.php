@@ -251,7 +251,7 @@ class HomeController extends Controller
     }
 
     /**
-     * نمایش جواهرات مردانه (Men's Jewelry)
+     * نمایش کالای لوکس مردانه (Men's Jewelry)
      */
     public function mens_jewelry()
     {
@@ -275,7 +275,7 @@ class HomeController extends Controller
     }
 
     /**
-     * نمایش جواهرات زنانه (Women's Jewelry)
+     * نمایش کالای لوکس زنانه (Women's Jewelry)
      */
     public function womens_jewelry()
     {

@@ -15,7 +15,7 @@
             <i class="fas fa-plus-circle"></i>
             ثبت شناسنامه جدید
         </h1>
-        <p class="text-muted">برای ثبت شناسنامه جدید جواهر، فرم زیر را تکمیل کنید.</p>
+        <p class="text-muted">برای ثبت شناسنامه جدید کالای لوکس، فرم زیر را تکمیل کنید.</p>
     </div>
 
     <form method="POST" 

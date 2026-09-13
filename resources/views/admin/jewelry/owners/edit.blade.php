@@ -50,7 +50,7 @@
                             @error('full_name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                            <small class="text-muted">نام و نام خانوادگی مالک جواهر را وارد کنید</small>
+                            <small class="text-muted">نام و نام خانوادگی مالک کالای لوکس را وارد کنید</small>
                         </div>
                     </div>
 

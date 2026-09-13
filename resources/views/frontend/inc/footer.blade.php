@@ -9,7 +9,7 @@
                 <a href="{{ route('home') }}" class="d-logo" style="text-decoration:none;">
                     <div class="d-logo-mark">
                         @if($gs->logo != null && file_exists(public_path($gs->logo)))
-                            <img src="{{ asset($gs->logo) }}" alt="Drikana" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
+                            <img src="{{ asset($gs->logo) }}" alt="Alobi" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
                         @else
                             D
                         @endif
@@ -20,7 +20,7 @@
                     </div>
                 </a>
                 <p>
-                    دریکانا، مارکت‌پلیس تخصصی طلا، جواهرات، ساعت‌های لوکس، سنگ‌های قیمتی و اشیاء ارزشمند.
+                    Alobi، مارکت‌پلیس جامع کالاها و خدمات لوکس، پریمیوم و منحصر‌به‌فرد.
                     با ارائه شناسنامه معتبر، رهگیری امن و گارانتی اصالت کالا، خریدی مطمئن را تجربه کنید.
                 </p>
                 <div class="d-footer-social">
@@ -69,7 +69,7 @@
                 <ul class="d-footer-contact">
                     <li><i class="la la-map-marker"></i> <span>{{ $gs->address ?? 'تهران، خیابان فردوسی، بازار بزرگ طلا، پلاک ۱۲۳' }}</span></li>
                     <li><i class="la la-phone"></i> <span>{{ $gs->phone ?? '۰۲۱-۱۲۳۴۵۶۷۸' }}</span></li>
-                    <li><i class="la la-envelope"></i> <span>{{ $gs->email ?? 'info@drikana.com' }}</span></li>
+                    <li><i class="la la-envelope"></i> <span>{{ $gs->email ?? 'info@alobi.com' }}</span></li>
                     <li><i class="la la-clock-o"></i> <span>شنبه تا پنجشنبه، ۹ الی ۲۰</span></li>
                 </ul>
                 <div style="margin-top:18px;">
@@ -87,7 +87,7 @@
 
         {{-- Bottom bar --}}
         <div class="d-footer-bottom">
-            <div>© {{ date('Y') }} {{ $gs->site_name ?? 'Drikana' }} — تمامی حقوق محفوظ است. طراحی شده با ❤️ برای بازار طلا و جواهر.</div>
+            <div>© {{ date('Y') }} {{ $gs->site_name ?? 'Alobi' }} — تمامی حقوق محفوظ است. طراحی شده با ❤️ برای بازار کالا و خدمات لوکس.</div>
             <div class="pay-methods">
                 <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%23d4af37' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='9' fill='%2307091a' text-anchor='middle' font-weight='900'>VISA</text></svg>" alt="Visa">
                 <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%231a1f4d' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='8' fill='%23d4af37' text-anchor='middle' font-weight='900'>Master</text></svg>" alt="MasterCard">

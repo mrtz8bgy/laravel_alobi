@@ -119,7 +119,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     /**
      * =============================================
-     * روابط جدید برای ماژول طلا و جواهر
+     * روابط جدید برای ماژول کالا و خدمات لوکس
      * =============================================
      */
 
@@ -132,7 +132,7 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
-     * قطعات طلا و جواهر متعلق به کاربر (از طریق جدول jewelry_owners)
+     * قطعات کالا و خدمات لوکس متعلق به کاربر (از طریق جدول jewelry_owners)
      */
     public function ownedJewelries()
     {
@@ -253,7 +253,7 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
-     * بررسی دسترسی کاربر به یک قطعه خاص
+     * بررسی دسترسی کاربر به یک کالا خاص
      */
     public function canAccessJewelry($jewelry)
     {

@@ -97,7 +97,7 @@
             <!-- مالک -->
             <div class="card mb-4">
                 <div class="card-header bg-success text-white">
-                    <i class="fas fa-user"></i> مالک جواهر
+                    <i class="fas fa-user"></i> مالک کالای لوکس
                 </div>
                 <div class="card-body">
                     @if($certificate->owner)

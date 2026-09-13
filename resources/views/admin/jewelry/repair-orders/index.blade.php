@@ -45,7 +45,7 @@
                                     <input type="text" 
                                            name="search" 
                                            class="form-control" 
-                                           placeholder="شماره سفارش / نام قطعه / سریال..." 
+                                           placeholder="شماره سفارش / نام کالا / سریال..." 
                                            value="{{ request('search') }}">
                                 </div>
                                 
@@ -149,7 +149,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>شماره سفارش</th>
-                                    <th>قطعه</th>
+                                    <th>کالا</th>
                                     <th>نوع تعمیر</th>
                                     <th>تاریخ درخواست</th>
                                     <th>وضعیت</th>

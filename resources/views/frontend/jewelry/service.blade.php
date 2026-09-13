@@ -1,13 +1,13 @@
 @extends('frontend.layouts.app')
 
-@section('meta_title', 'سرویس شناسنامه طلا و جواهر | دریکانا')
+@section('meta_title', 'سرویس شناسنامه کالا و خدمات لوکس | Alobi')
 
 @section('content')
 <section class="d-page-hero">
     <div class="container">
         <span class="kicker">CERTIFICATE SERVICE</span>
-        <h1>سرویس <span class="gold">شناسنامه طلا</span> و جواهرات</h1>
-        <p>اطلاعات کامل از خدمات صدور، تمدید و انتقال شناسنامه رسمی دریکانا.</p>
+        <h1>سرویس <span class="gold">شناسنامه طلا</span> و کالای لوکس</h1>
+        <p>اطلاعات کامل از خدمات صدور، تمدید و انتقال شناسنامه رسمی Alobi.</p>
     </div>
 </section>
 

@@ -11,27 +11,27 @@ use App\Models\JewelryCertificate;
 use App\Models\MissingReport;
 
 /**
- * Seeder نمونه برای دریکانا — طلا و جواهر
+ * Seeder نمونه برای Alobi — کالا و خدمات لوکس
  *
  * توجه: قبل از اجرا، بک‌آپ از دیتابیس بگیرید.
- * اجرا: php artisan db:seed --class=DrikanaSampleDataSeeder
+ * اجرا: php artisan db:seed --class=AlobiSampleDataSeeder
  */
-class DrikanaSampleDataSeeder extends Seeder
+class AlobiSampleDataSeeder extends Seeder
 {
     public function run()
     {
-        $this->command->info('🚀 در حال درج داده‌های نمونه دریکانا...');
+        $this->command->info('🚀 در حال درج داده‌های نمونه Alobi...');
 
-        // ===== 1) دسته‌بندی‌های طلا و جواهر =====
+        // ===== 1) دسته‌بندی‌های کالا و خدمات لوکس =====
         $categories = [
-            ['name' => 'حلقه ازدواج و انگشتر', 'icon' => 'frontend/images/drikana/ring.svg', 'meta_title' => 'خرید انگشتر طلا و حلقه ازدواج'],
-            ['name' => 'گردنبند و آویز',     'icon' => 'frontend/images/drikana/necklace.svg', 'meta_title' => 'گردنبند طلا و جواهر'],
-            ['name' => 'ساعت مچی لوکس',     'icon' => 'frontend/images/drikana/watch.svg', 'meta_title' => 'ساعت طلا و لوکس'],
-            ['name' => 'الماس و سنگ قیمتی', 'icon' => 'frontend/images/drikana/diamond.svg', 'meta_title' => 'الماس و سنگ قیمتی'],
-            ['name' => 'گوشواره و دستبند',  'icon' => 'frontend/images/drikana/necklace.svg', 'meta_title' => 'گوشواره و دستبند'],
-            ['name' => 'سکه و شمش طلا',     'icon' => 'frontend/images/drikana/coin.svg', 'meta_title' => 'سکه و شمش طلا'],
-            ['name' => 'نیم‌ست و ست کامل',   'icon' => 'frontend/images/drikana/crown.svg', 'meta_title' => 'ست طلا و جواهر'],
-            ['name' => 'عتیقه‌جات و کلکسیون', 'icon' => 'frontend/images/drikana/antique.svg', 'meta_title' => 'اشیاء عتیقه'],
+            ['name' => 'حلقه ازدواج و انگشتر', 'icon' => 'frontend/images/alobi/ring.svg', 'meta_title' => 'خرید انگشتر طلا و حلقه ازدواج'],
+            ['name' => 'گردنبند و آویز',     'icon' => 'frontend/images/alobi/necklace.svg', 'meta_title' => 'گردنبند کالا و خدمات لوکس'],
+            ['name' => 'ساعت مچی لوکس',     'icon' => 'frontend/images/alobi/watch.svg', 'meta_title' => 'ساعت طلا و لوکس'],
+            ['name' => 'الماس و سنگ قیمتی', 'icon' => 'frontend/images/alobi/diamond.svg', 'meta_title' => 'الماس و سنگ قیمتی'],
+            ['name' => 'گوشواره و دستبند',  'icon' => 'frontend/images/alobi/necklace.svg', 'meta_title' => 'گوشواره و دستبند'],
+            ['name' => 'سکه و شمش طلا',     'icon' => 'frontend/images/alobi/coin.svg', 'meta_title' => 'سکه و شمش طلا'],
+            ['name' => 'نیم‌ست و ست کامل',   'icon' => 'frontend/images/alobi/crown.svg', 'meta_title' => 'ست کالا و خدمات لوکس'],
+            ['name' => 'عتیقه‌جات و کلکسیون', 'icon' => 'frontend/images/alobi/antique.svg', 'meta_title' => 'اشیاء عتیقه'],
         ];
 
         foreach ($categories as $cat) {
@@ -51,7 +51,7 @@ class DrikanaSampleDataSeeder extends Seeder
         $this->command->info('✅ دسته‌بندی‌ها ثبت شدند.');
 
         // ===== 2) برندها =====
-        $brands = ['Rolex', 'Cartier', 'Tiffany & Co', 'Bvlgari', 'Drikana Signature', 'Patek Philippe', 'Omega', 'Van Cleef & Arpels'];
+        $brands = ['Rolex', 'Cartier', 'Tiffany & Co', 'Bvlgari', 'Alobi Signature', 'Patek Philippe', 'Omega', 'Van Cleef & Arpels'];
         foreach ($brands as $b) {
             Brand::updateOrCreate(['name' => $b], [
                 'slug' => Str::slug($b),
@@ -63,7 +63,7 @@ class DrikanaSampleDataSeeder extends Seeder
         }
         $this->command->info('✅ برندها ثبت شدند.');
 
-        // ===== 3) مالکان نمونه جواهرات =====
+        // ===== 3) مالکان نمونه کالای لوکس =====
         $owners = [
             ['full_name' => 'علی رضایی',    'phone' => '09121234567', 'national_id' => '0012345678', 'address' => 'تهران، پاسداران'],
             ['full_name' => 'مریم احمدی',   'phone' => '09129876543', 'national_id' => '0076543210', 'address' => 'تهران، سعادت‌آباد'],

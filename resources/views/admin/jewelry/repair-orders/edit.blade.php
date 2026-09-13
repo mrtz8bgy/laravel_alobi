@@ -49,9 +49,9 @@
                                 <input type="text" class="form-control" value="{{ $order->status_label }}" readonly>
                             </div>
                             
-                            {{-- قطعه (فقط خواندنی) --}}
+                            {{-- کالا (فقط خواندنی) --}}
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">قطعه</label>
+                                <label class="form-label">کالا</label>
                                 <input type="text" class="form-control" 
                                        value="{{ $order->jewelry->product_name }} - {{ $order->jewelry->serial_number }}" readonly>
                             </div>

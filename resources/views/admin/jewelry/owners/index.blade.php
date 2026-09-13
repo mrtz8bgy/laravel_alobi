@@ -3,7 +3,7 @@
 
 @section('jewelry_content')
 <div class="d-flex justify-content-between mb-3">
-    <h2>مالکان جواهرات</h2>
+    <h2>مالکان کالای لوکس</h2>
     <a href="{{ route('admin.jewelry.owners.create') }}" class="btn btn-primary">افزودن مالک جدید</a>
 </div>
 
@@ -48,7 +48,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="6" class="text-center">هیچ مالک جواهری ثبت نشده است.</td>
+                    <td colspan="6" class="text-center">هیچ مالک کالای لوکسی ثبت نشده است.</td>
                 </tr>
             @endforelse
         </tbody>

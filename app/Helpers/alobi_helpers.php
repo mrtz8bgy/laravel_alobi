@@ -1,6 +1,6 @@
 <?php
 /**
- * Drikana Safe DB helpers
+ * Alobi Safe DB helpers
  * — prevent "Base table or view not found" errors when tables don't exist yet
  */
 
@@ -26,8 +26,8 @@ if (!function_exists('safe_business_setting')) {
     }
 }
 
-if (!function_exists('drikana_setting')) {
-    function drikana_setting($key, $default = null) {
+if (!function_exists('alobi_setting')) {
+    function alobi_setting($key, $default = null) {
         return safe_business_setting($key, $default);
     }
 }

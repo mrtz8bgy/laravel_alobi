@@ -32,7 +32,7 @@ class MissingReportController extends Controller
             $query->where('status', $request->status);
         }
         
-        // فیلتر بر اساس جستجو در نام قطعه یا شماره سریال
+        // فیلتر بر اساس جستجو در نام کالا یا شماره سریال
         if ($request->filled('search')) {
             $search = $request->search;
             $query->whereHas('jewelry', function($q) use ($search) {
@@ -90,7 +90,7 @@ class MissingReportController extends Controller
             'description' => 'nullable|string',
         ]);
         
-        // چک میکنیم قطعه واقعاً مال این کاربر هست؟
+        // چک میکنیم کالا واقعاً مال این کاربر هست؟
         $jewelry = JewelryCertificate::with('owner')
                                      ->where('id', $request->jewelry_id)
                                      ->whereHas('owner', function($query) {
@@ -99,7 +99,7 @@ class MissingReportController extends Controller
                                      ->first();
                                      
         if (!$jewelry) {
-            return back()->withErrors(['شما مالک این قطعه نیستید'])->withInput();
+            return back()->withErrors(['شما مالک این کالا نیستید'])->withInput();
         }
         
         MissingReport::create([
@@ -161,7 +161,7 @@ class MissingReportController extends Controller
     }
     
     /**
-     * دریافت اطلاعات قطعه برای AJAX
+     * دریافت اطلاعات کالا برای AJAX
      */
     public function getJewelryInfo($id)
     {
@@ -173,7 +173,7 @@ class MissingReportController extends Controller
                                      ->first();
                                      
         if (!$jewelry) {
-            return response()->json(['error' => 'قطعه مورد نظر یافت نشد'], 404);
+            return response()->json(['error' => 'کالا مورد نظر یافت نشد'], 404);
         }
         
         return response()->json([

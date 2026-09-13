@@ -1,14 +1,14 @@
 @extends('frontend.layouts.app')
 
-@section('meta_title', 'رهگیری سفارش و قطعات طلا | دریکانا')
-@section('meta_description', 'با وارد کردن کد سفارش یا شماره سریال، وضعیت سفارش یا قطعه خود را در سامانه دریکانا رهگیری کنید.')
+@section('meta_title', 'رهگیری سفارش و قطعات طلا | Alobi')
+@section('meta_description', 'با وارد کردن کد سفارش یا شماره سریال، وضعیت سفارش یا کالا خود را در سامانه Alobi رهگیری کنید.')
 
 @section('content')
 <section class="d-page-hero">
     <div class="container">
         <span class="kicker"><i class="la la-map-pin"></i> سامانه رهگیری</span>
         <h1>رهگیری <span class="gold">سفارش و قطعات</span></h1>
-        <p>با وارد کردن شماره سریال شناسنامه یا کد سفارش، می‌توانید آخرین وضعیت قطعه یا مرسوله خود را به صورت زنده مشاهده کنید.</p>
+        <p>با وارد کردن شماره سریال شناسنامه یا کد سفارش، می‌توانید آخرین وضعیت کالا یا مرسوله خود را به صورت زنده مشاهده کنید.</p>
     </div>
 </section>
 
@@ -36,13 +36,13 @@
 
                 @if($certificate)
                     <div class="d-card-lux" style="margin-top:24px;">
-                        <div class="d-card-lux-title"><i class="la la-gem"></i> اطلاعات قطعه</div>
+                        <div class="d-card-lux-title"><i class="la la-gem"></i> اطلاعات کالا</div>
 
                         @if($missingReport)
                             <div class="alert-lux danger" style="margin-bottom:20px;">
                                 <i class="la la-exclamation-triangle"></i>
                                 <div>
-                                    <strong style="display:block; margin-bottom:4px;">⚠ این قطعه در سامانه به عنوان «{{ $missingReport->type == 'theft' ? 'مسروقه' : 'مفقودی' }}» ثبت شده است.</strong>
+                                    <strong style="display:block; margin-bottom:4px;">⚠ این کالا در سامانه به عنوان «{{ $missingReport->type == 'theft' ? 'مسروقه' : 'مفقودی' }}» ثبت شده است.</strong>
                                     <span style="font-size:13px; opacity:.85;">تاریخ ثبت: {{ $missingReport->created_at->format('Y/m/d') }} · وضعیت: در حال پیگیری</span>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                 <div class="value" style="direction:ltr; letter-spacing:2px;">{{ $certificate->serial_number }}</div>
                             </div>
                             <div class="d-cert-info-item">
-                                <div class="label">نام قطعه</div>
+                                <div class="label">نام کالا</div>
                                 <div class="value">{{ $certificate->product_name }}</div>
                             </div>
                             <div class="d-cert-info-item">

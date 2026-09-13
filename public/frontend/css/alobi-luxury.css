@@ -8,17 +8,17 @@
 
 :root {
     /* پالت رنگی لوکس */
-    --d-gold: #d4af37;
-    --d-gold-light: #f4d47c;
+    --d-gold: #ff3366;
+    --d-gold-light: #ff758c;
     --d-gold-dark: #b8892a;
     --d-gold-soft: #e8c968;
-    --d-navy-900: #07091a;
-    --d-navy-800: #0b0f28;
-    --d-navy-700: #12173a;
-    --d-navy-600: #1a1f4d;
+    --d-navy-900: #fbfbfd;
+    --d-navy-800: #f4f4f7;
+    --d-navy-700: #ffffff;
+    --d-navy-600: #ececf1;
     --d-navy-500: #272d66;
     --d-cream: #fdf7e6;
-    --d-white: #ffffff;
+    --d-white: #111111;
     --d-gray-100: #f5f3f0;
     --d-gray-300: #c5c3c6;
     --d-gray-500: #8e8b95;
@@ -29,7 +29,7 @@
     --d-info: #3182ce;
 
     /* گرادیان‌ها */
-    --grad-gold: linear-gradient(135deg, #b8892a 0%, #d4af37 40%, #f4d47c 55%, #d4af37 70%, #b8892a 100%);
+    --grad-gold: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     --grad-gold-soft: linear-gradient(135deg, #f4d47c 0%, #d4af37 100%);
     --grad-navy: linear-gradient(135deg, #07091a 0%, #1a1f4d 100%);
     --grad-dark: linear-gradient(180deg, #0b0f28 0%, #07091a 100%);
@@ -130,7 +130,7 @@ body::before {
     font-weight: 900;
     line-height: 1.2;
     letter-spacing: -.02em;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -164,7 +164,7 @@ body::before {
     margin-bottom: 14px;
 }
 .section-heading h2 .gold {
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -180,7 +180,7 @@ body::before {
     display: block;
     width: 80px;
     height: 3px;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     border-radius: var(--r-pill);
     margin: 12px auto 0;
     position: relative;
@@ -227,7 +227,7 @@ body::before {
 .btn-lux:hover::before { left: 100%; }
 
 .btn-lux-primary {
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     box-shadow: var(--shadow-gold);
 }
@@ -338,7 +338,7 @@ body::before {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,7 +363,7 @@ body::before {
 .d-logo-text .brand-name {
     font-size: 22px;
     font-weight: 900;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -409,7 +409,7 @@ body::before {
 }
 .d-search input::placeholder { color: var(--d-gray-500); }
 .d-search button {
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     border: none;
     width: 42px;
@@ -501,7 +501,7 @@ body::before {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     padding: 12px 26px;
     font-weight: 700;
@@ -540,7 +540,7 @@ body::before {
     right: 18px;
     left: 18px;
     height: 2px;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     transform: scaleX(0);
     transition: transform var(--tr-base);
     border-radius: 2px;
@@ -643,7 +643,7 @@ body::before {
 }
 .d-hero h1 .gold-line {
     display: block;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -666,7 +666,7 @@ body::before {
     display: block;
     font-size: 28px;
     font-weight: 900;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -702,7 +702,7 @@ body::before {
     z-index: 2;
     width: 200px;
     height: 200px;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 20% 100%, 0% 35%);
     display: flex;
     align-items: center;
@@ -797,7 +797,7 @@ body::before {
     transition: all var(--tr-base);
 }
 .d-service-card:hover .d-service-icon {
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     transform: rotate(360deg) scale(1.1);
 }
@@ -956,7 +956,7 @@ body::before {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1046,7 +1046,7 @@ body::before {
     height: 80px;
     margin: 0 auto 20px;
     border-radius: 50%;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1082,7 +1082,7 @@ body::before {
 .d-verify-form button {
     padding: 14px 32px;
     border-radius: var(--r-pill);
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     font-weight: 700;
     border: none;
@@ -1144,7 +1144,7 @@ body::before {
     position: absolute;
     top: 30px;
     left: 20px;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     padding: 14px 20px;
     border-radius: var(--r-md);
@@ -1166,7 +1166,7 @@ body::before {
     line-height: 1.4;
 }
 .d-about-content h2 .gold {
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1260,7 +1260,7 @@ body::before {
     left: 0;
     right: 0;
     height: 1px;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
 }
 .d-footer-grid {
     display: grid;
@@ -1283,7 +1283,7 @@ body::before {
     right: 0;
     width: 40px;
     height: 2px;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
 }
 .d-footer-brand p {
     color: var(--d-gray-300);
@@ -1332,7 +1332,7 @@ body::before {
     font-size: 16px;
 }
 .d-footer-social a:hover {
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     transform: translateY(-3px);
     box-shadow: var(--shadow-gold);
@@ -1359,7 +1359,7 @@ body::before {
 }
 .d-newsletter-form input::placeholder { color: var(--d-gray-500); }
 .d-newsletter-form button {
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     border: none;
     width: 40px;
@@ -1419,7 +1419,7 @@ body::before {
     margin: 0 0 14px;
 }
 .d-page-hero h1 .gold {
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1584,7 +1584,7 @@ select.form-control-lux {
     color: var(--d-gray-500);
     font-size: 14px;
 }
-.d-step.done .d-step-num { background: var(--grad-gold); color: var(--d-navy-900); border-color: var(--d-gold); }
+.d-step.done .d-step-num { background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%); color: var(--d-navy-900); border-color: var(--d-gold); }
 .d-step.active .d-step-num { background: var(--d-gold); color: var(--d-navy-900); border-color: var(--d-gold); box-shadow: 0 0 0 6px rgba(212,175,55,.2); animation: pulse-gold 2s infinite; }
 .d-step-title { font-size: 12px; color: var(--d-gray-500); font-weight: 600; }
 .d-step.done .d-step-title, .d-step.active .d-step-title { color: var(--d-gold-light); }
@@ -1597,7 +1597,7 @@ select.form-control-lux {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--grad-gold);
+    background: linear-gradient(135deg, #ff3366 0%, #ff5e62 100%);
     color: var(--d-navy-900);
     display: flex;
     align-items: center;
@@ -1875,4 +1875,47 @@ a, .link a { color: var(--d-gold); }
     color: var(--d-gold);
     align-items: center; justify-content: center;
     cursor: pointer;
+}
+
+/* ====== استایل‌های بنرهای تبلیغاتی ====== */
+.d-banner-card {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(255, 51, 102, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.d-banner-card img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+.d-banner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 51, 102, 0.2);
+}
+.d-banner-card:hover img {
+    transform: scale(1.05);
+}
+.d-banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    text-align: right;
+}
+.d-banner-overlay h3 {
+    color: #fff !important;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.d-banner-overlay span {
+    color: var(--d-gold-light);
+    font-size: 14px;
+    font-weight: 600;
 }

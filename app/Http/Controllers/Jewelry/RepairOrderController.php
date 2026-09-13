@@ -128,7 +128,7 @@ class RepairOrderController extends Controller
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'notes' => 'nullable|string|max:1000',
         ], [
-            'jewelry_certificate_id.required' => 'انتخاب قطعه الزامی است',
+            'jewelry_certificate_id.required' => 'انتخاب کالا الزامی است',
             'description.required' => 'توضیحات مشکل الزامی است',
             'description.min' => 'توضیحات باید حداقل 10 کاراکتر باشد',
             'repair_type.required' => 'نوع تعمیر الزامی است',
@@ -137,7 +137,7 @@ class RepairOrderController extends Controller
             'images.*.max' => 'حجم تصویر نباید بیشتر از 2 مگابایت باشد',
         ]);
         
-        // بررسی مالکیت قطعه
+        // بررسی مالکیت کالا
         $jewelry = JewelryCertificate::whereHas('owner', function($q) {
                 $q->where('user_id', Auth::id());
             })
@@ -261,7 +261,7 @@ class RepairOrderController extends Controller
             'notes' => 'nullable|string|max:1000',
         ]);
         
-        // بررسی مالکیت قطعه
+        // بررسی مالکیت کالا
         $jewelry = JewelryCertificate::whereHas('owner', function($q) use ($repairOrder) {
                 $q->where('user_id', $repairOrder->user_id);
             })

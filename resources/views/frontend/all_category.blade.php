@@ -428,7 +428,7 @@
                                                         'طلا' => 'fa-diamond',
                                                         'سکه' => 'fa-money',
                                                         'ساعت' => 'fa-clock-o',
-                                                        'جواهر' => 'fa-gem',
+                                                        'کالای لوکس' => 'fa-gem',
                                                         'زنانه' => 'fa-female',
                                                         'مردانه' => 'fa-male',
                                                         'انگشتر' => 'fa-circle-o',
@@ -503,7 +503,7 @@
                                                     $cardIcons = [
                                                         'طلا' => 'fa-diamond',
                                                         'ساعت' => 'fa-clock-o',
-                                                        'جواهر' => 'fa-gem',
+                                                        'کالای لوکس' => 'fa-gem',
                                                         'اکسسوری' => 'fa-shopping-bag',
                                                         'هدیه' => 'fa-gift',
                                                         'آرایشی' => 'fa-paint-brush',

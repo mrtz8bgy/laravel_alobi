@@ -36,9 +36,9 @@
                         @csrf
                         
                         <div class="row">
-                            {{-- انتخاب قطعه --}}
+                            {{-- انتخاب کالا --}}
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">قطعه *</label>
+                                <label class="form-label">کالا *</label>
                                 <select name="jewelry_certificate_id" id="jewelry_id" class="form-select @error('jewelry_certificate_id') is-invalid @enderror" required>
                                     <option value="">انتخاب کنید</option>
                                     @foreach($jewelries as $jewelry)
@@ -71,7 +71,7 @@
                             <div class="col-md-12 mb-3">
                                 <label class="form-label">توضیحات مشکل *</label>
                                 <textarea name="description" rows="3" class="form-control @error('description') is-invalid @enderror" 
-                                          placeholder="مشکل قطعه را توضیح دهید..." required>{{ old('description') }}</textarea>
+                                          placeholder="مشکل کالا را توضیح دهید..." required>{{ old('description') }}</textarea>
                                 @error('description')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -170,7 +170,7 @@
                             
                             {{-- آپلود تصاویر --}}
                             <div class="col-md-12 mb-3">
-                                <label class="form-label">تصاویر قطعه (اختیاری)</label>
+                                <label class="form-label">تصاویر کالا (اختیاری)</label>
                                 <div class="image-upload-container border rounded p-3">
                                     <input type="file" name="images[]" id="images" class="form-control @error('images.*') is-invalid @enderror" 
                                            multiple accept=".jpg,.jpeg,.png,.gif" onchange="validateAndPreviewImages(this)">
@@ -199,10 +199,10 @@
                             </div>
                             @endif
                             
-                            {{-- نمایش اطلاعات قطعه انتخاب شده --}}
+                            {{-- نمایش اطلاعات کالا انتخاب شده --}}
                             <div class="col-md-12 mb-3">
                                 <div id="jewelry_info" class="alert alert-info" style="display: none;">
-                                    <h6 class="alert-heading">اطلاعات قطعه انتخاب شده:</h6>
+                                    <h6 class="alert-heading">اطلاعات کالا انتخاب شده:</h6>
                                     <div id="jewelry_details"></div>
                                 </div>
                             </div>
@@ -293,7 +293,7 @@ function validateAndPreviewImages(input) {
     }
 }
 
-// نمایش اطلاعات قطعه انتخاب شده
+// نمایش اطلاعات کالا انتخاب شده
 document.getElementById('jewelry_id').addEventListener('change', function() {
     let jewelryId = this.value;
     let infoDiv = document.getElementById('jewelry_info');
@@ -316,7 +316,7 @@ document.getElementById('jewelry_id').addEventListener('change', function() {
                     detailsDiv.innerHTML = `
                         <div class="row">
                             <div class="col-md-6">
-                                <strong>نام قطعه:</strong> ${data.name || '---'}<br>
+                                <strong>نام کالا:</strong> ${data.name || '---'}<br>
                                 <strong>شماره سریال:</strong> ${data.serial_number || '---'}<br>
                                 <strong>نوع فلز:</strong> ${data.metal_type || '---'}<br>
                                 <strong>عیار:</strong> ${data.purity || '---'}
@@ -332,7 +332,7 @@ document.getElementById('jewelry_id').addEventListener('change', function() {
                             <hr>
                             <div class="text-center">
                                 <a href="/storage/${data.certificate_file}" target="_blank" class="btn btn-sm btn-info">
-                                    <i class="fas fa-image me-1"></i>مشاهده تصویر قطعه
+                                    <i class="fas fa-image me-1"></i>مشاهده تصویر کالا
                                 </a>
                             </div>
                         ` : ''}
@@ -364,7 +364,7 @@ document.getElementById('repairOrderForm').addEventListener('submit', function(e
     
     if (!jewelry) {
         e.preventDefault();
-        alert('لطفاً قطعه مورد نظر را انتخاب کنید');
+        alert('لطفاً کالا مورد نظر را انتخاب کنید');
         return false;
     }
     

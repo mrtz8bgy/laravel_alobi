@@ -7,7 +7,7 @@
     <div class="container">
         <span class="kicker"><i class="la la-certificate"></i> نتیجه استعلام</span>
         <h1>گواهی <span class="gold">اصالت کالا</span></h1>
-        <p>نتیجه استعلام سریال <strong style="color:var(--d-gold);" dir="ltr">{{ $certificate->serial_number }}</strong> از سامانه شناسنامه دریکانا.</p>
+        <p>نتیجه استعلام سریال <strong style="color:var(--d-gold);" dir="ltr">{{ $certificate->serial_number }}</strong> از سامانه شناسنامه Alobi.</p>
     </div>
 </section>
 
@@ -20,7 +20,7 @@
                         <i class="la la-check-circle"></i>
                         <div>
                             <strong style="display:block; margin-bottom:4px;">✅ این شناسنامه معتبر است.</strong>
-                            <span style="font-size:13px; opacity:.85;">لطقاً پیش از معامله، مشخصات قطعه را با اطلاعات درج شده تطبیق دهید.</span>
+                            <span style="font-size:13px; opacity:.85;">لطقاً پیش از معامله، مشخصات کالا را با اطلاعات درج شده تطبیق دهید.</span>
                         </div>
                     </div>
                 @elseif(property_exists($certificate,'rejected_at') && $certificate->rejected_at)
@@ -28,7 +28,7 @@
                         <i class="la la-times-circle"></i>
                         <div>
                             <strong style="display:block; margin-bottom:4px;">❌ این شناسنامه باطل شده است.</strong>
-                            <span style="font-size:13px; opacity:.85;">لطفاً از معامله این قطعه خودداری کنید.</span>
+                            <span style="font-size:13px; opacity:.85;">لطفاً از معامله این کالا خودداری کنید.</span>
                         </div>
                     </div>
                 @else
@@ -36,15 +36,15 @@
                         <i class="la la-clock-o"></i>
                         <div>
                             <strong style="display:block; margin-bottom:4px;">⏳ این شناسنامه در انتظار تأیید نهایی است.</strong>
-                            <span style="font-size:13px; opacity:.85;">تأیید اصالت نهایی توسط کارشناسان دریکانا در حال انجام است.</span>
+                            <span style="font-size:13px; opacity:.85;">تأیید اصالت نهایی توسط کارشناسان Alobi در حال انجام است.</span>
                         </div>
                     </div>
                 @endif
 
                 <div class="d-cert-display">
                     <div class="d-cert-head">
-                        <div class="cert-sub">Drikana · Certificate of Authenticity</div>
-                        <h3>گواهی اصالت قطعه</h3>
+                        <div class="cert-sub">Alobi · Certificate of Authenticity</div>
+                        <h3>گواهی اصالت کالا</h3>
                     </div>
                     <div class="d-cert-info-grid">
                         <div class="d-cert-info-item">

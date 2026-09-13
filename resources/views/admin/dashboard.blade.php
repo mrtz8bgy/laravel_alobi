@@ -787,7 +787,7 @@
             <div class="stat-icon" style="background: linear-gradient(135deg, var(--info-color), #3b82f6);">
                 <span>👁️</span>
             </div>
-            <span class="stat-label">مدیریت مالکان طلا و جواهر </span>
+            <span class="stat-label">مدیریت مالکان کالا و خدمات لوکس </span>
             <div class="stat-value">---</div>
             <a href="./admin/jewelry/owners" class="btn-link">
                 مشاهده جزئیات

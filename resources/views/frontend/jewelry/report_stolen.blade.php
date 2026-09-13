@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
-@section('meta_title', 'اعلام سرقت و مفقودی طلا و جواهر | سامانه رهگیری دریکانا')
-@section('meta_description', 'در صورت سرقت یا مفقودی طلا، جواهر یا ساعت خود، از طریق سامانه دریکانا گزارش ثبت کنید تا قطعه در شبکه سراسری رهگیری شود.')
+@section('meta_title', 'اعلام سرقت و مفقودی کالا و خدمات لوکس | سامانه رهگیری Alobi')
+@section('meta_description', 'در صورت سرقت یا مفقودی طلا، کالای لوکس یا ساعت خود، از طریق سامانه Alobi گزارش ثبت کنید تا کالا در شبکه سراسری رهگیری شود.')
 
 @section('content')
 <style>
@@ -86,8 +86,8 @@
 <section class="stolen-hero">
     <div class="container">
         <span class="kicker"><i class="la la-shield"></i> سامانه یکپارچه رهگیری</span>
-        <h1>اعلام <span class="red">سرقت</span> / <span class="gold">مفقودی</span> طلا و جواهر</h1>
-        <p>در صورت سرقت یا مفقودی هرگونه طلا، جواهر، ساعت لوکس، سنگ قیمتی یا اشیاء ارزشمند، مراتب را سریعاً در این سامانه ثبت کنید. قطعه شما بلافاصله در شبکه ملی دریکانا، طلافروشان، همکاران و مراجع قانونی به عنوان «ممنوع‌المعامله» ثبت می‌شود.</p>
+        <h1>اعلام <span class="red">سرقت</span> / <span class="gold">مفقودی</span> کالا و خدمات لوکس</h1>
+        <p>در صورت سرقت یا مفقودی هرگونه طلا، کالای لوکس، ساعت لوکس، سنگ قیمتی یا اشیاء ارزشمند، مراتب را سریعاً در این سامانه ثبت کنید. کالا شما بلافاصله در شبکه ملی Alobi، طلافروشان، همکاران و مراجع قانونی به عنوان «ممنوع‌المعامله» ثبت می‌شود.</p>
     </div>
 </section>
 
@@ -142,10 +142,10 @@
                         </div>
 
                         <div class="form-row">
-                            <label><span class="req">*</span> انتخاب قطعه از گنجینه من</label>
+                            <label><span class="req">*</span> انتخاب کالا از گنجینه من</label>
                             @if($jewelries && $jewelries->count() > 0)
                                 <select name="jewelry_id" required class="form-control-lux">
-                                    <option value="">-- قطعه را انتخاب کنید --</option>
+                                    <option value="">-- کالا را انتخاب کنید --</option>
                                     @foreach($jewelries as $j)
                                         <option value="{{ $j->id }}">{{ $j->product_name }} | سریال: {{ $j->serial_number }} | {{ $j->metal_type }} {{ $j->weight ? $j->weight . ' گرم' : '' }}</option>
                                     @endforeach
@@ -154,7 +154,7 @@
                             @else
                                 <div style="padding:14px; background:rgba(251,191,36,.08); border-radius:var(--r-sm); border:1px dashed rgba(251,191,36,.3); color:#fde68a; font-size:13px; text-align:center;">
                                     <i class="la la-info-circle" style="margin-left:6px;"></i>
-                                    شما هنوز هیچ قطعه‌ای در گنجینه خود ثبت نکرده‌اید. برای ثبت شناسنامه جدید <a href="{{ route('admin.jewelry.certificates.create') }}">کلیک کنید</a>.
+                                    شما هنوز هیچ کالا‌ای در گنجینه خود ثبت نکرده‌اید. برای ثبت شناسنامه جدید <a href="{{ route('admin.jewelry.certificates.create') }}">کلیک کنید</a>.
                                 </div>
                             @endif
                         </div>
@@ -166,8 +166,8 @@
 
                         <div class="form-row">
                             <label><span class="req">*</span> شرح کامل حادثه</label>
-                            <textarea name="description" placeholder="توضیح دهید چه زمانی و چگونه قطعه به سرقت رفت یا مفقود شد، مشخصات ظاهری خاص قطعه، و هر اطلاعاتی که به شناسایی کمک می‌کند...">{{ old('description') }}</textarea>
-                            <div class="hint">هرچه توضیحات دقیق‌تر باشد، شانس بازیابی قطعه بالاتر می‌رود.</div>
+                            <textarea name="description" placeholder="توضیح دهید چه زمانی و چگونه کالا به سرقت رفت یا مفقود شد، مشخصات ظاهری خاص کالا، و هر اطلاعاتی که به شناسایی کمک می‌کند...">{{ old('description') }}</textarea>
+                            <div class="hint">هرچه توضیحات دقیق‌تر باشد، شانس بازیابی کالا بالاتر می‌رود.</div>
                         </div>
 
                         <button type="submit" class="btn-lux btn-lux-primary" style="width:100%; justify-content:center; padding:15px 30px; font-size:16px;">
@@ -200,28 +200,28 @@
                         <div class="sn">۲</div>
                         <div class="sc">
                             <h6>بررسی کارشناسان</h6>
-                            <p>کارشناسان دریکانا در کوتاه‌ترین زمان با شما تماس گرفته و صحت گزارش را تایید می‌کنند.</p>
+                            <p>کارشناسان Alobi در کوتاه‌ترین زمان با شما تماس گرفته و صحت گزارش را تایید می‌کنند.</p>
                         </div>
                     </div>
                     <div class="info-step">
                         <div class="sn">۳</div>
                         <div class="sc">
                             <h6>اعلام به شبکه همکاران</h6>
-                            <p>مشخصات قطعه به شبکه طلافروشان، مراکز خریدوفروش، تعمیرکاران و pawnshop ها ارسال می‌شود.</p>
+                            <p>مشخصات کالا به شبکه طلافروشان، مراکز خریدوفروش، تعمیرکاران و pawnshop ها ارسال می‌شود.</p>
                         </div>
                     </div>
                     <div class="info-step">
                         <div class="sn">۴</div>
                         <div class="sc">
                             <h6>رهگیری هوشمند</h6>
-                            <p>در صورت استعلام یا مشاهده قطعه در هر نقطه، به شما و مراجع قضایی اطلاع‌رسانی می‌شود.</p>
+                            <p>در صورت استعلام یا مشاهده کالا در هر نقطه، به شما و مراجع قضایی اطلاع‌رسانی می‌شود.</p>
                         </div>
                     </div>
 
                     <div class="stats-row">
                         <div class="stat-mini">
                             <strong>{{ $stats['total_certificates'] ?? 0 }}</strong>
-                            <span>قطعه شناسنامه‌دار</span>
+                            <span>کالا شناسنامه‌دار</span>
                         </div>
                         <div class="stat-mini">
                             <strong>{{ $stats['recovered'] ?? 0 }}</strong>

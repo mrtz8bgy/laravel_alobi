@@ -315,7 +315,7 @@
     <!-- شناسنامه -->
     <div class="certificate-container" id="certificateContainer">
         <!-- واترمارک -->
-        <div class="watermark" id="watermark">شناسنامه طلا و جواهر</div>
+        <div class="watermark" id="watermark">شناسنامه کالا و خدمات لوکس</div>
         
         <!-- لوگو -->
         <div class="certificate-logo">
@@ -332,11 +332,11 @@
         
         <!-- هدر -->
         <div class="certificate-header">
-            <div class="certificate-title">شناسنامه طلا و جواهر</div>
+            <div class="certificate-title">شناسنامه کالا و خدمات لوکس</div>
             <div class="certificate-subtitle">گواهی اصالت و مالکیت</div>
         </div>
         
-        <!-- عکس جواهر -->
+        <!-- عکس کالای لوکس -->
         <div class="jewelry-image-section" id="imageSection">
             @php
                 // ایجاد URL صحیح برای عکس
@@ -390,7 +390,7 @@
                          data-path="{{ $imagePath }}"
                          data-url="{{ $imageUrl }}">
                 </div>
-                <div class="image-caption">📷 عکس جواهر</div>
+                <div class="image-caption">📷 عکس کالای لوکس</div>
                 <div class="image-description">
                     {{ $certificate->product_name }}
                     @if($imageExtension)
@@ -416,18 +416,18 @@
                                 @endif
                             </small>
                         @else
-                            عکس جواهر بارگذاری نشده است
+                            عکس کالای لوکس بارگذاری نشده است
                         @endif
                     </div>
                 </div>
-                <div class="image-caption">📷 عکس جواهر</div>
+                <div class="image-caption">📷 عکس کالای لوکس</div>
                 <div class="image-description">{{ $certificate->product_name }}</div>
             @endif
         </div>
         
         <!-- اطلاعات شناسنامه -->
         <div class="info-section">
-            <div class="section-title">مشخصات جواهر</div>
+            <div class="section-title">مشخصات کالای لوکس</div>
             <div class="info-grid">
                 <div class="info-item">
                     <span class="info-label">شماره سریال:</span>
@@ -564,7 +564,7 @@
         <div class="stamp" id="stamp">
             <div class="stamp-text">
                 مهر و امضا<br>
-                <small style="font-size: 11px;">مدیریت جواهرات</small>
+                <small style="font-size: 11px;">مدیریت کالای لوکس</small>
             </div>
         </div>
         
@@ -590,9 +590,9 @@
         <!-- پانویس -->
         <div style="margin-top: 30px; font-size: 11px; color: #7f8c8d; text-align: center; border-top: 1px solid #eee; padding-top: 15px;">
             @if($hasImage)
-                <p><span class="icon icon-camera"></span> عکس جواهر ضمیمه شده است. برای مشاهده با کیفیت بالا، فایل اصلی را دانلود کنید.</p>
+                <p><span class="icon icon-camera"></span> عکس کالای لوکس ضمیمه شده است. برای مشاهده با کیفیت بالا، فایل اصلی را دانلود کنید.</p>
             @endif
-            <p>این شناسنامه به منزله گواهی اصالت و مالکیت جواهر می‌باشد. هرگونه کپی‌برداری و جعل پیگرد قانونی دارد.</p>
+            <p>این شناسنامه به منزله گواهی اصالت و مالکیت کالای لوکس می‌باشد. هرگونه کپی‌برداری و جعل پیگرد قانونی دارد.</p>
             <p>تاریخ چاپ: {{ date('Y/m/d ساعت H:i') }}</p>
             <p style="font-size: 10px; color: #95a5a6; margin-top: 5px;">
                 شماره سریال برای تأیید اصالت: <strong>{{ $certificate->serial_number }}</strong> | 
@@ -748,7 +748,7 @@
             @if($hasImage && $imageUrl)
                 try {
                     const imageUrl = '{{ $imageUrl }}';
-                    const filename = 'جواهر-{{ $certificate->serial_number }}-{{ $certificate->product_name }}.{{ $imageExtension }}';
+                    const filename = 'کالای لوکس-{{ $certificate->serial_number }}-{{ $certificate->product_name }}.{{ $imageExtension }}';
                     const cleanedFilename = filename.replace(/[^\w\-. ]/g, '_');
                     
                     const link = document.createElement('a');
@@ -795,7 +795,7 @@
                 downloadBtn.disabled = false;
                 downloadBtn.style.opacity = '1';
                 downloadBtn.style.cursor = 'pointer';
-                downloadBtn.title = 'دانلود عکس جواهر';
+                downloadBtn.title = 'دانلود عکس کالای لوکس';
             }
         }
         
@@ -832,7 +832,7 @@
                             <span class="icon icon-bug"></span> تست آدرس
                         </button>
                     </div>
-                    <div class="image-caption">📷 عکس جواهر</div>
+                    <div class="image-caption">📷 عکس کالای لوکس</div>
                     <div class="image-description">{{ $certificate->product_name }}</div>
                 `;
             }
