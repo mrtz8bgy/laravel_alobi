@@ -2,15 +2,15 @@
 :root {
     /* Ø±Ù†Ú¯â€ŒÙ‡Ø§ÛŒ Ø§ØµÙ„ÛŒ Ø·Ù„Ø§ÛŒÛŒ - Ø¨Ø±Ø§ÛŒ Ø¬ÙˆØ§Ù‡Ø±Ø§Øª */
     --gold-primary: #d4af37;      /* Ø·Ù„Ø§ÛŒÛŒ Ú©Ù„Ø§Ø³ÛŒÚ© */
-    --gold-dark: #b8960c;         /* Ø·Ù„Ø§ÛŒÛŒ ØªÛŒØ±Ù‡ */
-    --gold-light: #f5e18b;        /* Ø·Ù„Ø§ÛŒÛŒ Ø±ÙˆØ´Ù† */
+    --gold-dark: #050505;         /* Ø·Ù„Ø§ÛŒÛŒ ØªÛŒØ±Ù‡ */
+    --gold-light: #e8d090;        /* Ø·Ù„Ø§ÛŒÛŒ Ø±ÙˆØ´Ù† */
     --gold-gradient: linear-gradient(135deg, #d4af37 0%, #b8960c 100%);
     
     /* Ø±Ù†Ú¯â€ŒÙ‡Ø§ÛŒ Ø¢Ø¨ÛŒ Ø³Ù„Ø·Ù†ØªÛŒ - Ù¾Ø³â€ŒØ²Ù…ÛŒÙ†Ù‡ */
-    --navy-dark: #0a1428;         /* Ø¢Ø¨ÛŒ Ø®ÛŒÙ„ÛŒ ØªÛŒØ±Ù‡ */
-    --navy-primary: #121e3a;      /* Ø¢Ø¨ÛŒ Ø§ØµÙ„ÛŒ */
-    --navy-light: #1a2a4f;        /* Ø¢Ø¨ÛŒ Ø±ÙˆØ´Ù†â€ŒØªØ± */
-    --navy-gradient: linear-gradient(135deg, #121e3a 0%, #0a1428 100%);
+    --navy-dark: #f9f9f9;         /* Ø¢Ø¨ÛŒ Ø®ÛŒÙ„ÛŒ ØªÛŒØ±Ù‡ */
+    --navy-primary: #ffffff;      /* Ø¢Ø¨ÛŒ Ø§ØµÙ„ÛŒ */
+    --navy-light: #ffffff;        /* Ø¢Ø¨ÛŒ Ø±ÙˆØ´Ù†â€ŒØªØ± */
+    --navy-gradient: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
     
     /* Ø±Ù†Ú¯â€ŒÙ‡Ø§ÛŒ Ø¬ÙˆØ§Ù‡Ø±ÛŒ */
     --ruby: #e31b23;              /* ÛŒØ§Ù‚ÙˆØª Ø³Ø±Ø® */
@@ -361,7 +361,7 @@ input:checked + .slider {
 .btn-back-to-top {
     background: var(--gold-gradient);
     color: var(--navy-dark);
-    border-radius: 50%;
+    border-radius: 0;
     width: 45px;
     height: 45px;
     display: flex;
@@ -397,7 +397,7 @@ input:checked + .slider {
 }
 .slick-prev, .slick-next {
     background: rgba(212, 175, 55, 0.8);
-    border-radius: 50%;
+    border-radius: 0;
 }
 .slick-prev:hover, .slick-next:hover {
     background: var(--gold-gradient);
@@ -527,7 +527,7 @@ input:checked + .slider {
 /* Ø§Ù†ØªØ®Ø§Ø¨ Ø±Ù†Ú¯ Ùˆ Ø³Ø§ÛŒØ² */
 .color-option {
     border: 2px solid transparent;
-    border-radius: 50%;
+    border-radius: 0;
     transition: all 0.3s;
 }
 .color-option.selected {

@@ -44,21 +44,21 @@
 /* تم سرمه‌ای، طلایی و سفید - طراحی لوکس و حرفه‌ای */
 /* ============================================ */
 :root {
-    --color-navy: #0f0e1a;
-    --color-navy-light: #1a1735;
-    --color-navy-card: #1e1b3a;
+    --color-navy: #ffffff;
+    --color-navy-light: #f8f9fa;
+    --color-navy-card: #ffffff;
     --color-gold: #c5a059;
     --color-gold-light: #f0d080;
     --color-gold-glow: #e8c547;
-    --color-white: #ffffff;
-    --color-white-smoke: #f5f5f7;
+    --color-white: #050505;
+    --color-white-smoke: #f4f4f4;
     --color-gray: #b0aec0;
     --color-gray-dark: #6b6980;
     --color-shadow: rgba(197,160,89, 0.15);
     --shadow-gold: 0 4px 25px rgba(197,160,89, 0.25);
     --shadow-gold-hover: 0 8px 40px rgba(197,160,89, 0.4);
     --gradient-gold: linear-gradient(135deg, #c5a059 0%, #f0d080 50%, #b8962e 100%);
-    --gradient-navy: linear-gradient(135deg, #0f0e1a 0%, #1a1735 50%, #2a2555 100%);
+    --gradient-navy: linear-gradient(135deg, #ffffff 0%, #f4f7f6 100%);
     --font-base: 'Vazirmatn', 'Segoe UI', sans-serif;
 }
 
@@ -69,13 +69,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: var(--font-base);
-    background: #020544;
-    color: var(--color-white);
-    line-height: 1.8;
-    direction: rtl;
-}
+body { font-family: var(--font-base); background: #ffffff; color: #050505; line-height: 1.8; direction: rtl; }
 
 a {
     color: var(--color-gold);
@@ -135,7 +129,7 @@ a:hover {
     align-items: center;
     gap: 12px;
     background:var(--gradient-gold);
-    color: var(--color-navy);
+    color: #050505;
     padding: 14px 28px;
     font-weight: 700;
     font-size: 16px;
@@ -151,7 +145,7 @@ a:hover {
 
 .mega-menu-btn:hover {
     background: var(--color-gold-light);
-    color: var(--color-navy);
+    color: #050505;
 }
 
 .mega-menu-btn i {
@@ -165,7 +159,7 @@ a:hover {
     right: 0 !important;
     left: auto !important;
     width: min(360px, 92vw);
-    background: var(--color-navy-card);
+    background: #ffffff; border: 1px solid #eeeeee;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -249,7 +243,7 @@ a:hover {
     right: calc(100% + 4px) !important;
     left: auto !important;
     width: min(720px, calc(100vw - 390px));
-    background: var(--color-navy-card);
+    background: #ffffff; border: 1px solid #eeeeee;
     border-radius: 0;
     box-shadow: 0 22px 70px rgba(0, 0, 0, 0.92);
     opacity: 0;
@@ -423,7 +417,7 @@ a:hover {
 
 .mega-menu-list::-webkit-scrollbar-track,
 .mega-sub-menu::-webkit-scrollbar-track {
-    background: var(--color-navy);
+    background: #ffffff;
     border-radius: 0;
 }
 
@@ -588,7 +582,7 @@ a:hover {
 .slide-btn-custom {
     display: inline-block;
     background: var(--gradient-gold);
-    color: var(--color-navy);
+    color: #050505;
     padding: 14px 38px;
     border-radius: 0;
     text-decoration: none;
@@ -602,7 +596,7 @@ a:hover {
 .slide-btn-custom:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: var(--shadow-gold-hover);
-    color: var(--color-navy);
+    color: #050505;
 }
 
 /* استایل‌های Slick برای اسلایدر */
@@ -639,7 +633,7 @@ a:hover {
 .fullwidth-slider-section .slick-prev:hover,
 .fullwidth-slider-section .slick-next:hover {
     background: var(--gradient-gold);
-    color: var(--color-navy);
+    color: #050505;
 }
 
 .fullwidth-slider-section .slick-prev::before,
@@ -663,7 +657,7 @@ a:hover {
 
 .fullwidth-slider-section .slick-prev:hover::after,
 .fullwidth-slider-section .slick-next:hover::after {
-    color: var(--color-navy);
+    color: #050505;
 }
 
 /* دات‌های اسلایدر */
@@ -704,7 +698,7 @@ a:hover {
 /* فلش دیل - اسکرول افقی زیر بنر */
 /* ============================================ */
 .flash-deal-section {
-    background: var(--color-navy-card);
+    background: #ffffff; border: 1px solid #eeeeee;
     padding: 15px 0;
     border-top: 1px solid rgba(197,160,89, 0.1);
     border-bottom: 1px solid rgba(197,160,89, 0.1);
@@ -770,7 +764,7 @@ a:hover {
 }
 
 .flash-deal-scroll::-webkit-scrollbar-track {
-    background: var(--color-navy);
+    background: #ffffff;
     border-radius: 0;
 }
 
@@ -781,7 +775,7 @@ a:hover {
 
 .flash-deal-item-horizontal {
     flex: 0 0 140px;
-    background: var(--color-navy);
+    background: #ffffff;
     border-radius: 0;
     padding: 10px;
     text-align: center;
@@ -831,7 +825,7 @@ a:hover {
     border-radius: 0;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: var(--color-navy-card);
+    background: #ffffff; border: 1px solid #eeeeee;
     border: 1px solid rgba(197,160,89, 0.12);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
@@ -846,7 +840,7 @@ a:hover {
     position: relative;
     height: 220px;
     overflow: hidden;
-    background: var(--color-navy);
+    background: #ffffff;
 }
 
 .card-image img {
@@ -935,7 +929,7 @@ a:hover {
 .mobile-icons-section {
     width: 100%;
     margin-bottom: 40px;
-    background: var(--gradient-navy);
+    background: linear-gradient(135deg, #ffffff 0%, #f4f7f6 100%);
     padding: 30px 0;
     border-radius: 0;
     position: relative;
@@ -1085,7 +1079,7 @@ a:hover {
 
 .categories-scroll-wrapper::-webkit-scrollbar-track,
 .brands-scroll-wrapper::-webkit-scrollbar-track {
-    background: var(--color-navy);
+    background: #ffffff;
     border-radius: 0;
 }
 
@@ -1114,7 +1108,7 @@ a:hover {
 .category-card-horizontal,
 .brand-card-horizontal {
     display: block;
-    background: var(--color-navy-card);
+    background: #ffffff; border: 1px solid #eeeeee;
     border-radius: 0;
     padding: 18px 12px;
     text-align: center;
@@ -1196,7 +1190,7 @@ a:hover {
     transform: translateY(-50%);
     width: 38px;
     height: 38px;
-    background: var(--color-navy-card);
+    background: #ffffff; border: 1px solid #eeeeee;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1214,7 +1208,7 @@ a:hover {
 }
 
 .scroll-btn:hover i {
-    color: var(--color-navy);
+    color: #050505;
 }
 
 .scroll-btn i {
@@ -1235,7 +1229,7 @@ a:hover {
 /* باکس‌های سفید داخل سایت */
 /* ============================================ */
 .bg-light.shadow-sm.rounded-3 {
-    background: var(--color-navy-card) !important;
+    background: #ffffff; border: 1px solid #eeeeee !important;
     border-radius: 0;!important;
     border: 1px solid rgba(197,160,89, 0.08);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
@@ -1507,7 +1501,7 @@ a:hover {
 }
 
 .c-scrollbar::-webkit-scrollbar-track {
-    background: var(--color-navy);
+    background: #ffffff;
     border-radius: 0;
 }
 

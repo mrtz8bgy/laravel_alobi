@@ -11,21 +11,21 @@
 
 :root {
     /* رنگ‌ها - طلایی و آبی سلطنتی برای جواهرات */
-    --gold: #D4AF37;
-    --gold-dark: #B8960C;
-    --gold-light: #F5E18B;
-    --navy: #121E3A;
-    --navy-dark: #0A1428;
-    --navy-light: #1A2A4F;
-    --bg: #121E3A;
-    --text: #F5E18B;
-    --muted: #A0A8B8;
-    --surface: #1A2A4F;
-    --border: rgba(212, 175, 55, 0.2);
-    --elev-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    --gold: #c5a059;
+    --gold-dark: #050505;
+    --gold-light: #e8d090;
+    --navy: #ffffff;
+    --navy-dark: #f9f9f9;
+    --navy-light: #ffffff;
+    --bg: #ffffff;
+    --text: #050505;
+    --muted: #757575;
+    --surface: #ffffff;
+    --border: #eeeeee;
+    --elev-shadow: 0 4px 15px rgba(0,0,0,0.05);
 
     /* فواصل و اندازه‌ها */
-    --radius: 8px;
+    --radius: 0;
     --container-max: 98%;
 }
 
@@ -431,7 +431,7 @@ input:focus, textarea:focus, select:focus {
     max-height: 100%;
     width: auto;
     max-width: 90%;
-    border-radius: 50%;
+    border-radius: 0;
 }
 
 .product-card-2 .price-box {
@@ -669,7 +669,7 @@ input:focus, textarea:focus, select:focus {
     border-radius: 0;
 }
 ::-webkit-scrollbar-thumb {
-    background: #121e3a;
+    background: #ffffff;
     border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {

@@ -4,8 +4,8 @@
 
 <style>
 :root {
-    --navy-dark: #0a0a2a;
-    --navy-light: #1a1a4a;
+    --navy-dark: #ffffff;
+    --navy-light: #f8f9fa;
     --gold: #c5a059;
     --gold-light: #e8d090;
     --gold-dark: #B8960F;
@@ -19,7 +19,7 @@
 
 /* هدر صفحه با رنگ سرمه‌ای */
 .page-header {
-    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     padding: 60px 0;
     text-align: center;
     position: relative;
@@ -66,7 +66,7 @@
 /* منوی سمت راست با رنگ‌های طلایی و سرمه‌ای */
 /* ============================================ */
 .all-category-menu {
-    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 0;
     box-shadow: var(--shadow-gold);
     overflow: hidden;
@@ -169,7 +169,7 @@
 .all-category-menu ul li:hover .default-icon,
 .all-category-menu ul li.active .cat-name,
 .all-category-menu ul li:hover .cat-name {
-    color: var(--navy-dark);
+    color: #ffffff;
 }
 
 .all-category-menu ul li.active .menu-icon img,
@@ -216,7 +216,7 @@
     justify-content: center;
     width: 55px;
     height: 55px;
-    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 0;
     margin-left: 15px;
     border: 1px solid var(--gold);
@@ -243,7 +243,7 @@
 }
 
 .category-name a {
-    color: var(--navy-dark);
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -260,7 +260,7 @@
     border-radius: 0;
     font-size: 13px;
     font-weight: 600;
-    color: var(--navy-dark);
+    color: #ffffff;
 }
 
 .category-badge i {
@@ -290,7 +290,7 @@
 }
 
 .subcategory-title a {
-    color: var(--navy-dark);
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -339,7 +339,7 @@
 /* استایل دکمه طلایی */
 .btn-gold {
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-    color: var(--navy-dark);
+    color: #ffffff;
     border: none;
     border-radius: 0;
     padding: 8px 25px;
@@ -350,7 +350,7 @@
 .btn-gold:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(197,160,89, 0.4);
-    color: var(--navy-dark);
+    color: #ffffff;
 }
 
 .text-gold {
