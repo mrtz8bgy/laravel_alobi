@@ -1234,7 +1234,7 @@ a:hover {
 /* ============================================ */
 /* باکس‌های سفید داخل سایت */
 /* ============================================ */
-.bg-white.shadow-sm.rounded-3 {
+.bg-light.shadow-sm.rounded-3 {
     background: var(--color-navy-card) !important;
     border-radius: 16px !important;
     border: 1px solid rgba(212, 175, 55, 0.08);
@@ -1947,7 +1947,7 @@ a:hover {
 <!-- ============================================ -->
 <section class="mb-5">
     <div class="container">
-        <div class="px-3 py-4 p-md-4 bg-white shadow-sm rounded-3">
+        <div class="px-3 py-4 p-md-4 bg-light shadow-sm rounded-3">
             <div class="section-title-1">
                 <h3><i class="la la-star"></i> {{__('محصولات ویژه')}}</h3>
                 <ul class="inline-links">
@@ -1998,7 +1998,7 @@ a:hover {
 <!-- ============================================ -->
 <section class="mb-5">
     <div class="container">
-        <div class="px-3 py-4 p-md-4 bg-white shadow-sm rounded-3">
+        <div class="px-3 py-4 p-md-4 bg-light shadow-sm rounded-3">
             <div class="section-title-1">
                 <h3><i class="la la-fire"></i> {{__('پرفروش‌ترین محصولات')}}</h3>
                 <ul class="inline-links">
@@ -2052,7 +2052,7 @@ a:hover {
 <!-- ============================================ -->
 <section class="mb-5">
     <div class="container">
-        <div class="px-3 py-4 p-md-4 bg-white shadow-sm rounded-3">
+        <div class="px-3 py-4 p-md-4 bg-light shadow-sm rounded-3">
             <div class="section-title-1">
                 <h3><i class="la la-clock-o"></i> {{__('جدیدترین محصولات')}}</h3>
                 <ul class="inline-links">
@@ -2106,7 +2106,7 @@ a:hover {
 <!-- ============================================ -->
 <section class="mb-5">
     <div class="container">
-        <div class="px-3 py-4 p-md-4 bg-white shadow-sm rounded-3">
+        <div class="px-3 py-4 p-md-4 bg-light shadow-sm rounded-3">
             <div class="section-title-1">
                 <h3><i class="la la-gift"></i> {{__('تخفیف ویژه')}}</h3>
                 <ul class="inline-links">
@@ -2175,7 +2175,7 @@ a:hover {
    @if (count($customer_products) > 0)
        <section class="mb-5">
            <div class="container">
-               <div class="px-3 py-4 p-md-4 bg-white shadow-sm rounded-3">
+               <div class="px-3 py-4 p-md-4 bg-light shadow-sm rounded-3">
                    <div class="section-title-1">
                        <h3><i class="la la-bullhorn"></i> {{__('تبلیغات')}}</h3>
                        <ul class="inline-links">
@@ -2275,6 +2275,38 @@ a:hover {
     </div>
 </section>
 
+
+<!-- Super Deal Section -->
+<section class="d-super-deals" style="padding: 40px 0; background: linear-gradient(135deg, #ffffff 0%, #fdfbf5 100%); margin: 40px 0; border-top: 1px solid rgba(212,175,55,0.2); border-bottom: 1px solid rgba(212,175,55,0.2);">
+    <div class="container">
+        <div class="d-sd-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h2 style="color: #111111; margin: 0; font-weight: 800; font-size: 26px;"><i class="la la-bolt" style="color: var(--d-gold-dark);"></i> پیشنهاد شگفت‌انگیز</h2>
+                <div class="d-timer" style="background: #ffffff; color: #111111; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 14px; letter-spacing: 2px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                    12 : 45 : 30
+                </div>
+            </div>
+            <a href="{{ route('products.todays_deal') }}" style="color: #111111; font-weight: 700; font-size: 15px; text-decoration: none;">مشاهده همه <i class="la la-angle-left"></i></a>
+        </div>
+        <div class="d-sd-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px;">
+            @php $todays_deal_products = filter_products(\App\Product::where('todays_deal', 1)->where('published', 1))->limit(4)->get(); @endphp
+            @foreach($todays_deal_products as $key => $product)
+                <a href="{{ route('product', $product->slug) }}" class="d-sd-card" style="background: #ffffff; border-radius: 16px; padding: 15px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); position: relative; border: 1px solid rgba(0,0,0,0.05); display: block; text-decoration: none; transition: transform 0.3s;">
+                    @if(home_discount_percentage($product->id) > 0)
+                        <span style="position: absolute; top: 10px; right: 10px; background: var(--d-gold-dark); color: #ffffff; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 2;">-{{ home_discount_percentage($product->id) }}%</span>
+                    @endif
+                    <img src="{{ uploaded_asset($product->thumbnail_img) }}" alt="{{ __($product->name) }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+                    <h4 style="font-size: 15px; color: #111111; margin-bottom: 10px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ __($product->name) }}</h4>
+                    @if(home_base_price($product->id) != home_discounted_base_price($product->id))
+                        <div style="text-decoration: line-through; color: var(--d-text-muted); font-size: 13px;">{{ home_base_price($product->id) }}</div>
+                    @endif
+                    <div style="color: var(--d-gold-dark); font-size: 18px; font-weight: 800;">{{ home_discounted_base_price($product->id) }}</div>
+                </a>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 <!-- بخش دسته‌بندی‌های کالا و خدمات لوکس -->
 <!-- ============================================ -->
 <section class="d-categories">
@@ -2343,7 +2375,7 @@ a:hover {
                 <h2 style="font-size:clamp(24px,3vw,38px); font-weight:800; margin:10px 0 20px; line-height:1.4;">
                     هر کالا، یک <span style="background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">شناسنامه معتبر</span>؛ آرامش خاطر شما
                 </h2>
-                <p style="color:var(--d-gray-300); font-size:15px; line-height:2.1; margin-bottom:0;">
+                <p style="color:var(--d-text-muted); font-size:15px; line-height:2.1; margin-bottom:0;">
                     گواهی اصالت دیجیتال Alobi، سندی رسمی و غیرقابل جعل است که تمامی مشخصات فنی، جزئیات دقیق، متریال، برند و تاریخچه مالکیت کالا را در خود جای می‌دهد. هرگونه نقل و انتقال، تعمیر یا تغییر وضعیت در پرونده کالا به صورت دائمی ثبت می‌شود.
                 </p>
                 <div class="d-trust-features">
@@ -2415,7 +2447,7 @@ a:hover {
             <h2 style="font-size:clamp(22px,3vw,34px); font-weight:800; margin:0 0 12px;">
                 همین حالا <span style="background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">اصالت</span> کالا خود را بررسی کنید
             </h2>
-            <p style="color:var(--d-gray-300); margin:0;">
+            <p style="color:var(--d-text-muted); margin:0;">
                 با وارد کردن شماره سریال شناسنامه، از مشخصات، اصالت و وضعیت کالا خود مطلع شوید.
             </p>
             <form method="GET" action="{{ route('jewelry.certificates.verify_page') }}" class="d-verify-form">
