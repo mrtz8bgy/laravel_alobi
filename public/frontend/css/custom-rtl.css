@@ -57,7 +57,7 @@ a:hover {
     color: var(--navy-dark);
     font-weight: 600;
     padding: 10px 24px;
-    border-radius: 8px;
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 .btn-primary:hover {
@@ -147,7 +147,7 @@ section.home-banner-area {
 /* Ø³Ø§ÛŒØ¯Ø¨Ø§Ø± Ø¯Ø³ØªÙ‡â€ŒØ¨Ù†Ø¯ÛŒ */
 .category-sidebar {
     background-color: var(--navy-primary);
-    /*! border-radius: 12px; */
+    /*! border-radius: 0; */
     overflow: hidden;
 }
 .category-sidebar .all-category {
@@ -185,7 +185,7 @@ section.home-banner-area {
 .product-card-2 {
     background: var(--navy-primary);
     border: 1px solid rgba(212, 175, 55, 0.2);
-    border-radius: 12px;
+    border-radius: 0;
     transition: all 0.3s;
     height: 350px;
 }
@@ -234,7 +234,7 @@ section.home-banner-area {
 /* ÙÙ„Ø´ Ø¯ÛŒÙ„ */
 .flash-deal-box {
     background: var(--navy-primary);
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
 }
 .flash-deal-box .title {
@@ -245,7 +245,7 @@ section.home-banner-area {
 }
 .flash-deal-item {
     background: var(--navy-light);
-    border-radius: 10px;
+    border-radius: 0;
 }
 .flash-deal-item .price {
     color: var(--gold-primary);
@@ -257,7 +257,7 @@ section.home-banner-area {
 /* Ø¨Ù†Ø±Ù‡Ø§ÛŒ ØªØ¨Ù„ÛŒØºØ§ØªÛŒ */
 .mobile-icons-section {
     background: var(--navy-gradient);
-    border-radius: 12px;
+    border-radius: 0;
 }
 
 .mobile-icon-circle {
@@ -351,7 +351,7 @@ input:checked + .slider {
 /* Ø§Ø³Ú©Ø±ÙˆÙ„ Ø¨Ø§Ø± */
 .c-scrollbar::-webkit-scrollbar-thumb {
     background: var(--gold-primary);
-    border-radius: 10px;
+    border-radius: 0;
 }
 .c-scrollbar::-webkit-scrollbar-track {
     background: var(--navy-light);
@@ -463,7 +463,7 @@ input:checked + .slider {
 }
 .cart-total {
     background: var(--navy-light);
-    border-radius: 12px;
+    border-radius: 0;
 }
 
 /* Ù…ÙˆØ¯Ø§Ù„ */
@@ -539,7 +539,7 @@ input:checked + .slider {
 .payment-option {
     background: var(--navy-light);
     border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 10px;
+    border-radius: 0;
     transition: all 0.3s;
 }
 .payment-option.selected {
