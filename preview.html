@@ -14,6 +14,8 @@
 
 
 
+
+
 <style>
 /* ==========================================================================
    DRIKANA — Luxury Gold & Jewelry Marketplace
@@ -29,11 +31,11 @@
     --d-gold-light: #ff758c;
     --d-gold-dark: #b8892a;
     --d-gold-soft: #e8c968;
-    --d-navy-900: #fbfbfd;
-    --d-navy-800: #f4f4f7;
-    --d-navy-700: #ffffff;
-    --d-navy-600: #ececf1;
-    --d-navy-500: #272d66;
+    --d-navy-900: #041f14;
+    --d-navy-800: #062b1d;
+    --d-navy-700: #0a3a28;
+    --d-navy-600: #0f4d36;
+    --d-navy-500: #156346;
     --d-cream: #fdf7e6;
     --d-white: #111111;
     --d-gray-100: #f5f3f0;
@@ -48,8 +50,8 @@
     /* گرادیان‌ها */
     --grad-gold: var(--grad-gold);
     --grad-gold-soft: linear-gradient(135deg, #f4d47c 0%, #d4af37 100%);
-    --grad-navy: linear-gradient(135deg, #07091a 0%, #1a1f4d 100%);
-    --grad-dark: linear-gradient(180deg, #0b0f28 0%, #07091a 100%);
+    --grad-navy: linear-gradient(135deg, #041f14 0%, #0f4d36 100%);
+    --grad-dark: linear-gradient(180deg, #062b1d 0%, #041f14 100%);
 
     /* سایه‌ها */
     --shadow-sm: 0 2px 8px rgba(0,0,0,.25);
@@ -1938,81 +1940,91 @@ a, .link a { color: var(--d-gold); }
 }
 
 
+
+/* ==========================================================================
+   PURE ROYAL LUXURY THEME (Rolex/Harrods Style)
+   Ivory/Cream Background + Royal Deep Green Elements + Gold Accents
+   ========================================================================== */
+
 /* Overrides for Pure Light Theme Elements */
-.d-header { background: #ffffff !important; border-bottom: 1px solid rgba(0,0,0,0.05); }
-.d-topbar { background: #f8f9fa !important; border-bottom: 1px solid rgba(0,0,0,0.05); color: var(--d-text-muted) !important; }
-.d-topbar a, .d-topbar span, .d-topbar i { color: var(--d-text-muted) !important; }
+.d-header { background: #041f14 !important; border-bottom: 2px solid var(--d-gold); }
+.d-topbar { background: #02120b !important; border-bottom: 1px solid rgba(212,175,55,0.1); color: #c5c3c6 !important; }
+.d-topbar a, .d-topbar span, .d-topbar i { color: #c5c3c6 !important; }
 .d-topbar a:hover { color: var(--d-gold) !important; }
 
-.d-mainbar .brand-name { /* color override removed for better contrast if needed, handled by classes */ }
-.d-mainbar .brand-tag { color: var(--d-text-muted) !important; }
-.d-logo-mark { /* color override removed for better contrast if needed, handled by classes */ }
+.d-mainbar .brand-name { color: var(--d-gold) !important; background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.d-mainbar .brand-tag { color: var(--d-gold-soft) !important; }
+.d-logo-mark { color: #041f14 !important; background: var(--grad-gold) !important; }
 
-.d-header-icons .d-icon-btn { color: #333333 !important; background: #f8f9fa !important; border: 1px solid rgba(0,0,0,0.05); }
-.d-header-icons .d-icon-btn i { color: #333333 !important; }
-.d-header-icons .d-icon-btn:hover { background: var(--grad-gold) !important; /* color override removed for better contrast if needed, handled by classes */ border-color: transparent !important; }
-.d-header-icons .d-icon-btn:hover i { /* color override removed for better contrast if needed, handled by classes */ }
+.d-header-icons .d-icon-btn { color: var(--d-gold) !important; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(212,175,55,0.3); }
+.d-header-icons .d-icon-btn i { color: var(--d-gold) !important; }
+.d-header-icons .d-icon-btn:hover { background: var(--grad-gold) !important; color: #041f14 !important; border-color: transparent !important; }
+.d-header-icons .d-icon-btn:hover i { color: #041f14 !important; }
 
-.d-nav { background: #ffffff !important; border-top: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-.d-nav-links a { color: #333333 !important; font-weight: 600; }
-.d-nav-links a:hover, .d-nav-links li.active a { color: var(--d-gold-dark) !important; }
-.d-nav-links a i { color: var(--d-gold-dark) !important; }
+.d-nav { background: #062b1d !important; border-top: 1px solid rgba(212,175,55,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+.d-nav-links a { color: #fdfbf7 !important; font-weight: 600; }
+.d-nav-links a:hover, .d-nav-links li.active a { color: var(--d-gold) !important; }
+.d-nav-links a i { color: var(--d-gold) !important; }
 
 .d-hero { 
-    background: linear-gradient(135deg, #ffffff 0%, #f4f7f6 100%) !important; 
-    color: var(--d-text-main) !important; 
+    background: linear-gradient(135deg, #041f14 0%, #062b1d 100%) !important; 
+    color: #fdfbf7 !important; 
     position:relative; 
     overflow:hidden; 
+    border-bottom: 2px solid var(--d-gold);
 }
-.d-hero h1, .d-hero p { color: var(--d-text-main) !important; }
-.d-hero-badge { background: #ffffff !important; color: var(--d-text-main) !important; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.d-hero h1, .d-hero p { color: #fdfbf7 !important; }
+.d-hero-badge { background: rgba(212,175,55,0.1) !important; color: var(--d-gold) !important; border: 1px solid rgba(212,175,55,0.3); }
 
-.d-footer { background: #f8f9fa !important; color: var(--d-text-main) !important; border-top: 1px solid rgba(0,0,0,0.08); }
-.d-footer h5 { /* color override removed for better contrast if needed, handled by classes */ font-weight: 800; border-bottom: 2px solid var(--d-gold); display: inline-block; padding-bottom: 8px; margin-bottom: 20px;}
-.d-footer p, .d-footer a, .d-footer li span { color: var(--d-text-muted) !important; }
-.d-footer a:hover { color: var(--d-gold-dark) !important; }
-.d-footer-bottom { background: #eeeeee !important; color: var(--d-text-muted) !important; }
-.d-footer-bottom .pay-methods span { background: #ffffff !important; border: 1px solid #ddd; color: #555 !important; }
+.d-footer { background: #041f14 !important; color: #c5c3c6 !important; border-top: 3px solid var(--d-gold); }
+.d-footer h5 { color: var(--d-gold) !important; font-weight: 800; border-bottom: 2px solid var(--d-gold); display: inline-block; padding-bottom: 8px; margin-bottom: 20px;}
+.d-footer p, .d-footer a, .d-footer li span { color: #c5c3c6 !important; }
+.d-footer a:hover { color: var(--d-gold-light) !important; }
+.d-footer-bottom { background: #02120b !important; color: #8e8b95 !important; }
+.d-footer-bottom .pay-methods span { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(212,175,55,0.2); color: var(--d-gold) !important; }
 
-.d-footer-social a { background: #ffffff; border: 1px solid #ddd; color: #555; }
-.d-footer-social a:hover { background: var(--grad-gold); color: #fff; border-color: transparent; }
+.d-footer-social a { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); color: var(--d-gold); }
+.d-footer-social a:hover { background: var(--grad-gold); color: #041f14; border-color: transparent; }
 
-.section-heading h2 { /* color override removed for better contrast if needed, handled by classes */ }
-.section-heading p { color: var(--d-text-muted) !important; }
+/* The main body needs to be Ivory/Cream for text readability */
+body { background: #fdfbf7 !important; color: #041f14 !important; }
+
+.section-heading h2 { color: #041f14 !important; }
+.section-heading p { color: #586b66 !important; }
 
 .d-service-card, .d-cat-card, .d-card-lux { 
     background: #ffffff !important; 
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04) !important; 
-    border: 1px solid rgba(0,0,0,0.05) !important; 
-    color: var(--d-text-main) !important; 
+    box-shadow: 0 4px 20px rgba(4,31,20,0.06) !important; 
+    border: 1px solid rgba(212,175,55,0.2) !important; 
+    color: #041f14 !important; 
 }
-.d-service-card h5, .d-cat-card h4 { /* color override removed for better contrast if needed, handled by classes */ font-weight: 700; }
-.d-service-card p { color: var(--d-text-muted) !important; }
-.d-service-icon { background: #f8f9fa; border: 1px solid #eee; }
+.d-service-card h5, .d-cat-card h4 { color: #041f14 !important; font-weight: 800; }
+.d-service-card p { color: #586b66 !important; }
+.d-service-icon { background: #fdfbf7; border: 1px solid rgba(212,175,55,0.3); }
 
-.d-super-deals { background: linear-gradient(135deg, #ffffff 0%, #fdfbf5 100%) !important; border-top: 1px solid rgba(212,175,55,0.2) !important; border-bottom: 1px solid rgba(212,175,55,0.2) !important;}
-.d-sd-header h2, .d-sd-header a { /* color override removed for better contrast if needed, handled by classes */ }
+.d-super-deals { background: linear-gradient(135deg, rgba(212,175,55,0.05) 0%, rgba(4,31,20,0.05) 100%) !important; border-top: 1px solid rgba(212,175,55,0.3) !important; border-bottom: 1px solid rgba(212,175,55,0.3) !important;}
+.d-sd-header h2, .d-sd-header a { color: #041f14 !important; }
 .d-sd-header h2 i { color: var(--d-gold-dark); }
-.d-timer { background: #ffffff !important; color: var(--d-text-main) !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; border: 1px solid #eee; }
-.d-banner-card { box-shadow: 0 10px 30px rgba(0,0,0, 0.08); }
-.d-banner-card:hover { box-shadow: 0 15px 40px rgba(0,0,0, 0.15); }
+.d-timer { background: #041f14 !important; color: var(--d-gold) !important; box-shadow: 0 4px 15px rgba(212,175,55,0.2) !important; border: 1px solid var(--d-gold); }
+.d-sd-card { background: #ffffff !important; border: 1px solid rgba(212,175,55,0.15) !important; }
+.d-sd-card h4 { color: #041f14 !important; }
+.d-sd-card .price-old { color: #8e8b95 !important; }
+.d-sd-card .price-new { color: var(--d-gold-dark) !important; }
+.d-banner-card { box-shadow: 0 10px 30px rgba(4,31,20, 0.15); border: 2px solid rgba(212,175,55,0.1); }
+.d-banner-card:hover { box-shadow: 0 15px 40px rgba(4,31,20, 0.25); border-color: var(--d-gold); }
 
 /* Verify section */
-.d-verify-cta { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-top: 1px solid #eee; }
-.d-verify-box { background: #ffffff; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid rgba(212,175,55,0.2); }
-.d-verify-box h2 { color: #111111; }
-.d-verify-box p { color: var(--d-text-muted); }
-.d-verify-form { background: #f8f9fa; border: 1px solid #eee; }
-.d-verify-form input { color: var(--d-text-main) !important; }
-.d-verify-form input::placeholder { color: #aaa; }
+.d-verify-cta { background: linear-gradient(135deg, #fdfbf7 0%, #ffffff 100%); border-top: 1px solid rgba(212,175,55,0.2); }
+.d-verify-box { background: #ffffff; box-shadow: 0 10px 40px rgba(4,31,20,0.08); border: 1px solid rgba(212,175,55,0.3); }
+.d-verify-box h2 { color: #041f14; }
+.d-verify-box p { color: #586b66; }
+.d-verify-form { background: #fdfbf7; border: 1px solid rgba(212,175,55,0.3); }
+.d-verify-form input { color: #041f14 !important; }
+.d-verify-form input::placeholder { color: #8e8b95; }
 
 /* General typography */
-.text-gold { color: var(--d-gold-dark) !important; }
-.text-white { /* color override removed for better contrast if needed, handled by classes */ }
-
-.btn-lux-primary { color: #ffffff !important; }
-.btn-lux-primary:hover { color: #ffffff !important; }
-.d-header-icons i { color: #333333 !important; }
+.text-gold { color: var(--d-gold) !important; }
+.text-white { color: #fdfbf7 !important; }
 
 /* ============================================================
    مگا منوی لوکس Alobi - بهبود یافته با پشتیبانی تصویر
@@ -2020,9 +2032,9 @@ a, .link a { color: var(--d-gold); }
 :root {
     --mega-gold: #d4af37;
     --mega-gold-light: #f4d47c;
-    --mega-navy-dark: #07091a;
-    --mega-navy-mid: #12173a;
-    --mega-navy-card: #1a1f4d;
+    --mega-navy-dark: #041f14;
+    --mega-navy-mid: #0a3a28;
+    --mega-navy-card: #0f4d36;
     --mega-shadow: 0 25px 80px rgba(0,0,0,.75);
 }
 
@@ -2292,15 +2304,12 @@ a, .link a { color: var(--d-gold); }
     .lux-mega-trigger.force-open .lux-mega-item:hover > .lux-mega-sub { opacity:1; visibility:visible; pointer-events:auto; }
 }
 
-body { margin:0; background: #ffffff !important; }
-.d-sd-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important; }
-.d-footer-brand p { color: var(--d-text-muted) !important; }
-.d-timer { background: #fff !important; color: #111 !important; border: 1px solid #ddd; }
-.d-header-icons .d-icon-btn { color: #333333 !important; }
-.d-header-icons .d-icon-btn i { color: #333333 !important; }
-.d-topbar a, .d-topbar span { color: #555555 !important; }
+body { margin:0; }
+.d-sd-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(4,31,20,0.15) !important; border-color: var(--d-gold) !important; }
+.d-footer-brand p { color: #c5c3c6 !important; }
 </style>
 </head>
+
 
 
 
