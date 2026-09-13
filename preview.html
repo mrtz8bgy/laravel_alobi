@@ -20,6 +20,8 @@
 
 
 
+
+
 <style>
 
 :root {
@@ -2022,16 +2024,16 @@ a, .link a { color: var(--d-gold); }
 :root {
     --mega-gold: #d4af37;
     --mega-gold-light: #f4d47c;
-    --mega-navy-dark: #07091a;
-    --mega-navy-mid: #12173a;
-    --mega-navy-card: #1a1f4d;
+    --mega-navy-dark: #050505;
+    --mega-navy-mid: #222222;
+    --mega-navy-card: #333333;
     --mega-shadow: 0 25px 80px rgba(0,0,0,.75);
 }
 
 .lux-mega-section {
-    background: linear-gradient(90deg, var(--mega-navy-dark) 0%, var(--mega-navy-mid) 100%);
-    border-top: 1px solid rgba(212,175,55,.15);
-    border-bottom: 2px solid rgba(212,175,55,.35);
+    background: var(--mega-navy-dark);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 2px solid var(--mega-gold);
     position: relative;
     z-index: 1100;
     direction: rtl;
@@ -2199,7 +2201,7 @@ a, .link a { color: var(--d-gold); }
 .lux-mega-banner {
     margin-top: 16px;
     padding: 18px;
-    border-radius: 12px;
+    border-radius: 0;
     background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(212,175,55,.05));
     border: 1px solid rgba(212,175,55,.3);
     display: flex;
@@ -2248,14 +2250,14 @@ a, .link a { color: var(--d-gold); }
     .lux-cat-btn {
         width: calc(100% - 20px);
         margin: 10px;
-        border-radius: 12px;
+        border-radius: 0;
         justify-content: space-between;
     }
     .lux-mega-list {
         position: static !important;
         width: calc(100% - 20px) !important;
         margin: 0 10px 10px;
-        border-radius: 12px;
+        border-radius: 0;
         max-height: 0;
         overflow: hidden;
         padding: 0;
@@ -2274,7 +2276,7 @@ a, .link a { color: var(--d-gold); }
         border: none !important;
         padding: 0 !important;
         background: rgba(0,0,0,.2) !important;
-        border-radius: 10px !important;
+        border-radius: 0 !important;
         margin-top: 6px;
         max-height: 0;
         overflow: hidden;
@@ -2295,14 +2297,20 @@ a, .link a { color: var(--d-gold); }
 }
 
 /* Preview Specific Fixes */
-.d-sd-card { padding: 15px; text-align: center; position: relative; display: block; text-decoration: none; }
+body { margin:0; background: #ffffff !important; color: #050505 !important; font-family: 'Vazirmatn', sans-serif; }
+.d-sd-card { padding: 15px; text-align: center; position: relative; display: block; text-decoration: none; border-radius:0 !important; }
 .d-sd-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px; }
-.d-timer { padding: 5px 15px; font-weight: bold; font-size: 14px; letter-spacing: 2px; }
+.d-timer { padding: 5px 15px; font-weight: bold; font-size: 14px; letter-spacing: 2px; border-radius:0 !important; }
 .price-new { font-size: 18px; }
 .price-old { text-decoration: line-through; font-size: 13px; }
-.d-sd-card span { position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 12px; font-weight: bold; z-index: 2; }
+.d-sd-card span { position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 12px; font-weight: bold; z-index: 2; border-radius:0 !important; }
+.d-footer-brand p { color: #aaaaaa !important; }
+.d-cat-btn { background: #050505; color: #c5a059; border-radius:0; }
+.lux-cat-btn { background: #050505 !important; color: #c5a059 !important; }
+.lux-mega-list { border-radius: 0 !important; }
 </style>
 </head>
+
 
 
 

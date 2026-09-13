@@ -4,16 +4,16 @@
 :root {
     --mega-gold: #d4af37;
     --mega-gold-light: #f4d47c;
-    --mega-navy-dark: #07091a;
-    --mega-navy-mid: #12173a;
-    --mega-navy-card: #1a1f4d;
+    --mega-navy-dark: #050505;
+    --mega-navy-mid: #222222;
+    --mega-navy-card: #333333;
     --mega-shadow: 0 25px 80px rgba(0,0,0,.75);
 }
 
 .lux-mega-section {
-    background: linear-gradient(90deg, var(--mega-navy-dark) 0%, var(--mega-navy-mid) 100%);
-    border-top: 1px solid rgba(212,175,55,.15);
-    border-bottom: 2px solid rgba(212,175,55,.35);
+    background: var(--mega-navy-dark);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 2px solid var(--mega-gold);
     position: relative;
     z-index: 1100;
     direction: rtl;
@@ -181,7 +181,7 @@
 .lux-mega-banner {
     margin-top: 16px;
     padding: 18px;
-    border-radius: 12px;
+    border-radius: 0;
     background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(212,175,55,.05));
     border: 1px solid rgba(212,175,55,.3);
     display: flex;
@@ -230,14 +230,14 @@
     .lux-cat-btn {
         width: calc(100% - 20px);
         margin: 10px;
-        border-radius: 12px;
+        border-radius: 0;
         justify-content: space-between;
     }
     .lux-mega-list {
         position: static !important;
         width: calc(100% - 20px) !important;
         margin: 0 10px 10px;
-        border-radius: 12px;
+        border-radius: 0;
         max-height: 0;
         overflow: hidden;
         padding: 0;
@@ -256,7 +256,7 @@
         border: none !important;
         padding: 0 !important;
         background: rgba(0,0,0,.2) !important;
-        border-radius: 10px !important;
+        border-radius: 0 !important;
         margin-top: 6px;
         max-height: 0;
         overflow: hidden;
