@@ -42,16 +42,22 @@ if (!function_exists('home_discounted_base_price')) {
     }
 }
 
+
 if (!function_exists('uploaded_asset')) {
     function uploaded_asset($path) {
-        // In older active ecommerce or generic apps, images are stored directly in public/uploads or public
         if ($path) {
-            return app('url')->asset('public/' . $path);
+            if (is_numeric($path)) {
+                // If it's a numeric ID but Upload model doesn't exist in this version, return placeholder
+                return app('url')->asset('public/assets/img/placeholder.jpg');
+            }
+            
+            // It's a string path like 'uploads/products/xyz.jpg'
+            // In XAMPP standard Laravel setup, asset() targets the public directory correctly.
+            return app('url')->asset($path);
         }
         return app('url')->asset('public/assets/img/placeholder.jpg');
     }
 }
-
 if (!function_exists('filter_products')) {
     function filter_products($query) {
         return $query;
