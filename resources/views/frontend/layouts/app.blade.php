@@ -56,9 +56,9 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 
-<!-- Theme: Multi-vendor marketplace (legacy gold-specific styles kept as fallback only) -->
-{{-- <link type="text/css" href="{{ asset('frontend/css/drikana-luxury.css') }}" rel="stylesheet" media="all"> --}}
-{{-- <link type="text/css" href="{{ asset('frontend/css/megamenu-lux.css') }}" rel="stylesheet" media="all"> --}}
+<!-- تم لوکس Drikana Gold & Jewelry -->
+<link type="text/css" href="{{ asset('frontend/css/drikana-luxury.css') }}" rel="stylesheet" media="all">
+<link type="text/css" href="{{ asset('frontend/css/megamenu-lux.css') }}" rel="stylesheet" media="all">
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" type="text/css" media="all">
