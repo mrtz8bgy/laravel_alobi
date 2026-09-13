@@ -204,3 +204,39 @@ textarea.form-control {
     border-radius: 4px !important;
     font-weight: 600 !important;
 }
+
+
+/* ==========================================================================
+   JEWELRY PLUGIN SPECIFIC OVERRIDES
+   ========================================================================== */
+/* The jewelry module uses some hardcoded classes for headers and rows. */
+.jewelry-panel, .panel-default {
+    border-top: 2px solid #c5a059 !important;
+}
+.jewelry-dashboard-stats .panel-colorful,
+.jewelry-dashboard-stats .bg-info,
+.jewelry-dashboard-stats .bg-primary,
+.jewelry-dashboard-stats .bg-success,
+.jewelry-dashboard-stats .bg-warning {
+    background: #ffffff !important;
+    border: 1px solid #eaeaea !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02) !important;
+    color: #050505 !important;
+}
+
+/* Fix sidebar gradient that might be hardcoded in jewelry layout */
+.brand-title {
+    color: #c5a059 !important;
+}
+#mainnav-menu .list-header {
+    color: #757575 !important;
+    background: transparent !important;
+}
+
+/* Fix buttons in jewelry data tables (they often use custom btn classes) */
+.btn-labeled {
+    border-radius: 4px !important;
+}
+.btn-labeled i {
+    background: rgba(0,0,0,0.1) !important;
+}
