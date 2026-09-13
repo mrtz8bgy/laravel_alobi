@@ -89,11 +89,11 @@
         <div class="d-footer-bottom">
             <div>© {{ date('Y') }} {{ $gs->site_name ?? 'Alobi' }} — تمامی حقوق محفوظ است. طراحی شده با ❤️ برای بازار کالا و خدمات لوکس.</div>
             <div class="pay-methods">
-                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%23d4af37' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='9' fill='%2307091a' text-anchor='middle' font-weight='900'>VISA</text></svg>" alt="Visa">
-                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%231a1f4d' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='8' fill='%23d4af37' text-anchor='middle' font-weight='900'>Master</text></svg>" alt="MasterCard">
-                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%23d4af37' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='8' fill='%2307091a' text-anchor='middle' font-weight='900'>SHETAB</text></svg>" alt="Shetab">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%23d4af37' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='9' fill='%23111111' text-anchor='middle' font-weight='900'>VISA</text></svg>" alt="Visa">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%23eeeeee' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='8' fill='%23d4af37' text-anchor='middle' font-weight='900'>Master</text></svg>" alt="MasterCard">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%23d4af37' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='8' fill='%23111111' text-anchor='middle' font-weight='900'>SHETAB</text></svg>" alt="Shetab">
                 @if(\App\BusinessSetting::where('type','cash_payment')->first()->value == 1)
-                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%23f5f3f0' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='7' fill='%2307091a' text-anchor='middle' font-weight='900'>Cash</text></svg>" alt="Cash on delivery">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='24' viewBox='0 0 40 24'><rect width='40' height='24' fill='%23f5f3f0' rx='3'/><text x='50%25' y='56%25' font-family='sans-serif' font-size='7' fill='%23111111' text-anchor='middle' font-weight='900'>Cash</text></svg>" alt="Cash on delivery">
                 @endif
             </div>
         </div>

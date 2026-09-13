@@ -15,7 +15,7 @@
 
     .verify-search { max-width:680px; margin: -30px auto 0; position: relative; z-index: 5; }
     .verify-search-box {
-        background: linear-gradient(145deg, var(--d-navy-700), var(--d-navy-800));
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
         border:1px solid rgba(212,175,55,.25);
         border-radius: var(--r-xl);
         padding: 28px;
@@ -31,7 +31,7 @@
     }
     .verify-form-row input:focus { border-color:var(--d-gold) !important; box-shadow:0 0 0 4px rgba(212,175,55,.15) !important; outline:none !important; }
     .verify-form-row button {
-        padding:14px 32px; border-radius:var(--r-pill); background:var(--grad-gold); color:var(--d-navy-900);
+        padding:14px 32px; border-radius:var(--r-pill); background:var(--grad-gold); color:#111111;
         font-weight:800; border:none; cursor:pointer; font-family:var(--f-base); font-size:15px;
         transition:all var(--tr-base); white-space:nowrap; display:inline-flex; align-items:center; gap:8px;
     }
@@ -44,7 +44,7 @@
         background: linear-gradient(135deg, #fdf7e6 0%, #f4e7c3 100%);
         border-radius: var(--r-lg);
         padding: 40px;
-        color: var(--d-navy-900);
+        color: #111111;
         position: relative;
         box-shadow: var(--shadow-lg), inset 0 0 0 8px rgba(212,175,55,.1);
         border: 3px double var(--d-gold-dark);
@@ -56,13 +56,13 @@
     .cert-paper::after { bottom:14px; left:20px; }
     .cert-header { text-align:center; padding-bottom:20px; border-bottom:2px double var(--d-gold-dark); margin-bottom:24px; }
     .cert-header .cert-badge { display:inline-block; background:var(--d-gold-dark); color:#fff; font-size:11px; letter-spacing:3px; padding:4px 16px; border-radius:var(--r-pill); margin-bottom:10px; text-transform:uppercase; }
-    .cert-header h3 { color:var(--d-navy-900) !important; font-size:26px; font-weight:900; margin:0; }
+    .cert-header h3 { color:#111111 !important; font-size:26px; font-weight:900; margin:0; }
     .cert-header p { color:var(--d-gold-dark); font-size:13px; letter-spacing:2px; margin:6px 0 0; text-transform:uppercase; }
 
     .cert-meta-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px 30px; margin-bottom:24px; }
     .cert-meta-item { padding:8px 0; border-bottom:1px dashed rgba(184,137,42,.3); }
     .cert-meta-item .label { font-size:11px; color:var(--d-gold-dark); font-weight:700; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:4px; }
-    .cert-meta-item .value { font-size:15px; color:var(--d-navy-900); font-weight:700; }
+    .cert-meta-item .value { font-size:15px; color:#111111; font-weight:700; }
 
     .cert-status-badge {
         display:inline-flex; align-items:center; gap:8px; padding:10px 24px; border-radius:var(--r-pill);
@@ -80,7 +80,7 @@
     .cert-seal-box {
         position:absolute; bottom:40px; right:40px; width:90px; height:90px; border-radius:50%;
         background: radial-gradient(circle, var(--d-gold) 30%, var(--d-gold-dark) 100%);
-        display:flex; align-items:center; justify-content:center; color:var(--d-navy-900); font-weight:900;
+        display:flex; align-items:center; justify-content:center; color:#111111; font-weight:900;
         font-size:10px; text-align:center; line-height:1.2; box-shadow: 0 4px 14px rgba(0,0,0,.3);
         transform: rotate(-12deg);
     }

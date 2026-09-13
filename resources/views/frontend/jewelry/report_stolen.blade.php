@@ -6,7 +6,7 @@
 @section('content')
 <style>
     .stolen-hero {
-        background: linear-gradient(135deg, #2a0a0a 0%, #1a0505 40%, var(--d-navy-900) 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #fdfbf5 40%, #f8f9fa 100%);
         padding: 70px 0 50px; text-align:center; position:relative; overflow:hidden;
         border-bottom: 1px solid rgba(239,68,68,.2);
     }
@@ -59,7 +59,7 @@
     .info-panel h4 { font-size:17px; font-weight:800; margin-bottom:18px; display:flex; align-items:center; gap:10px; color:#fca5a5; }
     .info-panel h4 i { color:#ef4444; font-size:22px; }
     .info-step { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
-    .info-step .sn { width:32px; height:32px; border-radius:50%; background:var(--grad-gold); color:var(--d-navy-900); font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:14px; }
+    .info-step .sn { width:32px; height:32px; border-radius:50%; background:var(--grad-gold); color:#ffffff; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:14px; }
     .info-step .sc h6 { font-size:14px; margin:0 0 4px; color:var(--d-white); }
     .info-step .sc p { font-size:12px; color:var(--d-gray-300); line-height:1.7; margin:0; }
 

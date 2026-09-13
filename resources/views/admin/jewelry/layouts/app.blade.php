@@ -678,10 +678,10 @@
     <style>
         /* ====== تم طلایی-سرمه‌ای Alobi برای پنل کالای لوکس ====== */
         @import url('https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css');
-        :root { --jg:#d4af37; --jg-light:#f4d47c; --jg-dark:#07091a; --jg-navy:#12173a; }
+        :root { --jg:#d4af37; --jg-light:#f4d47c; --jg-dark:#ffffff; --jg-navy:#f8f9fa; }
         body { background:#f3efe6; font-family:'Vazirmatn',Tahoma,sans-serif !important; }
         .sidebar {
-            background: linear-gradient(180deg, #07091a 0%, #12173a 60%, #1a1f4d 100%) !important;
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 60%, #eeeeee 100%) !important;
             border-left: 3px solid #d4af37;
         }
         .sidebar a { color: rgba(255,255,255,.75); border-right:3px solid transparent; border-radius:8px; margin-bottom:4px; transition: all .25s; }
@@ -703,7 +703,7 @@
             background: linear-gradient(90deg, #fff, #fffdf7) !important;
             border-bottom: 2px solid #d4af37;
         }
-        .page-header h1 { color:#07091a; font-weight:800; }
+        .page-header h1 { color:#111111; font-weight:800; }
         .btn-primary { background:linear-gradient(135deg,#d4af37,#b8892a); border-color:#b8892a; }
         .btn-primary:hover { background:linear-gradient(135deg,#b8892a,#d4af37); border-color:#b8892a; }
         .badge.bg-danger { background:linear-gradient(135deg,#ef4444,#b91c1c) !important; }

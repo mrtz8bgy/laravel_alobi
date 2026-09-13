@@ -61,7 +61,7 @@
 .mobile-side-menu.open .side-menu-overlay { opacity: 1; }
 .mobile-side-menu.open .side-menu-wrap { transform: translateX(0); }
 .mobile-side-menu .side-menu {
-    height: 100%; background: linear-gradient(180deg, #0b0f28, #07091a);
+    height: 100%; background: linear-gradient(180deg, #ffffff, #f8f9fa);
     border-left: 1px solid rgba(212,175,55,.2);
     overflow-y: auto; display: flex; flex-direction: column;
 }
@@ -90,7 +90,7 @@
 .mobile-side-menu .side-user-menu li a i { color: var(--d-gold); font-size: 18px; width: 24px; text-align: center; }
 .mobile-side-menu .side-user-menu li a:hover { background: rgba(212,175,55,.05); color: var(--d-gold); }
 .mobile-side-menu .badge {
-    margin-right: auto; background: var(--d-gold); color: var(--d-navy-900);
+    margin-right: auto; background: var(--d-gold); color: #111111;
     font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 700;
 }
 </style>
