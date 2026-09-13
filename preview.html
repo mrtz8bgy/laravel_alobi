@@ -24,6 +24,8 @@
 
 
 
+
+
 <style>
 
 :root {
@@ -2020,6 +2022,62 @@ a, .link a { color: var(--d-gold); }
    ========================================================================== */
 
 
+
+/* ==========================================================================
+   CARD & TEXT TRUNCATION (High-Fashion Alignment)
+   ========================================================================== */
+
+/* Truncate strictly to one line */
+.text-truncate-1 {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Ensure product titles in cards never break to two lines */
+.d-sd-card h4, 
+.d-card-lux h4,
+.product-card h4,
+.product-title {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-size: 15px; /* Keep font size consistent */
+}
+
+/* Ensure Brand/Category names in cards don't break either */
+.d-cat-card h4,
+.d-brand-card h4,
+.brand-name-trunc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Standardize card image heights so grid never misaligns */
+.d-sd-card img,
+.product-card-image {
+    width: 100%;
+    height: 180px !important;
+    object-fit: cover !important;
+    background: #f9f9f9;
+}
+
+/* Fix brand logo height */
+.d-brand-card img,
+.brand-logo-img {
+    height: 80px !important;
+    width: auto;
+    object-fit: contain !important;
+    margin: 0 auto;
+}
+
 /* ============================================================
    مگا منوی لوکس دریکانا - بهبود یافته با پشتیبانی تصویر
    ============================================================ */
@@ -2321,6 +2379,7 @@ body { margin:0; background: #ffffff !important; color: #050505 !important; font
 
 
 
+
 <body>
 
 <!-- HEADER -->
@@ -2417,7 +2476,7 @@ body { margin:0; background: #ffffff !important; color: #050505 !important; font
             <div class="d-hero-content">
                 <span class="d-hero-badge"><span class="dot"></span> معتبرترین مارکت‌پلیس جامع کالا و خدمات لوکس ایران</span>
                 <h1>درخشش <span class="gold-line">اعتماد</span> در هر <span class="gold-line">کالا</span></h1>
-                <p>خرید و فروش طلا، جواهرات، ساعت‌های لوکس و پوشاک و اکسسوری با <strong style="data-old-color:var(--d-gold-dark);">شناسنامه معتبر</strong>، <strong style="data-old-color:var(--d-gold-dark);">ضمانت اصالت</strong> و <strong style="data-old-color:var(--d-gold-dark);">امکان رهگیری دائمی</strong>.</p>
+                <p>خرید و فروش طلا، جواهرات، ساعت‌های لوکس و پوشاک و اکسسوری با <strong style="">شناسنامه معتبر</strong>، <strong style="">ضمانت اصالت</strong> و <strong style="">امکان رهگیری دائمی</strong>.</p>
                 <div class="d-hero-cta">
                     <a href="#" class="btn-lux btn-lux-primary"><i class="la la-shopping-bag"></i> مشاهده محصولات</a>
                     <a href="#" class="btn-lux btn-lux-outline"><i class="la la-certificate"></i> استعلام شناسنامه</a>
@@ -2470,7 +2529,7 @@ body { margin:0; background: #ffffff !important; color: #050505 !important; font
     <div class="container">
         <div class="d-verify-box">
             <div class="d-verify-icon"><i class="la la-certificate"></i></div>
-            <h2>همین حالا <span style="data-old-background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">اصالت</span> کالا خود را بررسی کنید</h2>
+            <h2>همین حالا <span class="text-gold">اصالت</span> کالا خود را بررسی کنید</h2>
             <p>با وارد کردن شماره سریال شناسنامه، از مشخصات، اصالت و وضعیت کالا خود مطلع شوید.</p>
             <form class="d-verify-form">
                 <input type="text" placeholder="شماره سریال شناسنامه را وارد کنید...">
@@ -2526,8 +2585,8 @@ body { margin:0; background: #ffffff !important; color: #050505 !important; font
         <div class="d-footer-bottom">
             <div>© 2025 Alobi — تمامی حقوق محفوظ است.</div>
             <div class="pay-methods">
-                <span style="data-old-background:#ffffff; border:1px solid #ddd;;padding:4px 10px;border-radius: 0;color:var(--d-gold-dark);font-size:11px;font-weight:700;">SHETAB</span>
-                <span style="data-old-background:#ffffff; border:1px solid #ddd;;padding:4px 10px;border-radius: 0;color:var(--d-gold-dark);font-size:11px;font-weight:700;">VISA</span>
+                <span style=" border:1px solid #ddd;;padding:4px 10px;border-radius: 0;color:var(--d-gold-dark);font-size:11px;font-weight:700;">SHETAB</span>
+                <span style=" border:1px solid #ddd;;padding:4px 10px;border-radius: 0;color:var(--d-gold-dark);font-size:11px;font-weight:700;">VISA</span>
             </div>
         </div>
     </div>
