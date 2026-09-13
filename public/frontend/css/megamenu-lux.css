@@ -1,12 +1,12 @@
 /* ============================================================
-   مگا منوی لوکس Alobi - بهبود یافته با پشتیبانی تصویر
+   مگا منوی لوکس دریکانا - بهبود یافته با پشتیبانی تصویر
    ============================================================ */
 :root {
     --mega-gold: #d4af37;
     --mega-gold-light: #f4d47c;
-    --mega-navy-dark: #041f14;
-    --mega-navy-mid: #0a3a28;
-    --mega-navy-card: #0f4d36;
+    --mega-navy-dark: #07091a;
+    --mega-navy-mid: #12173a;
+    --mega-navy-card: #1a1f4d;
     --mega-shadow: 0 25px 80px rgba(0,0,0,.75);
 }
 
@@ -52,7 +52,7 @@
     top: 100%;
     right: 0;
     width: 300px;
-    background: var(--mega-navy-card);
+    background: linear-gradient(180deg, var(--mega-navy-card), var(--mega-navy-dark));
     list-style: none;
     margin: 0;
     padding: 6px 0;
@@ -78,7 +78,7 @@
 
 .lux-mega-item {
     position: relative;
-    border-bottom: 1px solid rgba(0,0,0,.04);
+    border-bottom: 1px solid rgba(255,255,255,.04);
     overflow: visible;
 }
 .lux-mega-item:last-child { border-bottom: none; }
@@ -87,7 +87,7 @@
     align-items: center;
     gap: 12px;
     padding: 11px 18px;
-    color: var(--mega-text-main);
+    color: #e8e6f0;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -113,7 +113,7 @@
 .lux-mega-name { flex: 1; }
 .lux-mega-arrow {
     font-size: 14px;
-    color: rgba(4,31,20,.3);
+    color: rgba(255,255,255,.3);
     transition: transform .25s ease;
 }
 .lux-mega-item:hover > .lux-mega-link .lux-mega-arrow {
@@ -127,7 +127,7 @@
     top: 0;
     right: 100%;
     width: 620px;
-    background: var(--mega-navy-card);
+    background: linear-gradient(180deg, var(--mega-navy-card), var(--mega-navy-dark));
     border-radius: 14px;
     box-shadow: var(--mega-shadow);
     border: 1px solid rgba(212,175,55,.2);
@@ -168,7 +168,7 @@
     display: block;
     padding: 5px 8px;
     font-size: 12.5px;
-    color: var(--mega-text-muted);
+    color: #d0cedf;
     text-decoration: none;
     border-radius: 6px;
     transition: all .2s ease;
@@ -198,7 +198,7 @@
 }
 .lux-mega-banner-text span {
     font-size: 11px;
-    color: var(--mega-text-muted);
+    color: #c5c3d0;
 }
 
 /* View All */
@@ -255,7 +255,7 @@
         box-shadow: none !important;
         border: none !important;
         padding: 0 !important;
-        background: rgba(212,175,55,.05) !important;
+        background: rgba(0,0,0,.2) !important;
         border-radius: 10px !important;
         margin-top: 6px;
         max-height: 0;
