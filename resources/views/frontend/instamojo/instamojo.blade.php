@@ -23,7 +23,7 @@
         .card-header {
             background: #0275D8;
             padding: 15px 20px;
-            border-radius: 4px 4px 0 0;
+            border-radius: 0;4px 0 0;
         }
         .card-header h2 {
             color: white;
@@ -34,7 +34,7 @@
             padding: 15px;
             margin-bottom: 20px;
             border: 1px solid transparent;
-            border-radius: 4px;
+            border-radius: 0;
         }
         .alert-danger {
             color: #a94442;
@@ -58,7 +58,7 @@
             background-color: #fff;
             background-image: none;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 0;
         }
         .btn {
             display: inline-block;
@@ -72,7 +72,7 @@
             vertical-align: middle;
             cursor: pointer;
             border: 1px solid transparent;
-            border-radius: 4px;
+            border-radius: 0;
         }
         .btn-primary {
             color: #fff;

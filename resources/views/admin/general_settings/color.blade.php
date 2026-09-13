@@ -17,7 +17,7 @@
                         <div class="color-radio col-sm-3">
                             <label>
                                 <input type="radio" name="frontend_color" class="color-control-input" value="default" @if(\App\GeneralSetting::first()->frontend_color == 'default') checked @endif>
-                                <span class="color-control-box" style="background:#e62e04;"></span>
+                                <span class="color-control-box" style="background:#c5a059;"></span>
                             </label>
                         </div>
                         <div class="color-radio col-sm-3">

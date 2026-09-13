@@ -568,7 +568,7 @@
 .timeline-content {
     padding: 10px 15px;
     background: #f8f9fa;
-    border-radius: 5px;
+    border-radius: 0;
 }
 </style>
 @endsection

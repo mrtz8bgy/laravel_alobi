@@ -83,7 +83,7 @@
 
                         @if($certificate->transfers && $certificate->transfers->count() > 0)
                             <div style="margin-top:30px;">
-                                <h5 style="font-size:15px; font-weight:700; color:var(--d-gold); margin-bottom:16px;">
+                                <h5 style="font-size:15px; font-weight:700; color:#c5a059; margin-bottom:16px;">
                                     <i class="la la-history"></i> تاریخچه انتقال مالکیت
                                 </h5>
                                 @php

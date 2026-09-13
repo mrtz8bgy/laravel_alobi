@@ -6,11 +6,11 @@
 :root {
     --navy-dark: #0a0a2a;
     --navy-light: #1a1a4a;
-    --gold: #D4AF37;
+    --gold: #c5a059;
     --gold-light: #F5D76E;
     --gold-dark: #B8960F;
     --silver: #C0C0C0;
-    --shadow-gold: 0 5px 20px rgba(212, 175, 55, 0.2);
+    --shadow-gold: 0 5px 20px rgba(197,160,89, 0.2);
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
     --shadow-md: 0 4px 15px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
@@ -36,8 +36,8 @@
     height: 200%;
     background: repeating-linear-gradient(
         45deg,
-        rgba(212, 175, 55, 0.05) 0px,
-        rgba(212, 175, 55, 0.05) 2px,
+        rgba(197,160,89, 0.05) 0px,
+        rgba(197,160,89, 0.05) 2px,
         transparent 2px,
         transparent 8px
     );
@@ -67,13 +67,13 @@
 /* ============================================ */
 .all-category-menu {
     background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
-    border-radius: 20px;
+    border-radius: 0;
     box-shadow: var(--shadow-gold);
     overflow: hidden;
     margin-bottom: 30px;
     position: sticky;
     top: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(197,160,89, 0.3);
     width: 90%;
 }
 
@@ -92,18 +92,18 @@
 
 .all-category-menu ul::-webkit-scrollbar-track {
     background: rgba(255,255,255,0.05);
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 .all-category-menu ul::-webkit-scrollbar-thumb {
     background: var(--gold);
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 /* آیتم منو */
 .all-category-menu ul li {
     margin: 5px 10px;
-    border-radius: 12px;
+    border-radius: 0;
     transition: all 0.3s ease;
     background: rgba(255,255,255,0.03);
 }
@@ -126,8 +126,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(212, 175, 55, 0.15);
-    border-radius: 12px;
+    background: rgba(197,160,89, 0.15);
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 
@@ -182,7 +182,7 @@
 /* ============================================ */
 .category-card {
     background: white;
-    border-radius: 20px;
+    border-radius: 0;
     box-shadow: var(--shadow-sm);
     margin-bottom: 30px;
     overflow: hidden;
@@ -217,7 +217,7 @@
     width: 55px;
     height: 55px;
     background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
-    border-radius: 15px;
+    border-radius: 0;
     margin-left: 15px;
     border: 1px solid var(--gold);
 }
@@ -257,7 +257,7 @@
     float: left;
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
     padding: 5px 15px;
-    border-radius: 25px;
+    border-radius: 0;
     font-size: 13px;
     font-weight: 600;
     color: var(--navy-dark);
@@ -341,7 +341,7 @@
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
     color: var(--navy-dark);
     border: none;
-    border-radius: 30px;
+    border-radius: 0;
     padding: 8px 25px;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -349,7 +349,7 @@
 
 .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 5px 15px rgba(197,160,89, 0.4);
     color: var(--navy-dark);
 }
 

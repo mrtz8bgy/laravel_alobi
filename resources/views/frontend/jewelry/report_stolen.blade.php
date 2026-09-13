@@ -15,26 +15,26 @@
     .stolen-hero .kicker { display:inline-block; font-size:12px; letter-spacing:3px; color:#fca5a5; font-weight:700; margin-bottom:12px; padding:6px 18px; border:1px solid rgba(239,68,68,.3); border-radius:var(--r-pill); }
     .stolen-hero h1 { font-size:clamp(26px,4vw,44px); font-weight:800; margin:0 0 14px; }
     .stolen-hero h1 .red { color:#ef4444; }
-    .stolen-hero h1 .gold { background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .stolen-hero h1 .gold { background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
     .stolen-hero p { color:var(--d-gray-300); max-width:720px; margin:0 auto; font-size:15px; line-height:2; }
 
     .stolen-section { padding: 60px 0 80px; }
     .two-col { display:grid; grid-template-columns:1.4fr 1fr; gap:30px; align-items:start; }
 
     .report-form-card {
-        background: rgba(255,255,255,.03); border:1px solid rgba(212,175,55,.15);
+        background: rgba(255,255,255,.03); border:1px solid rgba(197,160,89,.15);
         border-radius: var(--r-lg); padding:32px; box-shadow:var(--shadow-md);
     }
     .form-row { margin-bottom:18px; }
     .form-row label { display:block; font-size:13px; font-weight:700; color:var(--d-gold-light); margin-bottom:8px; }
     .form-row label .req { color:#ef4444; margin-right:4px; }
     .form-row input, .form-row select, .form-row textarea {
-        width:100%; background:rgba(255,255,255,.05); border:1px solid rgba(212,175,55,.2);
+        width:100%; background:rgba(255,255,255,.05); border:1px solid rgba(197,160,89,.2);
         color:var(--d-white); border-radius:var(--r-sm); padding:11px 14px;
         font-family:var(--f-base); font-size:14px; transition:all var(--tr-base);
     }
     .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
-        outline:none; border-color:var(--d-gold); box-shadow:0 0 0 4px rgba(212,175,55,.12);
+        outline:none; border-color:#c5a059; box-shadow:0 0 0 4px rgba(197,160,89,.12);
     }
     .form-row textarea { min-height:120px; resize:vertical; }
     .form-row .hint { font-size:12px; color:var(--d-gray-500); margin-top:6px; }
@@ -42,30 +42,30 @@
     .radio-group { display:flex; gap:10px; flex-wrap:wrap; }
     .radio-card {
         flex:1; min-width:140px; padding:16px; border-radius:var(--r-md);
-        border:1px solid rgba(212,175,55,.2); background:rgba(255,255,255,.03);
+        border:1px solid rgba(197,160,89,.2); background:rgba(255,255,255,.03);
         cursor:pointer; text-align:center; transition:all var(--tr-base);
     }
     .radio-card input { display:none; }
-    .radio-card .rc-icon { font-size:32px; margin-bottom:8px; color:var(--d-gold); }
+    .radio-card .rc-icon { font-size:32px; margin-bottom:8px; color:#c5a059; }
     .radio-card .rc-label { font-weight:700; font-size:14px; }
-    .radio-card:hover { border-color:var(--d-gold); }
-    .radio-card.active { background:linear-gradient(135deg, rgba(212,175,55,.15), rgba(212,175,55,.05)); border-color:var(--d-gold); box-shadow:var(--shadow-gold); }
+    .radio-card:hover { border-color:#c5a059; }
+    .radio-card.active { background:linear-gradient(135deg, rgba(197,160,89,.15), rgba(197,160,89,.05)); border-color:#c5a059; box-shadow:var(--shadow-gold); }
 
     .info-panel {
-        background: linear-gradient(145deg, rgba(239,68,68,.08), rgba(212,175,55,.04));
+        background: linear-gradient(145deg, rgba(239,68,68,.08), rgba(197,160,89,.04));
         border:1px solid rgba(239,68,68,.2);
         border-radius:var(--r-lg); padding:28px;
     }
     .info-panel h4 { font-size:17px; font-weight:800; margin-bottom:18px; display:flex; align-items:center; gap:10px; color:#fca5a5; }
     .info-panel h4 i { color:#ef4444; font-size:22px; }
     .info-step { display:flex; gap:12px; margin-bottom:16px; align-items:flex-start; }
-    .info-step .sn { width:32px; height:32px; border-radius:50%; background:var(--grad-gold); color:#ffffff; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:14px; }
+    .info-step .sn { width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); color:#ffffff; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:14px; }
     .info-step .sc h6 { font-size:14px; margin:0 0 4px; color:var(--d-white); }
     .info-step .sc p { font-size:12px; color:var(--d-gray-300); line-height:1.7; margin:0; }
 
     .stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:20px; }
     .stat-mini { text-align:center; padding:14px; background:rgba(0,0,0,.25); border-radius:var(--r-md); border:1px solid rgba(255,255,255,.06); }
-    .stat-mini strong { display:block; font-size:22px; font-weight:900; background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .stat-mini strong { display:block; font-size:22px; font-weight:900; background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
     .stat-mini span { font-size:11px; color:var(--d-gray-300); margin-top:4px; display:block; }
 
     @if(Auth::check())
@@ -77,7 +77,7 @@
     }
     .guest-notice i { font-size:22px; color:#fbbf24; flex-shrink:0; }
     .guest-notice p { margin:0; font-size:13px; color:#fde68a; line-height:1.8; }
-    .guest-notice a { color:var(--d-gold); font-weight:700; }
+    .guest-notice a { color:#c5a059; font-weight:700; }
     @endif
 
     @media(max-width:992px){ .two-col{grid-template-columns:1fr;} }
@@ -97,7 +97,7 @@
         <div class="two-col">
             <!-- Form -->
             <div class="report-form-card">
-                <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid rgba(212,175,55,.12);">
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid rgba(197,160,89,.12);">
                     <div style="width:46px; height:46px; border-radius:50%; background:linear-gradient(135deg,#ef4444,#b91c1c); display:flex; align-items:center; justify-content:center; color:#fff; font-size:22px;">
                         <i class="la la-bullhorn"></i>
                     </div>
@@ -234,15 +234,15 @@
                     </div>
                 </div>
 
-                <div style="margin-top:20px; background:rgba(255,255,255,.03); border:1px solid rgba(212,175,55,.12); border-radius:var(--r-md); padding:22px;">
-                    <h5 style="font-size:15px; font-weight:700; margin:0 0 12px; display:flex; align-items:center; gap:8px; color:var(--d-gold);">
+                <div style="margin-top:20px; background:rgba(255,255,255,.03); border:1px solid rgba(197,160,89,.12); border-radius:var(--r-md); padding:22px;">
+                    <h5 style="font-size:15px; font-weight:700; margin:0 0 12px; display:flex; align-items:center; gap:8px; color:#c5a059;">
                         <i class="la la-phone"></i> تماس اضطراری
                     </h5>
                     <p style="font-size:13px; color:var(--d-gray-300); line-height:2; margin:0 0 12px;">
                         در صورت نیاز فوری با خطوط ویژه پشتیبانی ۲۴ ساعته تماس بگیرید:
                     </p>
                     <div style="display:flex; flex-direction:column; gap:8px;">
-                        <a href="tel:02112345678" style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:rgba(212,175,55,.08); border-radius:var(--r-sm); color:var(--d-gold-light); font-weight:700; text-decoration:none;">
+                        <a href="tel:02112345678" style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:rgba(197,160,89,.08); border-radius:var(--r-sm); color:var(--d-gold-light); font-weight:700; text-decoration:none;">
                             <i class="la la-phone"></i> ۰۲۱-۱۲۳۴۵۶۷۸
                         </a>
                         <a href="tel:110" style="display:flex; align-items:center; gap:10px; padding:10px 14px; background:rgba(239,68,68,.1); border-radius:var(--r-sm); color:#fca5a5; font-weight:700; text-decoration:none;">

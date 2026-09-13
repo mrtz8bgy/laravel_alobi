@@ -5,33 +5,33 @@
 
 @section('content')
 <style>
-    .verify-hero { background: var(--grad-navy); padding: 70px 0 50px; text-align: center; position: relative; overflow: hidden; border-bottom: 1px solid rgba(212,175,55,.15); }
-    .verify-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(circle at 50% 100%, rgba(212,175,55,.18), transparent 60%); }
+    .verify-hero { background: var(--grad-navy); padding: 70px 0 50px; text-align: center; position: relative; overflow: hidden; border-bottom: 1px solid rgba(197,160,89,.15); }
+    .verify-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(circle at 50% 100%, rgba(197,160,89,.18), transparent 60%); }
     .verify-hero > * { position: relative; z-index: 2; }
-    .verify-hero .kicker { display:inline-block; font-size:12px; letter-spacing:3px; color:var(--d-gold); font-weight:700; margin-bottom:12px; text-transform:uppercase; padding:6px 18px; border:1px solid rgba(212,175,55,.3); border-radius:var(--r-pill); }
+    .verify-hero .kicker { display:inline-block; font-size:12px; letter-spacing:3px; color:#c5a059; font-weight:700; margin-bottom:12px; text-transform:uppercase; padding:6px 18px; border:1px solid rgba(197,160,89,.3); border-radius:var(--r-pill); }
     .verify-hero h1 { font-size:clamp(26px,4vw,44px); font-weight:800; margin:0 0 14px; }
-    .verify-hero h1 .gold { background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .verify-hero h1 .gold { background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
     .verify-hero p { color:var(--d-gray-300); max-width:680px; margin:0 auto; font-size:15px; line-height:2; }
 
     .verify-search { max-width:680px; margin: -30px auto 0; position: relative; z-index: 5; }
     .verify-search-box {
         background: linear-gradient(145deg, #ffffff, #f8f9fa);
-        border:1px solid rgba(212,175,55,.25);
+        border:1px solid rgba(197,160,89,.25);
         border-radius: var(--r-xl);
         padding: 28px;
         box-shadow: var(--shadow-gold);
     }
-    .verify-search-box h3 { color:var(--d-gold); font-size:17px; margin-bottom:16px; font-weight:700; display:flex; align-items:center; gap:10px; }
+    .verify-search-box h3 { color:#c5a059; font-size:17px; margin-bottom:16px; font-weight:700; display:flex; align-items:center; gap:10px; }
     .verify-search-box h3 i { font-size:24px; }
     .verify-form-row { display:flex; gap:12px; }
     .verify-form-row input {
-        flex:1; background:rgba(255,255,255,.05) !important; border:1px solid rgba(212,175,55,.2) !important;
+        flex:1; background:rgba(255,255,255,.05) !important; border:1px solid rgba(197,160,89,.2) !important;
         color:var(--d-white) !important; border-radius:var(--r-pill) !important; padding:14px 22px !important;
         font-family:var(--f-base); font-size:16px; text-align:center; letter-spacing:3px;
     }
-    .verify-form-row input:focus { border-color:var(--d-gold) !important; box-shadow:0 0 0 4px rgba(212,175,55,.15) !important; outline:none !important; }
+    .verify-form-row input:focus { border-color:#c5a059 !important; box-shadow:0 0 0 4px rgba(197,160,89,.15) !important; outline:none !important; }
     .verify-form-row button {
-        padding:14px 32px; border-radius:var(--r-pill); background:var(--grad-gold); color:#111111;
+        padding:14px 32px; border-radius:var(--r-pill); background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); color:#111111;
         font-weight:800; border:none; cursor:pointer; font-family:var(--f-base); font-size:15px;
         transition:all var(--tr-base); white-space:nowrap; display:inline-flex; align-items:center; gap:8px;
     }
@@ -46,22 +46,22 @@
         padding: 40px;
         color: #111111;
         position: relative;
-        box-shadow: var(--shadow-lg), inset 0 0 0 8px rgba(212,175,55,.1);
-        border: 3px double var(--d-gold-dark);
+        box-shadow: var(--shadow-lg), inset 0 0 0 8px rgba(197,160,89,.1);
+        border: 3px double #9e7c3f;
     }
     .cert-paper::before, .cert-paper::after {
-        content: '❖'; position:absolute; color:var(--d-gold-dark); font-size:26px;
+        content: '❖'; position:absolute; color:#9e7c3f; font-size:26px;
     }
     .cert-paper::before { top:14px; right:20px; }
     .cert-paper::after { bottom:14px; left:20px; }
-    .cert-header { text-align:center; padding-bottom:20px; border-bottom:2px double var(--d-gold-dark); margin-bottom:24px; }
-    .cert-header .cert-badge { display:inline-block; background:var(--d-gold-dark); color:#fff; font-size:11px; letter-spacing:3px; padding:4px 16px; border-radius:var(--r-pill); margin-bottom:10px; text-transform:uppercase; }
+    .cert-header { text-align:center; padding-bottom:20px; border-bottom:2px double #9e7c3f; margin-bottom:24px; }
+    .cert-header .cert-badge { display:inline-block; background:#9e7c3f; color:#fff; font-size:11px; letter-spacing:3px; padding:4px 16px; border-radius:var(--r-pill); margin-bottom:10px; text-transform:uppercase; }
     .cert-header h3 { color:#111111 !important; font-size:26px; font-weight:900; margin:0; }
-    .cert-header p { color:var(--d-gold-dark); font-size:13px; letter-spacing:2px; margin:6px 0 0; text-transform:uppercase; }
+    .cert-header p { color:#9e7c3f; font-size:13px; letter-spacing:2px; margin:6px 0 0; text-transform:uppercase; }
 
     .cert-meta-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px 30px; margin-bottom:24px; }
     .cert-meta-item { padding:8px 0; border-bottom:1px dashed rgba(184,137,42,.3); }
-    .cert-meta-item .label { font-size:11px; color:var(--d-gold-dark); font-weight:700; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:4px; }
+    .cert-meta-item .label { font-size:11px; color:#9e7c3f; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:4px; }
     .cert-meta-item .value { font-size:15px; color:#111111; font-weight:700; }
 
     .cert-status-badge {
@@ -74,21 +74,21 @@
 
     .cert-qr-box {
         position:absolute; bottom:40px; left:40px; width:80px; height:80px;
-        background:#fff; border:4px solid var(--d-gold-dark); border-radius:8px;
+        background:#fff; border:4px solid #9e7c3f; border-radius: 0;
         display:flex; align-items:center; justify-content:center; font-size:40px;
     }
     .cert-seal-box {
         position:absolute; bottom:40px; right:40px; width:90px; height:90px; border-radius:50%;
-        background: radial-gradient(circle, var(--d-gold) 30%, var(--d-gold-dark) 100%);
+        background: radial-gradient(circle, #c5a059 30%, #9e7c3f 100%);
         display:flex; align-items:center; justify-content:center; color:#111111; font-weight:900;
         font-size:10px; text-align:center; line-height:1.2; box-shadow: 0 4px 14px rgba(0,0,0,.3);
         transform: rotate(-12deg);
     }
 
     .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin-top:50px; }
-    .feature-box { text-align:center; padding:26px 20px; background:rgba(255,255,255,.03); border:1px solid rgba(212,175,55,.12); border-radius:var(--r-md); transition:all var(--tr-base); }
-    .feature-box:hover { transform:translateY(-6px); border-color:var(--d-gold); box-shadow:var(--shadow-gold); }
-    .feature-box .fb-icon { width:60px; height:60px; margin:0 auto 14px; border-radius:50%; background:rgba(212,175,55,.12); border:2px solid rgba(212,175,55,.25); display:flex; align-items:center; justify-content:center; font-size:26px; color:var(--d-gold); }
+    .feature-box { text-align:center; padding:26px 20px; background:rgba(255,255,255,.03); border:1px solid rgba(197,160,89,.12); border-radius:var(--r-md); transition:all var(--tr-base); }
+    .feature-box:hover { transform:translateY(-6px); border-color:#c5a059; box-shadow:var(--shadow-gold); }
+    .feature-box .fb-icon { width:60px; height:60px; margin:0 auto 14px; border-radius:50%; background:rgba(197,160,89,.12); border:2px solid rgba(197,160,89,.25); display:flex; align-items:center; justify-content:center; font-size:26px; color:#c5a059; }
     .feature-box h5 { font-size:15px; font-weight:700; margin-bottom:8px; }
     .feature-box p { font-size:13px; color:var(--d-gray-300); line-height:1.8; margin:0; }
 
@@ -203,7 +203,7 @@
                     </div>
 
                     @if($certificate->description)
-                        <div style="padding:14px; background:rgba(184,137,42,.08); border-radius:8px; margin-bottom:20px; font-size:13px; color:#5c4a1a;">
+                        <div style="padding:14px; background:rgba(184,137,42,.08); border-radius: 0; margin-bottom:20px; font-size:13px; color:#5c4a1a;">
                             <strong>توضیحات:</strong> {{ $certificate->description }}
                         </div>
                     @endif
@@ -216,7 +216,7 @@
                         @endif
                     </div>
 
-                    <div class="cert-qr-box"><i class="la la-qrcode" style="color:var(--d-gold-dark);"></i></div>
+                    <div class="cert-qr-box"><i class="la la-qrcode" style="color:#9e7c3f;"></i></div>
                     <div class="cert-seal-box">DRIKANA<br>CERTIFIED</div>
                 </div>
 
@@ -225,12 +225,12 @@
                         <div class="d-card-lux-title"><i class="la la-exchange"></i> تاریخچه انتقال مالکیت</div>
                         <div style="display:flex; flex-direction:column; gap:14px;">
                             @foreach($certificate->transfers->sortByDesc('transfer_date') as $t)
-                                <div style="display:flex; gap:16px; align-items:flex-start; padding:14px; background:rgba(255,255,255,.03); border-radius:var(--r-sm); border-right:3px solid var(--d-gold);">
-                                    <div style="width:40px; height:40px; border-radius:50%; background:rgba(212,175,55,.15); display:flex; align-items:center; justify-content:center; color:var(--d-gold); flex-shrink:0;"><i class="la la-arrows-h"></i></div>
+                                <div style="display:flex; gap:16px; align-items:flex-start; padding:14px; background:rgba(255,255,255,.03); border-radius:var(--r-sm); border-right:3px solid #c5a059;">
+                                    <div style="width:40px; height:40px; border-radius:50%; background:rgba(197,160,89,.15); display:flex; align-items:center; justify-content:center; color:#c5a059; flex-shrink:0;"><i class="la la-arrows-h"></i></div>
                                     <div style="flex:1;">
                                         <div style="font-weight:700; margin-bottom:4px; color:var(--d-white);">
                                             از <span style="color:var(--d-gold-light);">{{ optional($t->fromOwner)->full_name ?: '—' }}</span>
-                                            <i class="la la-long-arrow-left" style="margin:0 10px; color:var(--d-gold);"></i>
+                                            <i class="la la-long-arrow-left" style="margin:0 10px; color:#c5a059;"></i>
                                             به <span style="color:var(--d-gold-light);">{{ optional($t->toOwner)->full_name ?: '—' }}</span>
                                         </div>
                                         <div style="font-size:13px; color:var(--d-gray-500);">

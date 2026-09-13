@@ -278,7 +278,7 @@
             height: 3px;
             background: var(--gold-gradient);
             margin: 12px auto 0;
-            border-radius: 10px;
+            border-radius: 0;
         }
         
         /* ================================================
@@ -419,7 +419,7 @@
             height: 18px;
             accent-color: var(--gold-primary);
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 0;
             flex-shrink: 0;
         }
         

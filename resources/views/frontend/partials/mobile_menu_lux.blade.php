@@ -62,35 +62,35 @@
 .mobile-side-menu.open .side-menu-wrap { transform: translateX(0); }
 .mobile-side-menu .side-menu {
     height: 100%; background: linear-gradient(180deg, #ffffff, #f8f9fa);
-    border-left: 1px solid rgba(212,175,55,.2);
+    border-left: 1px solid rgba(197,160,89,.2);
     overflow-y: auto; display: flex; flex-direction: column;
 }
 .mobile-side-menu .side-menu-header {
-    border-bottom: 1px solid rgba(212,175,55,.15);
-    background: rgba(212,175,55,.04);
+    border-bottom: 1px solid rgba(197,160,89,.15);
+    background: rgba(197,160,89,.04);
 }
 .mobile-side-menu .side-menu-close {
     position: absolute; top: 12px; left: 12px; width: 36px; height: 36px;
-    border-radius: 50%; background: rgba(255,255,255,.08); color: var(--d-gold);
+    border-radius: 50%; background: rgba(255,255,255,.08); color: #c5a059;
     display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer;
 }
 .mobile-side-menu .widget-profile-box { color: var(--d-white); gap: 12px; }
 .mobile-side-menu .widget-profile-box .image {
     width: 52px; height: 52px; border-radius: 50%;
     background-size: cover; background-position: center;
-    border: 2px solid var(--d-gold);
+    border: 2px solid #c5a059;
 }
 .mobile-side-menu .widget-profile-box .name { color: var(--d-gold-light); font-weight: 700; font-size: 16px; }
 .mobile-side-menu .side-user-menu { list-style: none; padding: 0; margin: 0; }
-.mobile-side-menu .side-user-menu li { border-bottom: 1px solid rgba(212,175,55,.06); }
+.mobile-side-menu .side-user-menu li { border-bottom: 1px solid rgba(197,160,89,.06); }
 .mobile-side-menu .side-user-menu li a {
     display: flex; align-items: center; gap: 12px;
     padding: 14px 8px; color: var(--d-gray-100); font-size: 14px; font-weight: 500;
 }
-.mobile-side-menu .side-user-menu li a i { color: var(--d-gold); font-size: 18px; width: 24px; text-align: center; }
-.mobile-side-menu .side-user-menu li a:hover { background: rgba(212,175,55,.05); color: var(--d-gold); }
+.mobile-side-menu .side-user-menu li a i { color: #c5a059; font-size: 18px; width: 24px; text-align: center; }
+.mobile-side-menu .side-user-menu li a:hover { background: rgba(197,160,89,.05); color: #c5a059; }
 .mobile-side-menu .badge {
-    margin-right: auto; background: var(--d-gold); color: #111111;
-    font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 700;
+    margin-right: auto; background: #c5a059; color: #111111;
+    font-size: 11px; padding: 2px 8px; border-radius: 0; font-weight: 700;
 }
 </style>

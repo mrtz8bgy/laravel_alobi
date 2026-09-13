@@ -47,17 +47,17 @@
     --color-navy: #0f0e1a;
     --color-navy-light: #1a1735;
     --color-navy-card: #1e1b3a;
-    --color-gold: #d4af37;
+    --color-gold: #c5a059;
     --color-gold-light: #f0d080;
     --color-gold-glow: #e8c547;
     --color-white: #ffffff;
     --color-white-smoke: #f5f5f7;
     --color-gray: #b0aec0;
     --color-gray-dark: #6b6980;
-    --color-shadow: rgba(212, 175, 55, 0.15);
-    --shadow-gold: 0 4px 25px rgba(212, 175, 55, 0.25);
-    --shadow-gold-hover: 0 8px 40px rgba(212, 175, 55, 0.4);
-    --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f0d080 50%, #b8962e 100%);
+    --color-shadow: rgba(197,160,89, 0.15);
+    --shadow-gold: 0 4px 25px rgba(197,160,89, 0.25);
+    --shadow-gold-hover: 0 8px 40px rgba(197,160,89, 0.4);
+    --gradient-gold: linear-gradient(135deg, #c5a059 0%, #f0d080 50%, #b8962e 100%);
     --gradient-navy: linear-gradient(135deg, #0f0e1a 0%, #1a1735 50%, #2a2555 100%);
     --font-base: 'Vazirmatn', 'Segoe UI', sans-serif;
 }
@@ -171,7 +171,7 @@ a:hover {
     padding: 0;
     display: none;
     box-shadow: 0 22px 70px rgba(0, 0, 0, 0.85);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(197,160,89, 0.2);
     border-radius: 0 0 14px 14px;
     max-height: min(78vh, 680px);
     overflow-y: auto;
@@ -212,7 +212,7 @@ a:hover {
 }
 
 .mega-menu-link:hover {
-    background: rgba(212, 175, 55, 0.12);
+    background: rgba(197,160,89, 0.12);
     color: var(--color-gold);
     padding-right: 28px;
 }
@@ -250,12 +250,12 @@ a:hover {
     left: auto !important;
     width: min(720px, calc(100vw - 390px));
     background: var(--color-navy-card);
-    border-radius: 14px;
+    border-radius: 0;
     box-shadow: 0 22px 70px rgba(0, 0, 0, 0.92);
     opacity: 0;
     visibility: hidden;
     transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(212, 175, 55, 0.18);
+    border: 1px solid rgba(197,160,89, 0.18);
     padding: 20px;
     max-height: min(78vh, 680px);
     overflow-y: auto;
@@ -341,13 +341,13 @@ a:hover {
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    border-radius: 8px;
+    border-radius: 0;
     transition: all 0.3s ease;
     font-family: var(--font-base);
 }
 
 .mega-sub-link:hover {
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(197,160,89, 0.1);
     color: var(--color-gold);
 }
 
@@ -391,14 +391,14 @@ a:hover {
     font-weight: 400;
     padding: 3px 12px;
     display: block;
-    border-radius: 4px;
+    border-radius: 0;
     transition: all 0.3s ease;
     font-family: var(--font-base);
 }
 
 .mega-sub-sub-list li a:hover {
     color: var(--color-gold);
-    background: rgba(212, 175, 55, 0.05);
+    background: rgba(197,160,89, 0.05);
 }
 
 /* ===== لینک مشاهده همه ===== */
@@ -410,7 +410,7 @@ a:hover {
 }
 
 .mega-view-all .mega-menu-link:hover {
-    background: rgba(212, 175, 55, 0.15);
+    background: rgba(197,160,89, 0.15);
 }
 
 /* ============================================ */
@@ -424,13 +424,13 @@ a:hover {
 .mega-menu-list::-webkit-scrollbar-track,
 .mega-sub-menu::-webkit-scrollbar-track {
     background: var(--color-navy);
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 .mega-menu-list::-webkit-scrollbar-thumb,
 .mega-sub-menu::-webkit-scrollbar-thumb {
     background: var(--color-gold);
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 /* ============================================ */
@@ -451,13 +451,13 @@ a:hover {
         left: auto !important;
         width: 100% !important;
         box-shadow: none !important;
-        border: 1px solid rgba(212, 175, 55, 0.12) !important;
+        border: 1px solid rgba(197,160,89, 0.12) !important;
         padding: 8px 10px 10px !important;
         opacity: 0 !important;
         visibility: hidden !important;
         max-height: 0 !important;
         background: rgba(255, 255, 255, 0.03) !important;
-        border-radius: 10px !important;
+        border-radius: 0;!important;
         margin-top: 6px;
         min-width: 100% !important;
     }
@@ -590,7 +590,7 @@ a:hover {
     background: var(--gradient-gold);
     color: var(--color-navy);
     padding: 14px 38px;
-    border-radius: 50px;
+    border-radius: 0;
     text-decoration: none;
     font-weight: 700;
     transition: all 0.3s ease;
@@ -686,7 +686,7 @@ a:hover {
     height: 10px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(197,160,89, 0.3);
     cursor: pointer;
     font-size: 0;
     padding: 0;
@@ -696,7 +696,7 @@ a:hover {
 .fullwidth-slider-section .slick-dots li.slick-active button {
     background: var(--color-gold);
     width: 30px;
-    border-radius: 6px;
+    border-radius: 0;
     border-color: var(--color-gold);
 }
 
@@ -706,8 +706,8 @@ a:hover {
 .flash-deal-section {
     background: var(--color-navy-card);
     padding: 15px 0;
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    border-top: 1px solid rgba(197,160,89, 0.1);
+    border-bottom: 1px solid rgba(197,160,89, 0.1);
     margin-bottom: 30px;
 }
 
@@ -739,7 +739,7 @@ a:hover {
     background: linear-gradient(135deg, #ef4444, #dc2626);
     color: white;
     padding: 2px 12px;
-    border-radius: 20px;
+    border-radius: 0;
     font-size: 12px;
     margin-right: 8px;
 }
@@ -771,23 +771,23 @@ a:hover {
 
 .flash-deal-scroll::-webkit-scrollbar-track {
     background: var(--color-navy);
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 .flash-deal-scroll::-webkit-scrollbar-thumb {
     background: var(--color-gold);
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 .flash-deal-item-horizontal {
     flex: 0 0 140px;
     background: var(--color-navy);
-    border-radius: 12px;
+    border-radius: 0;
     padding: 10px;
     text-align: center;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 1px solid rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(197,160,89, 0.08);
 }
 
 .flash-deal-item-horizontal:hover {
@@ -800,7 +800,7 @@ a:hover {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0;
     margin-bottom: 8px;
 }
 
@@ -828,11 +828,11 @@ a:hover {
 
 .product-card-2 {
     height: 100%;
-    border-radius: 16px;
+    border-radius: 0;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--color-navy-card);
-    border: 1px solid rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(197,160,89, 0.12);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -922,7 +922,7 @@ a:hover {
     background: linear-gradient(135deg, #ef4444, #dc2626);
     color: white;
     padding: 4px 12px;
-    border-radius: 20px;
+    border-radius: 0;
     font-size: 12px;
     font-weight: 700;
     z-index: 2;
@@ -937,10 +937,10 @@ a:hover {
     margin-bottom: 40px;
     background: var(--gradient-navy);
     padding: 30px 0;
-    border-radius: 16px;
+    border-radius: 0;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(197,160,89, 0.1);
 }
 
 .mobile-icons-section::before {
@@ -950,7 +950,7 @@ a:hover {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+    background: radial-gradient(circle at 30% 50%, rgba(197,160,89, 0.05) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -977,18 +977,18 @@ a:hover {
     width: 65px;
     height: 65px;
     margin: 0 auto 10px;
-    background: rgba(212, 175, 55, 0.12);
+    background: rgba(197,160,89, 0.12);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(197,160,89, 0.2);
 }
 
 .mobile-icon-item:hover .mobile-icon-circle {
     transform: scale(1.12) translateY(-3px);
-    background: rgba(212, 175, 55, 0.25);
+    background: rgba(197,160,89, 0.25);
     border-color: var(--color-gold);
     box-shadow: var(--shadow-gold);
 }
@@ -1011,7 +1011,7 @@ a:hover {
 .section-title-1 {
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 2px solid rgba(197,160,89, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1086,13 +1086,13 @@ a:hover {
 .categories-scroll-wrapper::-webkit-scrollbar-track,
 .brands-scroll-wrapper::-webkit-scrollbar-track {
     background: var(--color-navy);
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 .categories-scroll-wrapper::-webkit-scrollbar-thumb,
 .brands-scroll-wrapper::-webkit-scrollbar-thumb {
     background: var(--color-gold);
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 .categories-scroll-container,
@@ -1115,12 +1115,12 @@ a:hover {
 .brand-card-horizontal {
     display: block;
     background: var(--color-navy-card);
-    border-radius: 16px;
+    border-radius: 0;
     padding: 18px 12px;
     text-align: center;
     text-decoration: none;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(197,160,89, 0.08);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -1139,15 +1139,15 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(212, 175, 55, 0.08);
+    background: rgba(197,160,89, 0.08);
     border-radius: 50%;
     transition: all 0.3s ease;
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(197,160,89, 0.1);
 }
 
 .category-card-horizontal:hover .category-icon-box,
 .brand-card-horizontal:hover .brand-icon-box {
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(197,160,89, 0.2);
     border-color: var(--color-gold);
     box-shadow: var(--shadow-gold);
 }
@@ -1205,7 +1205,7 @@ a:hover {
     box-shadow: var(--shadow-gold);
     transition: all 0.3s ease;
     z-index: 10;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(197,160,89, 0.3);
 }
 
 .scroll-btn:hover {
@@ -1236,8 +1236,8 @@ a:hover {
 /* ============================================ */
 .bg-light.shadow-sm.rounded-3 {
     background: var(--color-navy-card) !important;
-    border-radius: 16px !important;
-    border: 1px solid rgba(212, 175, 55, 0.08);
+    border-radius: 0;!important;
+    border: 1px solid rgba(197,160,89, 0.08);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -1335,7 +1335,7 @@ a:hover {
 
     /* Mobile-specific mega menu tweaks */
     .mega-menu-btn {
-        border-radius: 12px;
+        border-radius: 0;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         margin: 0 10px 10px;
         justify-content: space-between;
@@ -1350,12 +1350,12 @@ a:hover {
         width: auto !important;
         max-height: calc(100vh - 90px) !important;
         background: linear-gradient(180deg, #17152f 0%, #10111d 100%) !important;
-        border-radius: 14px !important;
+        border-radius: 0;!important;
         padding: 8px 6px 10px !important;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55) !important;
         overflow-y: auto !important;
         overflow-x: hidden !important;
-        border: 1px solid rgba(212, 175, 55, 0.16) !important;
+        border: 1px solid rgba(197,160,89, 0.16) !important;
         z-index: 2000 !important;
     }
 
@@ -1373,13 +1373,13 @@ a:hover {
         font-size: 14.5px !important;
         color: var(--color-white-smoke) !important;
         background: transparent !important;
-        border-radius: 10px;
+        border-radius: 0;
         min-height: 46px;
     }
 
     .mega-menu-link:hover,
     .mega-menu-item.active > .mega-menu-link {
-        background: rgba(212, 175, 55, 0.15) !important;
+        background: rgba(197,160,89, 0.15) !important;
         color: var(--color-gold) !important;
     }
 
@@ -1404,13 +1404,13 @@ a:hover {
         overflow: hidden;
         transition: max-height 0.3s ease;
         box-shadow: none !important;
-        border-radius: 10px !important;
+        border-radius: 0;!important;
         padding: 0 !important;
         margin-top: 4px;
         visibility: visible !important;
         pointer-events: auto !important;
         background: rgba(255, 255, 255, 0.04) !important;
-        border: 1px solid rgba(212, 175, 55, 0.08) !important;
+        border: 1px solid rgba(197,160,89, 0.08) !important;
     }
 
     .mega-menu-item.active > .mega-sub-menu {
@@ -1422,11 +1422,11 @@ a:hover {
         padding: 10px 12px !important;
         font-size: 13.5px !important;
         color: var(--color-white-smoke) !important;
-        border-radius: 8px;
+        border-radius: 0;
     }
 
     .mega-sub-link:hover {
-        background: rgba(212, 175, 55, 0.12) !important;
+        background: rgba(197,160,89, 0.12) !important;
         color: var(--color-gold) !important;
     }
 
@@ -1443,7 +1443,7 @@ a:hover {
 
     .mega-sub-sub-list li a:hover {
         color: var(--color-gold) !important;
-        background: rgba(212, 175, 55, 0.08) !important;
+        background: rgba(197,160,89, 0.08) !important;
     }
 }
 
@@ -1490,10 +1490,10 @@ a:hover {
 @keyframes pulseGold {
     0%,
     100% {
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        box-shadow: 0 0 20px rgba(197,160,89, 0.2);
     }
     50% {
-        box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        box-shadow: 0 0 40px rgba(197,160,89, 0.4);
     }
 }
 
@@ -1508,12 +1508,12 @@ a:hover {
 
 .c-scrollbar::-webkit-scrollbar-track {
     background: var(--color-navy);
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 .c-scrollbar::-webkit-scrollbar-thumb {
     background: var(--color-gold);
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 /* ===== متن‌های اضافی ===== */
@@ -1547,7 +1547,7 @@ a:hover {
     background: linear-gradient(135deg, #f59e0b, #d97706);
     color: white;
     padding: 2px 12px;
-    border-radius: 12px;
+    border-radius: 0;
     font-size: 11px;
     font-weight: 600;
 }
@@ -1556,7 +1556,7 @@ a:hover {
 /* بنرهای تبلیغاتی پایین صفحه */
 /* ============================================ */
 .media-banner {
-    border-radius: 16px;
+    border-radius: 0;
     overflow: hidden;
     transition: all 0.3s ease;
 }
@@ -1568,7 +1568,7 @@ a:hover {
 
 .media-banner img {
     width: 100%;
-    border-radius: 16px;
+    border-radius: 0;
 }
 </style>
 
@@ -1676,9 +1676,9 @@ a:hover {
                 </h1>
                 <p>
                     خرید و فروش طلا، کالای لوکس، ساعت‌های لوکس و سنگ‌های قیمتی با
-                    <strong style="data-old-color:var(--d-gold);">شناسنامه معتبر</strong>،
-                    <strong style="data-old-color:var(--d-gold);">ضمانت اصالت</strong> و
-                    <strong style="data-old-color:var(--d-gold);">امکان رهگیری دائمی</strong>.
+                    <strong style="data-old-color:#c5a059;">شناسنامه معتبر</strong>،
+                    <strong style="data-old-color:#c5a059;">ضمانت اصالت</strong> و
+                    <strong style="data-old-color:#c5a059;">امکان رهگیری دائمی</strong>.
                     Alobi، جایی که ارزش‌ها ماندگارند.
                 </p>
                 <div class="d-hero-cta">
@@ -2244,7 +2244,7 @@ a:hover {
             @if(isset($banners_1) && count($banners_1) > 0)
                 @foreach ($banners_1 as $key => $banner)
                     <div class="col-md-6 mb-3">
-                        <a href="{{ $banner->url }}" class="d-block" style="border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: block; position: relative; transition: transform 0.3s;">
+                        <a href="{{ $banner->url }}" class="d-block" style="border-radius: 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: block; position: relative; transition: transform 0.3s;">
                             <img src="{{ asset($banner->photo) }}" alt="Banner" style="width: 100%; object-fit: cover; aspect-ratio: 21/9; display: block;">
                             <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div>
                         </a>
@@ -2281,7 +2281,7 @@ a:hover {
     <div class="container">
         <div class="d-sd-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
             <div style="display: flex; align-items: center; gap: 15px;">
-                <h2><i class="la la-bolt" style="data-old-color: var(--d-gold-dark);"></i> پیشنهاد شگفت‌انگیز</h2>
+                <h2><i class="la la-bolt" style="data-old-color: #9e7c3f;"></i> پیشنهاد شگفت‌انگیز</h2>
                 <div class="d-timer">
                     12 : 45 : 30
                 </div>
@@ -2295,7 +2295,7 @@ a:hover {
                     @if(home_discount_percentage($product->id) > 0)
                         <span style="position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 12px; font-weight: bold; z-index: 2;">-{{ home_discount_percentage($product->id) }}%</span>
                     @endif
-                    <img src="{{ uploaded_asset($product->thumbnail_img) }}" alt="{{ __($product->name) }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+                    <img src="{{ uploaded_asset($product->thumbnail_img) }}" alt="{{ __($product->name) }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 0; margin-bottom: 15px;">
                     <h4>{{ __($product->name) }}</h4>
                     @if(home_base_price($product->id) != home_discounted_base_price($product->id))
                         <div class="price-old" style="text-decoration: line-through; font-size: 13px;">{{ home_base_price($product->id) }}</div>
@@ -2319,17 +2319,17 @@ a:hover {
         </div>
         <div class="d-cat-grid">
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/ring.svg') }}" alt="حلقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/ring.svg') }}" alt="حلقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
                 <h4>حلقه و انگشتر</h4>
                 <span class="cat-count">۲,۴۰۰+ مدل</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/necklace.svg') }}" alt="گردنبند" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/necklace.svg') }}" alt="گردنبند" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
                 <h4>گردنبند و آویز</h4>
                 <span class="cat-count">طلای ظریف</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/watch.svg') }}" alt="ساعت" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/watch.svg') }}" alt="ساعت" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
                 <h4>ساعت لوکس</h4>
                 <span class="cat-count">رولکس، پتک و...</span>
             </a>
@@ -2339,12 +2339,12 @@ a:hover {
                 <span class="cat-count">قیمتی و نیمه‌قیمتی</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/crown.svg') }}" alt="تاج" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/crown.svg') }}" alt="تاج" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
                 <h4>کالای لوکس سلطنتی</h4>
                 <span class="cat-count">کلکسیون ویژه</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/coin.svg') }}" alt="سکه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(212,175,55,.4));">
+                <img src="{{ asset('frontend/images/alobi/coin.svg') }}" alt="سکه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
                 <h4>شمش و سکه</h4>
                 <span class="cat-count">سرمایه‌گذاری</span>
             </a>
@@ -2369,11 +2369,11 @@ a:hover {
     <div class="container">
         <div class="d-trust-inner">
             <div class="d-trust-content">
-                <span class="kicker" style="data-old-color:var(--d-gold); font-weight:700; letter-spacing:3px; font-size:13px;">
+                <span class="kicker" style="data-old-color:#c5a059; font-weight:700; letter-spacing:3px; font-size:13px;">
                     CERTIFICATE & SECURITY
                 </span>
                 <h2>
-                    هر کالا، یک <span style="data-old-background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">شناسنامه معتبر</span>؛ آرامش خاطر شما
+                    هر کالا، یک <span style="data-old-background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">شناسنامه معتبر</span>؛ آرامش خاطر شما
                 </h2>
                 <p style="data-old-color:var(--d-text-muted); font-size:15px; line-height:2.1; margin-bottom:0;">
                     گواهی اصالت دیجیتال Alobi، سندی رسمی و غیرقابل جعل است که تمامی مشخصات فنی، جزئیات دقیق، متریال، برند و تاریخچه مالکیت کالا را در خود جای می‌دهد. هرگونه نقل و انتقال، تعمیر یا تغییر وضعیت در پرونده کالا به صورت دائمی ثبت می‌شود.
@@ -2445,7 +2445,7 @@ a:hover {
         <div class="d-verify-box">
             <div class="d-verify-icon"><i class="la la-certificate"></i></div>
             <h2>
-                همین حالا <span style="data-old-background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">اصالت</span> کالا خود را بررسی کنید
+                همین حالا <span style="data-old-background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">اصالت</span> کالا خود را بررسی کنید
             </h2>
             <p style="data-old-color:var(--d-text-muted); margin:0;">
                 با وارد کردن شماره سریال شناسنامه، از مشخصات، اصالت و وضعیت کالا خود مطلع شوید.

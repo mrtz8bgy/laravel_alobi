@@ -31,13 +31,13 @@
             background: #f39c12;
             color: white;
             padding: 5px 10px;
-            border-radius: 5px;
+            border-radius: 0;
             display: inline-block;
         }
         .section {
             margin-bottom: 30px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 0;
             overflow: hidden;
         }
         .section-header {
@@ -74,7 +74,7 @@
         }
         .badge {
             padding: 5px 10px;
-            border-radius: 4px;
+            border-radius: 0;
             font-size: 14px;
         }
         .badge-danger {
@@ -90,7 +90,7 @@
             margin-bottom: 20px;
             padding: 10px;
             border: 1px dashed #ccc;
-            border-radius: 8px;
+            border-radius: 0;
         }
         .jewelry-image {
             max-width: 200px;
@@ -112,10 +112,10 @@
 </head>
 <body>
     <div class="no-print" style="text-align: left; margin-bottom: 20px;">
-        <button onclick="window.print()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        <button onclick="window.print()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 0; cursor: pointer;">
             چاپ
         </button>
-        <button onclick="window.close()" style="padding: 10px 20px; background: #95a5a6; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        <button onclick="window.close()" style="padding: 10px 20px; background: #95a5a6; color: white; border: none; border-radius: 0; cursor: pointer;">
             بستن
         </button>
     </div>

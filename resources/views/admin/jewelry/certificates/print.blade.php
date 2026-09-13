@@ -70,21 +70,21 @@
             display: inline-block;
             padding: 10px;
             border: 2px solid #f1c40f;
-            border-radius: 10px;
+            border-radius: 0;
             background-color: #fffdf6;
             margin-bottom: 10px;
         }
         .jewelry-image {
             max-width: 300px;
             max-height: 250px;
-            border-radius: 5px;
+            border-radius: 0;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
         .image-placeholder {
             width: 300px;
             height: 200px;
             border: 2px dashed #ddd;
-            border-radius: 10px;
+            border-radius: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -170,12 +170,12 @@
             margin: 15px 0 25px 0;
             padding: 15px;
             background-color: #f8f9fa;
-            border-radius: 10px;
+            border-radius: 0;
         }
         .btn {
             padding: 8px 16px;
             border: none;
-            border-radius: 5px;
+            border-radius: 0;
             cursor: pointer;
             font-size: 14px;
             margin: 0 8px;
@@ -243,7 +243,7 @@
         .status-badge {
             display: inline-block;
             padding: 2px 8px;
-            border-radius: 10px;
+            border-radius: 0;
             font-size: 11px;
             margin-left: 5px;
         }
@@ -553,7 +553,7 @@
         <div class="info-section">
             <div class="section-title">توضیحات</div>
             <div class="info-item">
-                <div style="line-height: 1.6; text-align: justify; font-size: 14px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                <div style="line-height: 1.6; text-align: justify; font-size: 14px; padding: 10px; background-color: #f8f9fa; border-radius: 0;">
                     {{ $certificate->description }}
                 </div>
             </div>
@@ -867,7 +867,7 @@
                 top: 20px;
                 right: 20px;
                 padding: 12px 20px;
-                border-radius: 5px;
+                border-radius: 0;
                 color: white;
                 font-size: 14px;
                 z-index: 10000;

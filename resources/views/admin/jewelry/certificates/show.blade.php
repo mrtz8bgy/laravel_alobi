@@ -391,12 +391,12 @@
 @push('styles')
 <style>
     .card {
-        border-radius: 10px;
+        border-radius: 0;
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         margin-bottom: 20px;
     }
     .card-header {
-        border-radius: 10px 10px 0 0 !important;
+        border-radius: 0;10px 0 0 !important;
         font-weight: 600;
     }
     .table-borderless th {

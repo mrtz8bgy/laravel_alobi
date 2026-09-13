@@ -73,7 +73,7 @@
                     <li><i class="la la-clock-o"></i> <span>شنبه تا پنجشنبه، ۹ الی ۲۰</span></li>
                 </ul>
                 <div style="margin-top:18px;">
-                    <div style="color: var(--d-gold); font-size:13px; font-weight:600; margin-bottom:8px;">
+                    <div style="color: #c5a059; font-size:13px; font-weight:600; margin-bottom:8px;">
                         <i class="la la-bullhorn"></i> عضویت در خبرنامه
                     </div>
                     <form method="POST" action="{{ route('subscribers.store') }}" class="d-newsletter-form">

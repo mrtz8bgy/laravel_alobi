@@ -30,7 +30,7 @@
         --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         --card-shadow-hover: 0 20px 40px rgba(67, 97, 238, 0.1);
         --transition: all 0.3s ease;
-        --border-radius: 20px;
+        --border-radius: 0;
         --border-radius-sm: 16px;
     }
 
@@ -64,7 +64,7 @@
         color: white;
         border: none;
         padding: 10px 25px;
-        border-radius: 12px;
+        border-radius: 0;
         font-size: 0.95rem;
         font-weight: 500;
         transition: var(--transition);
@@ -138,7 +138,7 @@
         width: 60px;
         height: 60px;
         background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-        border-radius: 16px;
+        border-radius: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -195,7 +195,7 @@
     .small-stat-card .stat-icon {
         width: 50px;
         height: 50px;
-        border-radius: 12px;
+        border-radius: 0;
         font-size: 1.5rem;
         margin: 0 auto 15px;
     }
@@ -221,7 +221,7 @@
         gap: 5px;
         padding: 8px 16px;
         background: var(--bg-gray);
-        border-radius: 10px;
+        border-radius: 0;
     }
 
     .small-stat-card .btn-link:hover {
@@ -291,7 +291,7 @@
 
     /* جداول */
     .table-responsive {
-        border-radius: 12px;
+        border-radius: 0;
         overflow: hidden;
     }
 
@@ -332,7 +332,7 @@
     /* بج‌ها */
     .badge {
         padding: 6px 12px;
-        border-radius: 30px;
+        border-radius: 0;
         font-size: 0.85rem;
         font-weight: 500;
         display: inline-block;
@@ -368,7 +368,7 @@
         background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
         border: none;
         padding: 12px 25px;
-        border-radius: 12px;
+        border-radius: 0;
         color: white;
         font-weight: 600;
         font-size: 0.95rem;
@@ -394,7 +394,7 @@
         background: transparent;
         color: var(--primary-color);
         padding: 8px 16px;
-        border-radius: 10px;
+        border-radius: 0;
         transition: var(--transition);
         display: inline-flex;
         align-items: center;

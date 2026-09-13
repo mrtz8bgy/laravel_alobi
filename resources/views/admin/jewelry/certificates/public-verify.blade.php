@@ -7,7 +7,7 @@
     <div class="container">
         <span class="kicker"><i class="la la-certificate"></i> نتیجه استعلام</span>
         <h1>گواهی <span class="gold">اصالت کالا</span></h1>
-        <p>نتیجه استعلام سریال <strong style="color:var(--d-gold);" dir="ltr">{{ $certificate->serial_number }}</strong> از سامانه شناسنامه Alobi.</p>
+        <p>نتیجه استعلام سریال <strong style="color:#c5a059;" dir="ltr">{{ $certificate->serial_number }}</strong> از سامانه شناسنامه Alobi.</p>
     </div>
 </section>
 
