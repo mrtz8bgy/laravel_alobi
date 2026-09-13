@@ -1061,6 +1061,7 @@ a:hover {
     display: inline-block;
     width: 140px;
     flex-shrink: 0;
+    max-height: 122px;
 }
 
 /* ===== کارت دسته‌بندی با فونت بزرگتر ===== */
@@ -1475,7 +1476,7 @@ a:hover {
 }
 
 .gry-bg {
-    background:#02042d !important;
+    background:#333 !important;
 }
 
 .heading-6 {
