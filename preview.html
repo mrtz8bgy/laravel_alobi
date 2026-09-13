@@ -16,6 +16,8 @@
 
 
 
+
+
 <style>
 /* ==========================================================================
    DRIKANA — Luxury Gold & Jewelry Marketplace
@@ -2080,7 +2082,7 @@ body { background: #fdfbf7 !important; color: #041f14 !important; }
     top: 100%;
     right: 0;
     width: 300px;
-    background: linear-gradient(180deg, var(--mega-navy-card), var(--mega-navy-dark));
+    background: var(--mega-navy-card);
     list-style: none;
     margin: 0;
     padding: 6px 0;
@@ -2106,7 +2108,7 @@ body { background: #fdfbf7 !important; color: #041f14 !important; }
 
 .lux-mega-item {
     position: relative;
-    border-bottom: 1px solid rgba(255,255,255,.04);
+    border-bottom: 1px solid rgba(0,0,0,.04);
     overflow: visible;
 }
 .lux-mega-item:last-child { border-bottom: none; }
@@ -2115,7 +2117,7 @@ body { background: #fdfbf7 !important; color: #041f14 !important; }
     align-items: center;
     gap: 12px;
     padding: 11px 18px;
-    color: #e8e6f0;
+    color: var(--mega-text-main);
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -2141,7 +2143,7 @@ body { background: #fdfbf7 !important; color: #041f14 !important; }
 .lux-mega-name { flex: 1; }
 .lux-mega-arrow {
     font-size: 14px;
-    color: rgba(255,255,255,.3);
+    color: rgba(4,31,20,.3);
     transition: transform .25s ease;
 }
 .lux-mega-item:hover > .lux-mega-link .lux-mega-arrow {
@@ -2155,7 +2157,7 @@ body { background: #fdfbf7 !important; color: #041f14 !important; }
     top: 0;
     right: 100%;
     width: 620px;
-    background: linear-gradient(180deg, var(--mega-navy-card), var(--mega-navy-dark));
+    background: var(--mega-navy-card);
     border-radius: 14px;
     box-shadow: var(--mega-shadow);
     border: 1px solid rgba(212,175,55,.2);
@@ -2196,7 +2198,7 @@ body { background: #fdfbf7 !important; color: #041f14 !important; }
     display: block;
     padding: 5px 8px;
     font-size: 12.5px;
-    color: #d0cedf;
+    color: var(--mega-text-muted);
     text-decoration: none;
     border-radius: 6px;
     transition: all .2s ease;
@@ -2226,7 +2228,7 @@ body { background: #fdfbf7 !important; color: #041f14 !important; }
 }
 .lux-mega-banner-text span {
     font-size: 11px;
-    color: #c5c3d0;
+    color: var(--mega-text-muted);
 }
 
 /* View All */
@@ -2283,7 +2285,7 @@ body { background: #fdfbf7 !important; color: #041f14 !important; }
         box-shadow: none !important;
         border: none !important;
         padding: 0 !important;
-        background: rgba(0,0,0,.2) !important;
+        background: rgba(212,175,55,.05) !important;
         border-radius: 10px !important;
         margin-top: 6px;
         max-height: 0;
@@ -2309,6 +2311,7 @@ body { margin:0; }
 .d-footer-brand p { color: #c5c3c6 !important; }
 </style>
 </head>
+
 
 
 
