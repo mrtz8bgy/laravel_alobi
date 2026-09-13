@@ -123,7 +123,7 @@
         <div class="lux-mega-trigger" id="luxMegaTrigger">
             <a href="#" class="lux-cat-btn" aria-expanded="false">
                 <i class="la la-bars"></i>
-                <span>همه دسته‌بندی‌های طلا و جواهر</span>
+                <span>همه دسته‌بندی‌ها</span>
                 <i class="la la-angle-down"></i>
             </a>
             <ul class="lux-mega-list" id="luxMegaList">
@@ -177,7 +177,7 @@
                                     <img src="{{ asset('frontend/images/drikana/diamond.svg') }}" alt="">
                                     <div class="lux-mega-banner-text">
                                         <strong>مشاهده همه {{ $cat->name }}</strong>
-                                        <span>جدیدترین مدل‌ها با بهترین قیمت و شناسنامه معتبر</span>
+                                        <span>جدیدترین محصولات با بهترین قیمت و ارسال سریع</span>
                                     </div>
                                 </a>
                             </div>
