@@ -21,23 +21,23 @@
         }
         
         :root {
-            --gold-primary: #c8a951;
-            --gold-light: #f5d77b;
-            --gold-gradient: linear-gradient(135deg, #f5d77b, #c8a951);
-            --bg-deep: #02042d;
-            --bg-card: rgba(255, 255, 255, 0.04);
-            --text-light: #e6dcc8;
-            --text-muted: #b0a68e;
-            --border-gold: rgba(196, 169, 90, 0.25);
+            --gold-primary: #c5a059;
+            --gold-light: #e8d090;
+            --gold-gradient: linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%);
+            --bg-deep: #ffffff;
+            --bg-card: #ffffff;
+            --text-light: #050505;
+            --text-muted: #757575;
+            --border-gold: #eeeeee;
             --shadow-gold: 0 20px 40px -8px rgba(0,0,0,0.6);
-            --radius-xl: 28px;
-            --radius-lg: 20px;
+            --radius-xl: 0;
+            --radius-lg: 0;
             --transition: all 0.3s ease;
         }
         
         body {
             font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
-            background: var(--bg-deep);
+            background: var(--bg-deep); color: var(--text-light);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -128,7 +128,7 @@
            ================================================ */
         .login-wrapper {
             display: flex;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(0,0,0,0.02);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border-radius: var(--radius-xl);
@@ -675,7 +675,7 @@
         }
         
         .language-selector select option {
-            background: var(--bg-deep);
+            background: var(--bg-deep); color: var(--text-light);
             color: var(--text-light);
             padding: 10px;
         }

@@ -2223,18 +2223,10 @@ ul.seller-brand-list .brand-item {
     line-height: 69px;
     font-size: 36px;
 }
-.red-widget {
-    background-color: #fa5c7c;
-}
-.blue-widget {
-    background-color: #39afd1;
-}
-.green-widget {
-    background-color: #0acf97;
-}
-.yellow-widget {
-    background-color: #ffbc00;
-}
+.red-widget { background-color: #1a1a1a; }
+.blue-widget { background-color: #333333; }
+.green-widget { background-color: #050505; }
+.yellow-widget { background-color: #c5a059; }
 
 .category-widget ul {
     padding: 0;

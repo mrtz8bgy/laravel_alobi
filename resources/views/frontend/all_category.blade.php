@@ -7,7 +7,7 @@
     --navy-dark: #0a0a2a;
     --navy-light: #1a1a4a;
     --gold: #c5a059;
-    --gold-light: #F5D76E;
+    --gold-light: #e8d090;
     --gold-dark: #B8960F;
     --silver: #C0C0C0;
     --shadow-gold: 0 5px 20px rgba(197,160,89, 0.2);
@@ -91,7 +91,7 @@
 }
 
 .all-category-menu ul::-webkit-scrollbar-track {
-    background: rgba(255,255,255,0.05);
+    background: rgba(0,0,0,0.02);
     border-radius: 0;
 }
 
@@ -105,7 +105,7 @@
     margin: 5px 10px;
     border-radius: 0;
     transition: all 0.3s ease;
-    background: rgba(255,255,255,0.03);
+    background: rgba(0,0,0,0.02);
 }
 
 .all-category-menu ul li a {
@@ -162,7 +162,7 @@
 
 .all-category-menu ul li.active .menu-icon,
 .all-category-menu ul li:hover .menu-icon {
-    background: rgba(255,255,255,0.25);
+    background: rgba(0,0,0,0.05);
 }
 
 .all-category-menu ul li.active .default-icon,
