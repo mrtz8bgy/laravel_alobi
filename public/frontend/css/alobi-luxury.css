@@ -66,12 +66,13 @@ body { background: var(--d-white) !important; color: var(--d-text-main) !importa
 .btn-lux-outline:hover { background: var(--d-gold) !important; color: var(--d-black) !important; }
 
 /* Hero */
-.d-hero { background: var(--d-light-grey) !important; color: var(--d-text-main) !important; border-bottom: none; border-top: none; }
-.d-hero h1, .d-hero p { color: var(--d-text-main) !important; }
+.d-hero { background: #050505 !important; color: var(--d-text-main) !important; border-bottom: none; border-top: none; }
+.d-hero h1, .d-hero p { color: #d0b06b !important; }
 .d-hero h1 { font-family: var(--f-display); font-weight: 300; letter-spacing: -1px; }
 .d-hero-badge { background: var(--d-black) !important; color: var(--d-gold) !important; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; border-radius: 0; border: none; }
 .d-hero-stat strong { color: var(--d-black) !important; font-weight: 800; }
 .d-hero-stat span { color: var(--d-grey) !important; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; }
+
 
 /* Product Cards & Deal Cards */
 .d-sd-card, .d-service-card, .d-cat-card, .d-card-lux { 
