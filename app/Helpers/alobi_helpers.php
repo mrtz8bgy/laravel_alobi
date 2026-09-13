@@ -31,3 +31,17 @@ if (!function_exists('alobi_setting')) {
         return safe_business_setting($key, $default);
     }
 }
+
+if (!function_exists('home_discount_percentage')) {
+    function home_discount_percentage($product_id) {
+        $product = \App\Product::find($product_id);
+        if ($product && $product->discount > 0) {
+            if ($product->discount_type == 'percent') {
+                return $product->discount;
+            } elseif ($product->discount_type == 'amount' && $product->unit_price > 0) {
+                return round(($product->discount / $product->unit_price) * 100);
+            }
+        }
+        return 0;
+    }
+}
