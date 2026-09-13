@@ -45,3 +45,27 @@ if (!function_exists('home_discount_percentage')) {
         return 0;
     }
 }
+
+if (!function_exists('uploaded_asset')) {
+    function uploaded_asset($id) {
+        if (($asset = \App\Upload::find($id)) != null) {
+            return $asset->external_link == null ? my_asset($asset->file_name) : $asset->external_link;
+        }
+        return static_asset('assets/img/placeholder.jpg');
+    }
+}
+
+if (!function_exists('my_asset')) {
+    function my_asset($path) {
+        if (env('FILESYSTEM_DRIVER') == 's3') {
+            return \Illuminate\Support\Facades\Storage::disk('s3')->url($path);
+        }
+        return app('url')->asset($path);
+    }
+}
+
+if (!function_exists('static_asset')) {
+    function static_asset($path) {
+        return app('url')->asset('public/' . $path);
+    }
+}
