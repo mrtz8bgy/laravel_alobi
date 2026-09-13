@@ -28,6 +28,8 @@
 
 
 
+
+
 <style>
 
 :root {
@@ -2300,27 +2302,33 @@ a, .link a { color: var(--d-gold); }
 .mega-menu-section { display:none !important; }
 
 /* ===== Mobile Mega Menu ===== */
+
 @media (max-width: 992px) {
-    .lux-mega-section { padding: 0 0 0 0; }
+    .lux-mega-section { padding: 0; }
+    .lux-mega-container { padding: 0; }
     .lux-cat-btn {
-        width: calc(100% - 20px);
-        margin: 10px;
+        width: 100%;
+        margin: 0;
         border-radius: 0;
         justify-content: space-between;
+        padding: 14px 15px;
+        box-sizing: border-box;
     }
     .lux-mega-list {
         position: static !important;
-        width: calc(100% - 20px) !important;
-        margin: 0 10px 10px;
+        width: 100% !important;
+        margin: 0;
         border-radius: 0;
         max-height: 0;
         overflow: hidden;
         padding: 0;
         transition: max-height .35s ease;
         display: block;
+        box-sizing: border-box;
     }
     .lux-mega-trigger.open .lux-mega-list { max-height: 75vh; overflow-y: auto; padding: 6px 0; }
     .lux-mega-sub {
+
         position: static !important;
         width: 100% !important;
         opacity: 1 !important;
@@ -3896,6 +3904,7 @@ body { background: #ffffff !important; color: #1c1c1c !important; font-family: '
 .lux-mega-link:hover { color: #cba052 !important; background: #f9f8f6 !important; }
 </style>
 </head>
+
 
 
 

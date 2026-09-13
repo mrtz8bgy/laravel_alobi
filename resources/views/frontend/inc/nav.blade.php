@@ -131,7 +131,7 @@
         <div class="lux-mega-trigger" id="luxMegaTrigger">
             <a href="#" class="lux-cat-btn" aria-expanded="false">
                 <i class="la la-bars"></i>
-                <span>همه دسته‌بندی‌های کالا و خدمات لوکس</span>
+                <span class="d-none d-md-inline-block">همه دسته‌بندی‌های کالا و خدمات لوکس</span><span class="d-inline-block d-md-none">همه دسته‌بندی‌ها</span>
                 <i class="la la-angle-down"></i>
             </a>
             <ul class="lux-mega-list" id="luxMegaList">
