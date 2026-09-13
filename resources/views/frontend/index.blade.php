@@ -1596,7 +1596,7 @@ a:hover {
                                     @if($category->icon && file_exists(public_path($category->icon)))
                                         <img class="mega-cat-icon lazyload" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset($category->icon) }}" width="30" alt="{{ __($category->name) }}">
                                     @else
-                                        <i class="la la-folder-open" style="font-size:20px;data-old-color:var(--data-old-color-gold);width:30px;text-align:center;"></i>
+                                        <i class="la la-folder-open" style="font-size:20px;width:30px;text-align:center;"></i>
                                     @endif
                                     <span>{{ __($category->name) }}</span>
                                     @if($category->subcategories && $category->subcategories->isNotEmpty())
@@ -1614,7 +1614,7 @@ a:hover {
                                                             @if($subcategory->icon && file_exists(public_path($subcategory->icon)))
                                                                 <img class="mega-sub-icon lazyload" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset($subcategory->icon) }}" width="24" alt="{{ __($subcategory->name) }}">
                                                             @else
-                                                                <i class="la la-folder-o" style="font-size:20px;data-old-color:var(--data-old-color-gold);width:24px;text-align:center;"></i>
+                                                                <i class="la la-folder-o" style="font-size:20px;width:24px;text-align:center;"></i>
                                                             @endif
                                                             <span>{{ __($subcategory->name) }}</span>
                                                         </a>
@@ -1676,9 +1676,9 @@ a:hover {
                 </h1>
                 <p>
                     خرید و فروش طلا، کالای لوکس، ساعت‌های لوکس و سنگ‌های قیمتی با
-                    <strong style="data-old-color:#c5a059;">شناسنامه معتبر</strong>،
-                    <strong style="data-old-color:#c5a059;">ضمانت اصالت</strong> و
-                    <strong style="data-old-color:#c5a059;">امکان رهگیری دائمی</strong>.
+                    <strong >شناسنامه معتبر</strong>،
+                    <strong >ضمانت اصالت</strong> و
+                    <strong >امکان رهگیری دائمی</strong>.
                     Alobi، جایی که ارزش‌ها ماندگارند.
                 </p>
                 <div class="d-hero-cta">
@@ -2281,7 +2281,7 @@ a:hover {
     <div class="container">
         <div class="d-sd-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
             <div style="display: flex; align-items: center; gap: 15px;">
-                <h2><i class="la la-bolt" style="data-old-color: #9e7c3f;"></i> پیشنهاد شگفت‌انگیز</h2>
+                <h2><i class="la la-bolt" ></i> پیشنهاد شگفت‌انگیز</h2>
                 <div class="d-timer">
                     12 : 45 : 30
                 </div>
@@ -2319,42 +2319,42 @@ a:hover {
         </div>
         <div class="d-cat-grid">
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/ring.svg') }}" alt="حلقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
+                <img src="{{ asset('frontend/images/alobi/ring.svg') }}" alt="حلقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>حلقه و انگشتر</h4>
                 <span class="cat-count">۲,۴۰۰+ مدل</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/necklace.svg') }}" alt="گردنبند" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
+                <img src="{{ asset('frontend/images/alobi/necklace.svg') }}" alt="گردنبند" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>گردنبند و آویز</h4>
                 <span class="cat-count">طلای ظریف</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/watch.svg') }}" alt="ساعت" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
+                <img src="{{ asset('frontend/images/alobi/watch.svg') }}" alt="ساعت" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>ساعت لوکس</h4>
                 <span class="cat-count">رولکس، پتک و...</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/diamond.svg') }}" alt="الماس" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(110,180,230,.4));">
+                <img src="{{ asset('frontend/images/alobi/diamond.svg') }}" alt="الماس" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>الماس و سنگ قیمتی</h4>
                 <span class="cat-count">قیمتی و نیمه‌قیمتی</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/crown.svg') }}" alt="تاج" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
+                <img src="{{ asset('frontend/images/alobi/crown.svg') }}" alt="تاج" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>کالای لوکس سلطنتی</h4>
                 <span class="cat-count">کلکسیون ویژه</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/coin.svg') }}" alt="سکه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,.4));">
+                <img src="{{ asset('frontend/images/alobi/coin.svg') }}" alt="سکه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>شمش و سکه</h4>
                 <span class="cat-count">سرمایه‌گذاری</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/gift.svg') }}" alt="هدیه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(200,30,60,.4));">
+                <img src="{{ asset('frontend/images/alobi/gift.svg') }}" alt="هدیه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>پک هدیه لوکس</h4>
                 <span class="cat-count">بسته‌بندی ویژه</span>
             </a>
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/antique.svg') }}" alt="عتیقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(200,160,80,.4));">
+                <img src="{{ asset('frontend/images/alobi/antique.svg') }}" alt="عتیقه" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>اشیاء عتیقه</h4>
                 <span class="cat-count">کلکسیونرها</span>
             </a>
@@ -2369,13 +2369,13 @@ a:hover {
     <div class="container">
         <div class="d-trust-inner">
             <div class="d-trust-content">
-                <span class="kicker" style="data-old-color:#c5a059; font-weight:700; letter-spacing:3px; font-size:13px;">
+                <span class="kicker" style=" font-weight:700; letter-spacing:3px; font-size:13px;">
                     CERTIFICATE & SECURITY
                 </span>
                 <h2>
-                    هر کالا، یک <span style="data-old-background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">شناسنامه معتبر</span>؛ آرامش خاطر شما
+                    هر کالا، یک <span class="text-gold">شناسنامه معتبر</span>؛ آرامش خاطر شما
                 </h2>
-                <p style="data-old-color:var(--d-text-muted); font-size:15px; line-height:2.1; margin-bottom:0;">
+                <p style=" font-size:15px; line-height:2.1; margin-bottom:0;">
                     گواهی اصالت دیجیتال Alobi، سندی رسمی و غیرقابل جعل است که تمامی مشخصات فنی، جزئیات دقیق، متریال، برند و تاریخچه مالکیت کالا را در خود جای می‌دهد. هرگونه نقل و انتقال، تعمیر یا تغییر وضعیت در پرونده کالا به صورت دائمی ثبت می‌شود.
                 </p>
                 <div class="d-trust-features">
@@ -2445,9 +2445,9 @@ a:hover {
         <div class="d-verify-box">
             <div class="d-verify-icon"><i class="la la-certificate"></i></div>
             <h2>
-                همین حالا <span style="data-old-background:linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">اصالت</span> کالا خود را بررسی کنید
+                همین حالا <span class="text-gold">اصالت</span> کالا خود را بررسی کنید
             </h2>
-            <p style="data-old-color:var(--d-text-muted); margin:0;">
+            <p style=" margin:0;">
                 با وارد کردن شماره سریال شناسنامه، از مشخصات، اصالت و وضعیت کالا خود مطلع شوید.
             </p>
             <form method="GET" action="{{ route('jewelry.certificates.verify_page') }}" class="d-verify-form">
