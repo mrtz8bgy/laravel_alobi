@@ -6,7 +6,7 @@
 .bootstrap-tagsinput {
     background-color: #fff;
     border: 1px solid rgba(0,0,0,0.09);
-    border-radius: 3px;
+    border-radius: 0 !important;
     color: #4d627b;
     cursor: text;
     display: inline-block;
@@ -36,8 +36,8 @@
     box-shadow: none;
 }
 .bootstrap-tagsinput .tag {
-    border-radius: 2px;
-    color: white;
+    border-radius: 0 !important;
+    color: #c5a059;
     display: inline-block;
     font-size: 12px;
     font-weight: normal;
