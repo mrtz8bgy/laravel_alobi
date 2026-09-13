@@ -1,63 +1,128 @@
-/* ==========================================================================
-   DRIKANA — Luxury Gold & Jewelry Marketplace
-   تم لوکس طلایی و سرمه‌ای برای فروشگاه طلا، جواهرات و اشیاء قیمتی
-   نسخه: 2.0
-   ========================================================================== */
-
-@import url('https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css');
 
 :root {
-    /* پالت رنگی لوکس */
-    --d-gold: var(--d-gold);
-    --d-gold-light: #ff758c;
-    --d-gold-dark: #b8892a;
-    --d-gold-soft: #e8c968;
-    --d-navy-900: #041f14;
-    --d-navy-800: #062b1d;
-    --d-navy-700: #0a3a28;
-    --d-navy-600: #0f4d36;
-    --d-navy-500: #156346;
-    --d-cream: #fdf7e6;
-    --d-white: #111111;
-    --d-gray-100: #f5f3f0;
-    --d-gray-300: #c5c3c6;
-    --d-gray-500: #8e8b95;
-    --d-gray-700: #4d4a5c;
-    --d-danger: #e53e3e;
-    --d-success: #38a169;
-    --d-warn: #d69e2e;
-    --d-info: #3182ce;
-
-    /* گرادیان‌ها */
-    --grad-gold: var(--grad-gold);
-    --grad-gold-soft: linear-gradient(135deg, #f4d47c 0%, #d4af37 100%);
-    --grad-navy: linear-gradient(135deg, #041f14 0%, #0f4d36 100%);
-    --grad-dark: linear-gradient(180deg, #062b1d 0%, #041f14 100%);
-
-    /* سایه‌ها */
-    --shadow-sm: 0 2px 8px rgba(0,0,0,.25);
-    --shadow-md: 0 8px 24px rgba(0,0,0,.35);
-    --shadow-lg: 0 20px 50px rgba(0,0,0,.55);
-    --shadow-gold: 0 10px 30px rgba(212,175,55,.25);
-    --shadow-gold-lg: 0 15px 45px rgba(212,175,55,.4);
-
-    /* گردی‌ها */
-    --r-sm: 8px;
-    --r-md: 14px;
-    --r-lg: 22px;
-    --r-xl: 28px;
+    /* High-Fashion Minimalist Palette */
+    --d-black: #050505;
+    --d-dark-grey: #1a1a1a;
+    --d-grey: #757575;
+    --d-light-grey: #f4f4f4;
+    --d-white: #ffffff;
+    
+    /* Refined Gold Accents */
+    --d-gold: #c5a059;
+    --d-gold-light: #e8d090;
+    --d-gold-dark: #9e7c3f;
+    --grad-gold: linear-gradient(135deg, #c5a059 0%, #e8d090 50%, #c5a059 100%);
+    
+    /* Typography */
+    --d-text-main: #050505;
+    --d-text-muted: #757575;
+    
+    /* Shadows & Borders */
+    --shadow-sm: 0 2px 10px rgba(0,0,0,0.03);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.06);
+    --border-lux: 1px solid #eeeeee;
+    
+    /* Structural */
+    --r-sm: 4px;
+    --r-md: 8px;
+    --r-lg: 12px;
     --r-pill: 999px;
-
-    /* فونت */
     --f-base: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
     --f-display: 'Vazirmatn', 'Segoe UI', serif;
-
-    /* سرعت انیمیشن */
-    --tr-fast: .2s cubic-bezier(.4,0,.2,1);
-    --tr-base: .35s cubic-bezier(.4,0,.2,1);
 }
 
-/* ===== ریست و پایه ===== */
+/* ==========================================================================
+   ULTIMATE HIGH-FASHION LUXURY OVERRIDES
+   ========================================================================== */
+body { background: var(--d-white) !important; color: var(--d-text-main) !important; font-family: var(--f-base); }
+
+/* Header: Pitch Black for VIP/Premium feel */
+.d-header { background: var(--d-black) !important; border-bottom: 2px solid var(--d-gold); box-shadow: var(--shadow-md); }
+.d-topbar { background: #000000 !important; border-bottom: 1px solid rgba(255,255,255,0.05); color: #aaaaaa !important; }
+.d-topbar a, .d-topbar span, .d-topbar i { color: #aaaaaa !important; }
+.d-topbar a:hover { color: var(--d-gold) !important; }
+
+/* Branding & Nav */
+.d-mainbar .brand-name { color: var(--d-white) !important; letter-spacing: 2px; }
+.d-mainbar .brand-tag { color: var(--d-gold) !important; letter-spacing: 3px; }
+.d-logo-mark { background: var(--grad-gold) !important; color: var(--d-black) !important; border:none; box-shadow: none; }
+.d-logo-mark::after { display:none; }
+
+.d-header-icons .d-icon-btn { background: transparent !important; border: 1px solid rgba(255,255,255,0.1); color: var(--d-white) !important; }
+.d-header-icons .d-icon-btn i { color: var(--d-white) !important; }
+.d-header-icons .d-icon-btn:hover { background: var(--d-gold) !important; border-color: var(--d-gold) !important; color: var(--d-black) !important; }
+.d-header-icons .d-icon-btn:hover i { color: var(--d-black) !important; }
+.d-header-icons .badge { background: var(--d-gold); color: var(--d-black); font-weight: 800; }
+
+.d-nav { background: var(--d-dark-grey) !important; border-top: 1px solid rgba(255,255,255,0.05); }
+.d-nav-links a { color: var(--d-light-grey) !important; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
+.d-nav-links a:hover, .d-nav-links li.active a { color: var(--d-gold) !important; }
+.d-nav-links a i { color: var(--d-gold) !important; }
+
+/* Buttons */
+.btn-lux-primary { background: var(--d-black) !important; color: var(--d-white) !important; border: 1px solid var(--d-black); border-radius: 0; text-transform: uppercase; letter-spacing: 1px; box-shadow: none !important; }
+.btn-lux-primary:hover { background: var(--d-gold) !important; border-color: var(--d-gold) !important; color: var(--d-black) !important; transform: translateY(-2px); }
+.btn-lux-outline { border: 1px solid var(--d-gold) !important; color: var(--d-gold) !important; border-radius: 0; background: transparent; }
+.btn-lux-outline:hover { background: var(--d-gold) !important; color: var(--d-black) !important; }
+
+/* Hero */
+.d-hero { background: var(--d-light-grey) !important; color: var(--d-text-main) !important; border-bottom: none; border-top: none; }
+.d-hero h1, .d-hero p { color: var(--d-text-main) !important; }
+.d-hero h1 { font-family: var(--f-display); font-weight: 300; letter-spacing: -1px; }
+.d-hero-badge { background: var(--d-black) !important; color: var(--d-gold) !important; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; border-radius: 0; border: none; }
+.d-hero-stat strong { color: var(--d-black) !important; font-weight: 800; }
+.d-hero-stat span { color: var(--d-grey) !important; text-transform: uppercase; letter-spacing: 1px; font-size: 11px; }
+
+/* Product Cards & Deal Cards */
+.d-sd-card, .d-service-card, .d-cat-card, .d-card-lux { 
+    background: var(--d-white) !important; 
+    border: var(--border-lux) !important; 
+    border-radius: 0 !important; 
+    box-shadow: var(--shadow-sm) !important; 
+    transition: all 0.4s ease;
+}
+.d-sd-card:hover, .d-card-lux:hover { 
+    box-shadow: var(--shadow-md) !important; 
+    border-color: var(--d-gold) !important; 
+    transform: translateY(-5px);
+}
+.d-sd-card h4, .d-service-card h5, .d-cat-card h4 { color: var(--d-text-main) !important; font-weight: 600; font-family: var(--f-display); }
+.d-sd-card .price-old { color: var(--d-grey) !important; }
+.d-sd-card .price-new { color: var(--d-black) !important; font-weight: 800; }
+.d-sd-card span[style*="position: absolute"] { background: var(--d-black) !important; color: var(--d-gold) !important; border-radius: 0 !important; text-transform: uppercase; }
+
+/* Banners */
+.d-banner-card { border-radius: 0 !important; border: none !important; box-shadow: none !important; overflow: hidden; }
+.d-banner-card img { filter: brightness(0.85); transition: transform 0.8s ease, filter 0.8s ease; }
+.d-banner-card:hover img { transform: scale(1.05); filter: brightness(1); }
+.d-banner-overlay { background: linear-gradient(to top, rgba(0,0,0,0.9), transparent) !important; padding: 40px 30px !important;}
+.d-banner-overlay h3 { font-family: var(--f-display); font-weight: 300; font-size: 28px; }
+.d-banner-overlay span { color: var(--d-gold) !important; text-transform: uppercase; letter-spacing: 2px; }
+
+/* Sections */
+.d-super-deals { background: var(--d-white) !important; border-top: var(--border-lux) !important; border-bottom: var(--border-lux) !important; }
+.d-sd-header h2 { font-family: var(--f-display); font-weight: 400; font-size: 28px !important; color: var(--d-black) !important; }
+.d-sd-header h2 i { display: none; } /* Hide the bolt icon for cleaner look */
+.d-timer { background: var(--d-black) !important; color: var(--d-gold) !important; border: none !important; border-radius: 0 !important; font-weight: 400 !important; }
+
+/* Footer */
+.d-footer { background: var(--d-black) !important; color: #aaaaaa !important; border-top: none; }
+.d-footer h5 { color: var(--d-white) !important; font-family: var(--f-display); font-weight: 400; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 25px; letter-spacing: 1px; }
+.d-footer p, .d-footer a, .d-footer li span { color: #aaaaaa !important; }
+.d-footer a:hover { color: var(--d-gold) !important; }
+.d-footer-bottom { background: #000000 !important; color: #777777 !important; border-top: 1px solid #222; }
+.d-footer-social a { background: transparent; border: 1px solid #444; color: #fff; border-radius: 50%; }
+.d-footer-social a:hover { background: var(--d-gold); border-color: var(--d-gold); color: var(--d-black); }
+.d-footer-brand p { color: #aaaaaa !important; }
+
+/* General elements */
+.section-heading h2 { font-family: var(--f-display); font-weight: 400; }
+.divider-gold { background: var(--d-gold); width: 60px; height: 1px; }
+.divider-gold::before { display: none; }
+.text-gold { color: var(--d-gold) !important; }
+.text-white { color: var(--d-white) !important; }
+
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -1927,82 +1992,3 @@ a, .link a { color: var(--d-gold); }
    Ivory/Cream Background + Royal Deep Green Elements + Gold Accents
    ========================================================================== */
 
-/* Overrides for Pure Light Theme Elements */
-.d-header { background: #041f14 !important; border-bottom: 2px solid var(--d-gold); }
-.d-topbar { background: #02120b !important; border-bottom: 1px solid rgba(212,175,55,0.1); color: #c5c3c6 !important; }
-.d-topbar a, .d-topbar span, .d-topbar i { color: #c5c3c6 !important; }
-.d-topbar a:hover { color: var(--d-gold) !important; }
-
-.d-mainbar .brand-name { color: var(--d-gold) !important; background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.d-mainbar .brand-tag { color: var(--d-gold-soft) !important; }
-.d-logo-mark { color: #041f14 !important; background: var(--grad-gold) !important; }
-
-.d-header-icons .d-icon-btn { color: var(--d-gold) !important; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(212,175,55,0.3); }
-.d-header-icons .d-icon-btn i { color: var(--d-gold) !important; }
-.d-header-icons .d-icon-btn:hover { background: var(--grad-gold) !important; color: #041f14 !important; border-color: transparent !important; }
-.d-header-icons .d-icon-btn:hover i { color: #041f14 !important; }
-
-.d-nav { background: #062b1d !important; border-top: 1px solid rgba(212,175,55,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-.d-nav-links a { color: #fdfbf7 !important; font-weight: 600; }
-.d-nav-links a:hover, .d-nav-links li.active a { color: var(--d-gold) !important; }
-.d-nav-links a i { color: var(--d-gold) !important; }
-
-.d-hero { 
-    background: linear-gradient(135deg, #041f14 0%, #062b1d 100%) !important; 
-    color: #fdfbf7 !important; 
-    position:relative; 
-    overflow:hidden; 
-    border-bottom: 2px solid var(--d-gold);
-}
-.d-hero h1, .d-hero p { color: #fdfbf7 !important; }
-.d-hero-badge { background: rgba(212,175,55,0.1) !important; color: var(--d-gold) !important; border: 1px solid rgba(212,175,55,0.3); }
-
-.d-footer { background: #041f14 !important; color: #c5c3c6 !important; border-top: 3px solid var(--d-gold); }
-.d-footer h5 { color: var(--d-gold) !important; font-weight: 800; border-bottom: 2px solid var(--d-gold); display: inline-block; padding-bottom: 8px; margin-bottom: 20px;}
-.d-footer p, .d-footer a, .d-footer li span { color: #c5c3c6 !important; }
-.d-footer a:hover { color: var(--d-gold-light) !important; }
-.d-footer-bottom { background: #02120b !important; color: #8e8b95 !important; }
-.d-footer-bottom .pay-methods span { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(212,175,55,0.2); color: var(--d-gold) !important; }
-
-.d-footer-social a { background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); color: var(--d-gold); }
-.d-footer-social a:hover { background: var(--grad-gold); color: #041f14; border-color: transparent; }
-
-/* The main body needs to be Ivory/Cream for text readability */
-body { background: #fdfbf7 !important; color: #041f14 !important; }
-
-.section-heading h2 { color: #041f14 !important; }
-.section-heading p { color: #586b66 !important; }
-
-.d-service-card, .d-cat-card, .d-card-lux { 
-    background: #ffffff !important; 
-    box-shadow: 0 4px 20px rgba(4,31,20,0.06) !important; 
-    border: 1px solid rgba(212,175,55,0.2) !important; 
-    color: #041f14 !important; 
-}
-.d-service-card h5, .d-cat-card h4 { color: #041f14 !important; font-weight: 800; }
-.d-service-card p { color: #586b66 !important; }
-.d-service-icon { background: #fdfbf7; border: 1px solid rgba(212,175,55,0.3); }
-
-.d-super-deals { background: linear-gradient(135deg, rgba(212,175,55,0.05) 0%, rgba(4,31,20,0.05) 100%) !important; border-top: 1px solid rgba(212,175,55,0.3) !important; border-bottom: 1px solid rgba(212,175,55,0.3) !important;}
-.d-sd-header h2, .d-sd-header a { color: #041f14 !important; }
-.d-sd-header h2 i { color: var(--d-gold-dark); }
-.d-timer { background: #041f14 !important; color: var(--d-gold) !important; box-shadow: 0 4px 15px rgba(212,175,55,0.2) !important; border: 1px solid var(--d-gold); }
-.d-sd-card { background: #ffffff !important; border: 1px solid rgba(212,175,55,0.15) !important; }
-.d-sd-card h4 { color: #041f14 !important; }
-.d-sd-card .price-old { color: #8e8b95 !important; }
-.d-sd-card .price-new { color: var(--d-gold-dark) !important; }
-.d-banner-card { box-shadow: 0 10px 30px rgba(4,31,20, 0.15); border: 2px solid rgba(212,175,55,0.1); }
-.d-banner-card:hover { box-shadow: 0 15px 40px rgba(4,31,20, 0.25); border-color: var(--d-gold); }
-
-/* Verify section */
-.d-verify-cta { background: linear-gradient(135deg, #fdfbf7 0%, #ffffff 100%); border-top: 1px solid rgba(212,175,55,0.2); }
-.d-verify-box { background: #ffffff; box-shadow: 0 10px 40px rgba(4,31,20,0.08); border: 1px solid rgba(212,175,55,0.3); }
-.d-verify-box h2 { color: #041f14; }
-.d-verify-box p { color: #586b66; }
-.d-verify-form { background: #fdfbf7; border: 1px solid rgba(212,175,55,0.3); }
-.d-verify-form input { color: #041f14 !important; }
-.d-verify-form input::placeholder { color: #8e8b95; }
-
-/* General typography */
-.text-gold { color: var(--d-gold) !important; }
-.text-white { color: #fdfbf7 !important; }

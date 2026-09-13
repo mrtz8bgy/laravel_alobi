@@ -1596,7 +1596,7 @@ a:hover {
                                     @if($category->icon && file_exists(public_path($category->icon)))
                                         <img class="mega-cat-icon lazyload" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset($category->icon) }}" width="30" alt="{{ __($category->name) }}">
                                     @else
-                                        <i class="la la-folder-open" style="font-size:20px;color:var(--color-gold);width:30px;text-align:center;"></i>
+                                        <i class="la la-folder-open" style="font-size:20px;data-old-color:var(--data-old-color-gold);width:30px;text-align:center;"></i>
                                     @endif
                                     <span>{{ __($category->name) }}</span>
                                     @if($category->subcategories && $category->subcategories->isNotEmpty())
@@ -1614,7 +1614,7 @@ a:hover {
                                                             @if($subcategory->icon && file_exists(public_path($subcategory->icon)))
                                                                 <img class="mega-sub-icon lazyload" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset($subcategory->icon) }}" width="24" alt="{{ __($subcategory->name) }}">
                                                             @else
-                                                                <i class="la la-folder-o" style="font-size:20px;color:var(--color-gold);width:24px;text-align:center;"></i>
+                                                                <i class="la la-folder-o" style="font-size:20px;data-old-color:var(--data-old-color-gold);width:24px;text-align:center;"></i>
                                                             @endif
                                                             <span>{{ __($subcategory->name) }}</span>
                                                         </a>
@@ -1676,9 +1676,9 @@ a:hover {
                 </h1>
                 <p>
                     خرید و فروش طلا، کالای لوکس، ساعت‌های لوکس و سنگ‌های قیمتی با
-                    <strong style="color:var(--d-gold);">شناسنامه معتبر</strong>،
-                    <strong style="color:var(--d-gold);">ضمانت اصالت</strong> و
-                    <strong style="color:var(--d-gold);">امکان رهگیری دائمی</strong>.
+                    <strong style="data-old-color:var(--d-gold);">شناسنامه معتبر</strong>،
+                    <strong style="data-old-color:var(--d-gold);">ضمانت اصالت</strong> و
+                    <strong style="data-old-color:var(--d-gold);">امکان رهگیری دائمی</strong>.
                     Alobi، جایی که ارزش‌ها ماندگارند.
                 </p>
                 <div class="d-hero-cta">
@@ -2277,30 +2277,30 @@ a:hover {
 
 
 <!-- Super Deal Section -->
-<section class="d-super-deals" style="padding: 40px 0; background: linear-gradient(135deg, rgba(212,175,55,0.05) 0%, rgba(4,31,20,0.05) 100%); margin: 40px 0; border-top: 1px solid rgba(212,175,55,0.2); border-bottom: 1px solid rgba(212,175,55,0.2);">
+<section class="d-super-deals">
     <div class="container">
         <div class="d-sd-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
             <div style="display: flex; align-items: center; gap: 15px;">
-                <h2 style="color: #041f14; margin: 0; font-weight: 800; font-size: 26px;"><i class="la la-bolt" style="color: var(--d-gold-dark);"></i> پیشنهاد شگفت‌انگیز</h2>
-                <div class="d-timer" style="background: #ffffff; border: 1px solid rgba(212,175,55,0.15); color: #041f14; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 14px; letter-spacing: 2px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                <h2><i class="la la-bolt" style="data-old-color: var(--d-gold-dark);"></i> پیشنهاد شگفت‌انگیز</h2>
+                <div class="d-timer">
                     12 : 45 : 30
                 </div>
             </div>
-            <a href="{{ route('products.todays_deal') }}" style="color: #041f14; font-weight: 700; font-size: 15px; text-decoration: none;">مشاهده همه <i class="la la-angle-left"></i></a>
+            <a href="{{ route('products.todays_deal') }}" class="text-gold" style="font-weight: 700; font-size: 15px; text-decoration: none; text-transform:uppercase; letter-spacing:1px;">مشاهده همه <i class="la la-angle-left"></i></a>
         </div>
         <div class="d-sd-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px;">
             @php $todays_deal_products = filter_products(\App\Product::where('todays_deal', 1)->where('published', 1))->limit(4)->get(); @endphp
             @foreach($todays_deal_products as $key => $product)
-                <a href="{{ route('product', $product->slug) }}" class="d-sd-card" style="background: #ffffff; border: 1px solid rgba(212,175,55,0.15); border-radius: 16px; padding: 15px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); position: relative; border: 1px solid rgba(0,0,0,0.05); display: block; text-decoration: none; transition: transform 0.3s;">
+                <a href="{{ route('product', $product->slug) }}" class="d-sd-card" style="padding: 15px; text-align: center; position: relative; display: block; text-decoration: none;">
                     @if(home_discount_percentage($product->id) > 0)
-                        <span style="position: absolute; top: 10px; right: 10px; background: var(--d-gold-dark); color: #ffffff; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 2;">-{{ home_discount_percentage($product->id) }}%</span>
+                        <span style="position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 12px; font-weight: bold; z-index: 2;">-{{ home_discount_percentage($product->id) }}%</span>
                     @endif
                     <img src="{{ uploaded_asset($product->thumbnail_img) }}" alt="{{ __($product->name) }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
-                    <h4 style="font-size: 15px; color: #041f14; margin-bottom: 10px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ __($product->name) }}</h4>
+                    <h4>{{ __($product->name) }}</h4>
                     @if(home_base_price($product->id) != home_discounted_base_price($product->id))
-                        <div style="text-decoration: line-through; color: var(--d-text-muted); font-size: 13px;">{{ home_base_price($product->id) }}</div>
+                        <div class="price-old" style="text-decoration: line-through; font-size: 13px;">{{ home_base_price($product->id) }}</div>
                     @endif
-                    <div style="color: var(--d-gold-dark); font-size: 18px; font-weight: 800;">{{ home_discounted_base_price($product->id) }}</div>
+                    <div class="price-new" style="font-size: 18px;">{{ home_discounted_base_price($product->id) }}</div>
                 </a>
             @endforeach
         </div>
@@ -2369,13 +2369,13 @@ a:hover {
     <div class="container">
         <div class="d-trust-inner">
             <div class="d-trust-content">
-                <span class="kicker" style="color:var(--d-gold); font-weight:700; letter-spacing:3px; font-size:13px;">
+                <span class="kicker" style="data-old-color:var(--d-gold); font-weight:700; letter-spacing:3px; font-size:13px;">
                     CERTIFICATE & SECURITY
                 </span>
-                <h2 style="font-size:clamp(24px,3vw,38px); font-weight:800; margin:10px 0 20px; line-height:1.4;">
-                    هر کالا، یک <span style="background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">شناسنامه معتبر</span>؛ آرامش خاطر شما
+                <h2>
+                    هر کالا، یک <span style="data-old-background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">شناسنامه معتبر</span>؛ آرامش خاطر شما
                 </h2>
-                <p style="color:var(--d-text-muted); font-size:15px; line-height:2.1; margin-bottom:0;">
+                <p style="data-old-color:var(--d-text-muted); font-size:15px; line-height:2.1; margin-bottom:0;">
                     گواهی اصالت دیجیتال Alobi، سندی رسمی و غیرقابل جعل است که تمامی مشخصات فنی، جزئیات دقیق، متریال، برند و تاریخچه مالکیت کالا را در خود جای می‌دهد. هرگونه نقل و انتقال، تعمیر یا تغییر وضعیت در پرونده کالا به صورت دائمی ثبت می‌شود.
                 </p>
                 <div class="d-trust-features">
@@ -2444,10 +2444,10 @@ a:hover {
     <div class="container">
         <div class="d-verify-box">
             <div class="d-verify-icon"><i class="la la-certificate"></i></div>
-            <h2 style="font-size:clamp(22px,3vw,34px); font-weight:800; margin:0 0 12px;">
-                همین حالا <span style="background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">اصالت</span> کالا خود را بررسی کنید
+            <h2>
+                همین حالا <span style="data-old-background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">اصالت</span> کالا خود را بررسی کنید
             </h2>
-            <p style="color:var(--d-text-muted); margin:0;">
+            <p style="data-old-color:var(--d-text-muted); margin:0;">
                 با وارد کردن شماره سریال شناسنامه، از مشخصات، اصالت و وضعیت کالا خود مطلع شوید.
             </p>
             <form method="GET" action="{{ route('jewelry.certificates.verify_page') }}" class="d-verify-form">

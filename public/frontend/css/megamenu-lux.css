@@ -29,9 +29,9 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, #b8892a, #d4af37, #f4d47c, #d4af37, #b8892a);
+    background: var(--mega-navy-dark);
     background-size: 200% 200%;
-    color: var(--mega-navy-dark);
+    color: var(--mega-gold);
     padding: 14px 28px;
     font-weight: 800;
     font-size: 15px;
@@ -44,7 +44,7 @@
 }
 .lux-cat-btn:hover {
     background-position: 100% 0;
-    color: var(--mega-navy-dark);
+    color: var(--mega-gold);
 }
 
 .lux-mega-list {
@@ -58,9 +58,9 @@
     padding: 6px 0;
     display: none;
     box-shadow: var(--mega-shadow);
-    border: 1px solid rgba(212,175,55,.2);
+    border: 1px solid var(--mega-border);
     border-top: none;
-    border-radius: 0 0 14px 14px;
+    border-radius: 0;
     max-height: 70vh;
     overflow-y: auto;
     overflow-x: visible;
@@ -101,15 +101,15 @@
 }
 .lux-mega-ico {
     width: 34px; height: 34px;
-    border-radius: 10px;
-    background: rgba(212,175,55,.08);
+    border-radius: 0;
+    background: #f9f9f9;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
     transition: all .3s ease;
 }
 .lux-mega-ico img { width:22px; height:22px; object-fit:contain; }
 .lux-mega-ico i { font-size:18px; color: var(--mega-gold); }
-.lux-mega-link:hover .lux-mega-ico { background: rgba(212,175,55,.2); transform: scale(1.08); }
+.lux-mega-link:hover .lux-mega-ico { background: var(--mega-gold); transform: scale(1.08); }
 .lux-mega-name { flex: 1; }
 .lux-mega-arrow {
     font-size: 14px;
@@ -128,9 +128,9 @@
     right: 100%;
     width: 620px;
     background: linear-gradient(180deg, var(--mega-navy-card), var(--mega-navy-dark));
-    border-radius: 14px;
+    border-radius: 0;
     box-shadow: var(--mega-shadow);
-    border: 1px solid rgba(212,175,55,.2);
+    border: 1px solid var(--mega-border);
     padding: 24px;
     opacity: 0;
     visibility: hidden;
@@ -174,7 +174,7 @@
     transition: all .2s ease;
 }
 .lux-sub-cat-list li a:hover {
-    background: rgba(212,175,55,.08);
+    background: #f9f9f9;
     color: var(--mega-gold);
     padding-right: 14px;
 }
