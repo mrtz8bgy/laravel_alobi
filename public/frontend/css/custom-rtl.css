@@ -190,7 +190,7 @@ section.home-banner-area {
     height: 350px;
 }
 .product-card-2:hover {
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.06);
     transform: translateY(-5px);
     border-color: var(--gold-primary);
 }

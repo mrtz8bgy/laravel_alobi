@@ -6,7 +6,7 @@
     --mega-gold-light: #f4d47c;
     --mega-navy-dark: #050505;
     --mega-navy-mid: #222222;
-    --mega-navy-card: #333333;
+    --mega-navy-card: #f9f8f6;
     --mega-shadow: 0 25px 80px rgba(0,0,0,.75);
 }
 
@@ -170,7 +170,7 @@
     font-size: 12.5px;
     color: #d0cedf;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 0;
     transition: all .2s ease;
 }
 .lux-sub-cat-list li a:hover {
@@ -217,7 +217,7 @@
 .lux-mega-list::-webkit-scrollbar,
 .lux-mega-sub::-webkit-scrollbar { width: 4px; }
 .lux-mega-list::-webkit-scrollbar-thumb,
-.lux-mega-sub::-webkit-scrollbar-thumb { background: var(--mega-gold); border-radius: 4px; }
+.lux-mega-sub::-webkit-scrollbar-thumb { background: var(--mega-gold); border-radius: 0; }
 .lux-mega-list::-webkit-scrollbar-track,
 .lux-mega-sub::-webkit-scrollbar-track { background: transparent; }
 

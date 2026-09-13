@@ -4,13 +4,13 @@
 /* ============================================ */
 :root {
     --color-navy: #ffffff;
-    --color-navy-light: #f8f9fa;
+    --color-navy-light: #f9f8f6;
     --color-navy-card: #ffffff;
-    --color-gold: #c5a059;
-    --color-gold-light: #f0d080;
+    --color-gold: #cba052;
+    --color-gold-light: #e5c37f;
     --color-gold-glow: #e8c547;
-    --color-white: #050505;
-    --color-white-smoke: #f4f4f4;
+    --color-white: #0a0a0a;
+    --color-white-smoke: #f0eee9;
     --color-gray: #b0aec0;
     --color-gray-dark: #6b6980;
     --color-shadow: rgba(197,160,89, 0.15);
@@ -118,7 +118,7 @@ a:hover {
     right: 0 !important;
     left: auto !important;
     width: min(360px, 92vw);
-    background: #ffffff; border: 1px solid #eeeeee;
+    background: #ffffff; border: 1px solid #f0eee9;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -202,7 +202,7 @@ a:hover {
     right: calc(100% + 4px) !important;
     left: auto !important;
     width: min(720px, calc(100vw - 390px));
-    background: #ffffff; border: 1px solid #eeeeee;
+    background: #ffffff; border: 1px solid #f0eee9;
     border-radius: 0;
     box-shadow: 0 22px 70px rgba(0, 0, 0, 0.92);
     opacity: 0;
@@ -657,7 +657,7 @@ a:hover {
 /* فلش دیل - اسکرول افقی زیر بنر */
 /* ============================================ */
 .flash-deal-section {
-    background: #ffffff; border: 1px solid #eeeeee;
+    background: #ffffff; border: 1px solid #f0eee9;
     padding: 15px 0;
     border-top: 1px solid rgba(197,160,89, 0.1);
     border-bottom: 1px solid rgba(197,160,89, 0.1);
@@ -784,7 +784,7 @@ a:hover {
     border-radius: 0;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: #ffffff; border: 1px solid #eeeeee;
+    background: #ffffff; border: 1px solid #f0eee9;
     border: 1px solid rgba(197,160,89, 0.12);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
@@ -1068,7 +1068,7 @@ a:hover {
 .category-card-horizontal,
 .brand-card-horizontal {
     display: block;
-    background: #ffffff; border: 1px solid #eeeeee;
+    background: #ffffff; border: 1px solid #f0eee9;
     border-radius: 0;
     padding: 18px 12px;
     text-align: center;
@@ -1150,7 +1150,7 @@ a:hover {
     transform: translateY(-50%);
     width: 38px;
     height: 38px;
-    background: #ffffff; border: 1px solid #eeeeee;
+    background: #ffffff; border: 1px solid #f0eee9;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1189,7 +1189,7 @@ a:hover {
 /* باکس‌های سفید داخل سایت */
 /* ============================================ */
 .bg-light.shadow-sm.rounded-3 {
-    background: #ffffff; border: 1px solid #eeeeee !important;
+    background: #ffffff; border: 1px solid #f0eee9 !important;
     border-radius: 0;!important;
     border: 1px solid rgba(197,160,89, 0.08);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
@@ -1475,9 +1475,7 @@ a:hover {
     color: var(--color-gray-dark) !important;
 }
 
-.gry-bg {
-    background:#333 !important;
-}
+.gry-bg { background: #f9f8f6 !important;}
 
 .heading-6 {
     font-size: 16px;
