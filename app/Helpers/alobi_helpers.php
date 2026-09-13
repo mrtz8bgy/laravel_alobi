@@ -1,40 +1,8 @@
 <?php
-/**
- * Alobi Safe DB helpers
- * — prevent "Base table or view not found" errors when tables don't exist yet
- */
-
-if (!function_exists('safe_table_exists')) {
-    function safe_table_exists($table) {
-        try {
-            return \Illuminate\Support\Facades\Schema::hasTable($table);
-        } catch (\Exception $e) {
-            return false;
-        }
-    }
-}
-
-if (!function_exists('safe_business_setting')) {
-    function safe_business_setting($key, $default = null) {
-        try {
-            if (!safe_table_exists('business_settings')) return $default;
-            $row = \Illuminate\Support\Facades\DB::table('business_settings')->where('type', $key)->first();
-            return $row ? $row->value : $default;
-        } catch (\Exception $e) {
-            return $default;
-        }
-    }
-}
-
-if (!function_exists('alobi_setting')) {
-    function alobi_setting($key, $default = null) {
-        return safe_business_setting($key, $default);
-    }
-}
 
 if (!function_exists('home_discount_percentage')) {
     function home_discount_percentage($product_id) {
-        $product = \App\Product::find($product_id);
+        $product = \App\Models\Product::find($product_id);
         if ($product && $product->discount > 0) {
             if ($product->discount_type == 'percent') {
                 return $product->discount;
@@ -46,26 +14,47 @@ if (!function_exists('home_discount_percentage')) {
     }
 }
 
+if (!function_exists('home_base_price')) {
+    function home_base_price($product_id) {
+        $product = \App\Models\Product::find($product_id);
+        if ($product) {
+            return number_format($product->unit_price) . ' تومان';
+        }
+        return '0 تومان';
+    }
+}
+
+if (!function_exists('home_discounted_base_price')) {
+    function home_discounted_base_price($product_id) {
+        $product = \App\Models\Product::find($product_id);
+        if ($product) {
+            $price = $product->unit_price;
+            if ($product->discount > 0) {
+                if ($product->discount_type == 'percent') {
+                    $price -= ($price * $product->discount) / 100;
+                } elseif ($product->discount_type == 'amount') {
+                    $price -= $product->discount;
+                }
+            }
+            return number_format($price) . ' تومان';
+        }
+        return '0 تومان';
+    }
+}
+
 if (!function_exists('uploaded_asset')) {
-    function uploaded_asset($id) {
-        if (($asset = \App\Upload::find($id)) != null) {
-            return $asset->external_link == null ? my_asset($asset->file_name) : $asset->external_link;
+    function uploaded_asset($path) {
+        // In older active ecommerce or generic apps, images are stored directly in public/uploads or public
+        if ($path) {
+            return app('url')->asset('public/' . $path);
         }
-        return static_asset('assets/img/placeholder.jpg');
+        return app('url')->asset('public/assets/img/placeholder.jpg');
     }
 }
 
-if (!function_exists('my_asset')) {
-    function my_asset($path) {
-        if (env('FILESYSTEM_DRIVER') == 's3') {
-            return \Illuminate\Support\Facades\Storage::disk('s3')->url($path);
-        }
-        return app('url')->asset($path);
+if (!function_exists('filter_products')) {
+    function filter_products($query) {
+        return $query;
     }
 }
 
-if (!function_exists('static_asset')) {
-    function static_asset($path) {
-        return app('url')->asset('public/' . $path);
-    }
-}
