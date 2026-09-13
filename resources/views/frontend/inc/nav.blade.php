@@ -5,8 +5,8 @@
             <div class="d-topbar-inner">
                 <div class="d-contact-info">
                     <span><i class="la la-phone"></i> پشتیبانی ۲۴ ساعته: {{ \App\GeneralSetting::first()->phone ?? '۰۲۱-۱۲۳۴۵۶۷۸' }}</span>
-                    <span><i class="la la-envelope"></i> {{ \App\GeneralSetting::first()->email ?? 'info@drikana.com' }}</span>
-                    <span><i class="la la-map-marker"></i> تهران، بازار بزرگ طلا</span>
+                    <span><i class="la la-envelope"></i> {{ \App\GeneralSetting::first()->email ?? 'info@marketplace.com' }}</span>
+                    <span><i class="la la-map-marker"></i> تهران، ایران</span>
                 </div>
                 <ul class="d-top-links">
                     <li><a href="{{ route('orders.track') }}"><i class="la la-map-pin"></i> رهگیری سفارش</a></li>
@@ -39,13 +39,13 @@
                         $gs = \App\GeneralSetting::first();
                         $logoUrl = ($gs && $gs->logo && file_exists(public_path($gs->logo))) ? asset($gs->logo) : asset('frontend/images/logo/drikana-logo.svg');
                     @endphp
-                    <img src="{{ $logoUrl }}" alt="Drikana" style="height:48px;" onerror="this.src='{{ asset('frontend/images/logo/drikana-logo.svg') }}'">
+                    <img src="{{ $logoUrl }}" alt="Marketplace" style="height:48px;" onerror="this.src='{{ asset('frontend/images/logo/drikana-logo.svg') }}'">
                 </a>
 
                 <!-- Search -->
                 <div class="d-search">
                     <form action="{{ route('search') }}" method="GET" class="d-search-form">
-                        <input type="text" id="search" name="q" placeholder="جستجوی طلا، جواهر، ساعت، سنگ قیمتی..." autocomplete="off" required>
+                        <input type="text" id="search" name="q" placeholder="جستجوی محصولات، برندها و دسته‌بندی‌ها..." autocomplete="off" required>
                         <button type="submit" aria-label="جستجو"><i class="la la-search la-flip-horizontal"></i></button>
                         <div class="typed-search-box d-none">
                             <div class="search-preloader"><div class="loader"><div></div><div></div><div></div></div></div>
@@ -57,12 +57,6 @@
 
                 <!-- Header Icons -->
                 <div class="d-header-icons">
-                    <a href="{{ route('jewelry.certificates.verify_page') }}" class="d-icon-btn" title="استعلام شناسنامه" style="text-decoration:none;">
-                        <i class="la la-certificate"></i>
-                    </a>
-                    <a href="{{ route('jewelry.missing_reports.create_public') }}" class="d-icon-btn hide-sm" title="اعلام سرقت/مفقودی" style="text-decoration:none;">
-                        <i class="la la-shield"></i>
-                    </a>
                     <a href="{{ route('compare') }}" class="d-icon-btn hide-sm" title="مقایسه" style="text-decoration:none;">
                         <i class="la la-refresh"></i>
                         @if(Session::has('compare'))<span class="badge">{{ count(Session::get('compare')) }}</span>@else<span class="badge">0</span>@endif
@@ -91,12 +85,10 @@
                 </a>
                 <ul class="d-nav-links">
                     <li class="{{ request()->routeIs('home') ? 'active' : '' }}"><a href="{{ route('home') }}"><i class="la la-home"></i> خانه</a></li>
-                    <li><a href="#"><i class="la la-diamond"></i> طلا و جواهر</a></li>
-                    <li><a href="#"><i class="la la-clock-o"></i> ساعت</a></li>
-                    <li><a href="#"><i class="la la-gem"></i> سنگ‌های قیمتی</a></li>
-                    <li><a href="{{ route('jewelry.certificates.verify_page') }}"><i class="la la-certificate"></i> استعلام شناسنامه</a></li>
-                    <li><a href="{{ route('jewelry.missing_reports.create_public') }}"><i class="la la-bullhorn"></i> اعلام سرقت</a></li>
-                    <li><a href="#"><i class="la la-phone"></i> تماس با ما</a></li>
+                    <li><a href="{{ route('products') }}"><i class="la la-shopping-bag"></i> محصولات</a></li>
+                    <li><a href="{{ route('brands.all') }}"><i class="la la-tags"></i> برندها</a></li>
+                    <li><a href="{{ route('flash-deal-details', 'latest') }}"><i class="la la-bolt"></i> پیشنهادهای ویژه</a></li>
+                    <li><a href="{{ route('supportpolicy') }}"><i class="la la-phone"></i> پشتیبانی</a></li>
                 </ul>
                 <div class="d-nav-cta">
                     @if (\App\BusinessSetting::where('type', 'vendor_system_activation')->first()->value == 1)

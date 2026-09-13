@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 class DrikanaSampleProductsSeeder extends Seeder
 {
     /**
-     * ۶ محصول نمونه طلا و جواهر برای نمایش در صفحه اصلی
+     * محصولات نمونه عمومی برای نمایش در صفحه اصلی بازار چندفروشنده‌ای
      */
     public function run()
     {
@@ -18,114 +18,123 @@ class DrikanaSampleProductsSeeder extends Seeder
         $admin = DB::table('users')->where('email','admin@drikana.com')->first();
         $adminId = $admin ? $admin->id : 1;
 
-        $catRings    = DB::table('categories')->where('slug','rings')->first();
-        $catNeck     = DB::table('categories')->where('slug','necklaces')->first();
-        $catWatch    = DB::table('categories')->where('slug','luxury-watches')->first();
-        $catDia      = DB::table('categories')->where('slug','diamonds-gemstones')->first();
-        $catBrace    = DB::table('categories')->where('slug','bracelets-earrings')->first();
-        $catSet      = DB::table('categories')->where('slug','jewelry-sets')->first();
+        $categorySlugs = ['mobile', 'laptops', 'clothing', 'home-appliances', 'beauty', 'sports', 'books', 'jewelry', 'tools', 'digital-products'];
+        $selectedCategories = [];
 
-        $brandRolex  = DB::table('brands')->where('slug','rolex')->first();
-        $brandCartier= DB::table('brands')->where('slug','cartier')->first();
-        $brandTiff   = DB::table('brands')->where('slug','tiffany-co')->first();
-        $brandDrikana= DB::table('brands')->where('slug','drikana-signature')->first();
+        foreach ($categorySlugs as $slug) {
+            $category = DB::table('categories')->where('slug', $slug)->first();
+            if ($category) {
+                $selectedCategories[$slug] = $category;
+            }
+        }
+
+        $fallbackCategory = DB::table('categories')->first();
+        $brandNames = ['Apple', 'Samsung', 'Nike', 'LG', 'Cosmetic House', 'Ariya', 'BookLand'];
+        $brandId = null;
+
+        if (DB::table('brands')->count() > 0) {
+            $brandId = DB::table('brands')->first()->id;
+        }
 
         $products = [
             [
-                'name' => 'انگشتر الماس نامزدی دریکانا سری رؤیا',
-                'category_id' => $catRings->id ?? null,
-                'brand_id' => $brandDrikana->id ?? null,
-                'thumbnail_img' => 'frontend/images/drikana/ring.svg',
-                'photos' => 'frontend/images/drikana/ring.svg',
-                'unit_price' => 285000000,
-                'purchase_price' => 260000000,
-                'discount' => 5, 'discount_type' => 'percent',
-                'description' => '<p>انگشتر نامزدی طلای ۱۸ عیار با الماس ۰٫۷ قیراط برلیان تراش. همراه با شناسنامه معتبر GIA.</p>',
-                'tags' => 'انگشتر,الماس,نامزدی,طلا ۱۸',
-                'slug' => 'diamond-engagement-ring-roy',
-                'featured' => 1, 'todays_deal' => 0, 'published' => 1, 'refundable' => 1, 'variant_product' => 0,
-                'current_stock' => 3, 'rating' => 5.0, 'num_of_sale' => 4,
-            ],
-            [
-                'name' => 'گردنبند مروارید طبیعی کواترو',
-                'category_id' => $catNeck->id ?? null,
-                'brand_id' => $brandTiff->id ?? null,
-                'thumbnail_img' => 'frontend/images/drikana/necklace.svg',
-                'photos' => 'frontend/images/drikana/necklace.svg',
-                'unit_price' => 52000000,
-                'purchase_price' => 48000000,
-                'discount' => 0, 'discount_type' => 'amount',
-                'description' => '<p>گردنبند مروارید طبیعی آب شیرین، رشته ۴۵ سانتی، قفل طلای ۱۸ عیار.</p>',
-                'tags' => 'گردنبند,مروارید,طلا',
-                'slug' => 'pearl-necklace-cuatro',
-                'featured' => 1, 'todays_deal' => 1, 'published' => 1, 'refundable' => 1, 'variant_product' => 0,
-                'current_stock' => 5, 'rating' => 4.9, 'num_of_sale' => 7,
-            ],
-            [
-                'name' => 'ساعت مردانه Rolex Submariner Date اصل',
-                'category_id' => $catWatch->id ?? null,
-                'brand_id' => $brandRolex->id ?? null,
-                'thumbnail_img' => 'frontend/images/drikana/watch.svg',
-                'photos' => 'frontend/images/drikana/watch.svg',
-                'unit_price' => 4200000000,
-                'purchase_price' => 3900000000,
-                'discount' => 3, 'discount_type' => 'percent',
-                'description' => '<p>ساعت اتوماتیک مردانه رولکس سابمارینر دیت، استیل ضدخش، مقاوم در برابر آب تا عمق ۳۰۰ متر. با جعبه و کارت گارانتی اصلی.</p>',
-                'tags' => 'ساعت,رولکس,لوکس,مردانه',
-                'slug' => 'rolex-submariner-date',
-                'featured' => 1, 'todays_deal' => 0, 'published' => 1, 'refundable' => 0, 'variant_product' => 0,
-                'current_stock' => 1, 'rating' => 5.0, 'num_of_sale' => 2,
-            ],
-            [
-                'name' => 'دستبند زمرد نقره با طلای سفید',
-                'category_id' => $catBrace->id ?? null,
-                'brand_id' => $brandDrikana->id ?? null,
+                'name' => 'گوشی هوشمند مدل X10',
+                'category_id' => ($selectedCategories['mobile'] ?? $fallbackCategory)->id ?? null,
+                'brand_id' => $brandId,
                 'thumbnail_img' => 'frontend/images/drikana/diamond.svg',
                 'photos' => 'frontend/images/drikana/diamond.svg',
-                'unit_price' => 145000000,
-                'purchase_price' => 130000000,
-                'discount' => 0, 'discount_type' => 'amount',
-                'description' => '<p>دستبند زنانه با زمرد کلمبیا و طلای سفید ۱۸ عیار، با شناسنامه اتحادیه طلا.</p>',
-                'tags' => 'دستبند,زمرد,طلا سفید',
-                'slug' => 'emerald-bracelet-silver-gold',
+                'unit_price' => 24500000,
+                'purchase_price' => 22000000,
+                'discount' => 8, 'discount_type' => 'percent',
+                'description' => '<p>گوشی هوشمند با صفحه‌نمایش بزرگ، دوربین دوگانه و عملکرد سریع برای کار روزانه و سرگرمی.</p>',
+                'tags' => 'گوشی,موبایل,هوشمند',
+                'slug' => 'mobile-x10',
                 'featured' => 1, 'todays_deal' => 1, 'published' => 1, 'refundable' => 1, 'variant_product' => 0,
-                'current_stock' => 2, 'rating' => 4.8, 'num_of_sale' => 3,
+                'current_stock' => 15, 'rating' => 4.8, 'num_of_sale' => 18,
             ],
             [
-                'name' => 'نیم‌ست یاقوت سرخ آتوسا',
-                'category_id' => $catSet->id ?? null,
-                'brand_id' => $brandDrikana->id ?? null,
+                'name' => 'لپ‌تاپ سبک و حرفه‌ای Pro 14',
+                'category_id' => ($selectedCategories['laptops'] ?? $fallbackCategory)->id ?? null,
+                'brand_id' => $brandId,
+                'thumbnail_img' => 'frontend/images/drikana/watch.svg',
+                'photos' => 'frontend/images/drikana/watch.svg',
+                'unit_price' => 41000000,
+                'purchase_price' => 37500000,
+                'discount' => 10, 'discount_type' => 'percent',
+                'description' => '<p>لپ‌تاپ حرفه‌ای با پردازنده قدرتمند، حافظه SSD و طراحی سبک برای کار و مطالعه.</p>',
+                'tags' => 'لپ‌تاپ,کامپیوتر,محصولات دیجیتال',
+                'slug' => 'laptop-pro-14',
+                'featured' => 1, 'todays_deal' => 0, 'published' => 1, 'refundable' => 1, 'variant_product' => 0,
+                'current_stock' => 8, 'rating' => 4.9, 'num_of_sale' => 12,
+            ],
+            [
+                'name' => 'پیراهن مردانه کتان کلاسیک',
+                'category_id' => ($selectedCategories['clothing'] ?? $fallbackCategory)->id ?? null,
+                'brand_id' => $brandId,
+                'thumbnail_img' => 'frontend/images/drikana/necklace.svg',
+                'photos' => 'frontend/images/drikana/necklace.svg',
+                'unit_price' => 1800000,
+                'purchase_price' => 1500000,
+                'discount' => 12, 'discount_type' => 'percent',
+                'description' => '<p>پیراهن مردانه با جنس کتان سبک و مناسب استفاده روزانه و رسمی.</p>',
+                'tags' => 'لباس,پیراهن,مد,مردانه',
+                'slug' => 'classic-cotton-shirt',
+                'featured' => 1, 'todays_deal' => 1, 'published' => 1, 'refundable' => 1, 'variant_product' => 0,
+                'current_stock' => 22, 'rating' => 4.7, 'num_of_sale' => 9,
+            ],
+            [
+                'name' => 'یخچال کم‌مصرف 320 لیتری',
+                'category_id' => ($selectedCategories['home-appliances'] ?? $fallbackCategory)->id ?? null,
+                'brand_id' => $brandId,
                 'thumbnail_img' => 'frontend/images/drikana/crown.svg',
                 'photos' => 'frontend/images/drikana/crown.svg',
-                'unit_price' => 195000000,
-                'purchase_price' => 180000000,
-                'discount' => 7, 'discount_type' => 'percent',
-                'description' => '<p>نیم‌ست یاقوت سرخ برمه با طلای ۱۸ عیار شامل گردنبند، گوشواره و انگشتر.</p>',
-                'tags' => 'نیم ست,یاقوت,زرشکی,عروس',
-                'slug' => 'ruby-half-set-atousa',
+                'unit_price' => 34500000,
+                'purchase_price' => 31000000,
+                'discount' => 0, 'discount_type' => 'amount',
+                'description' => '<p>یخچال کم‌مصرف با فضای مناسب، مصرف انرژی بهینه و طراحی مدرن برای خانه.</p>',
+                'tags' => 'یخچال,خانه,لوازم خانگی',
+                'slug' => 'fridge-320l',
                 'featured' => 1, 'todays_deal' => 0, 'published' => 1, 'refundable' => 1, 'variant_product' => 0,
-                'current_stock' => 2, 'rating' => 5.0, 'num_of_sale' => 1,
+                'current_stock' => 6, 'rating' => 4.6, 'num_of_sale' => 7,
             ],
             [
-                'name' => 'حلقه ازدواج Cartier Love اصل',
-                'category_id' => $catRings->id ?? null,
-                'brand_id' => $brandCartier->id ?? null,
+                'name' => 'کیت مراقبت پوست Daily Glow',
+                'category_id' => ($selectedCategories['beauty'] ?? $fallbackCategory)->id ?? null,
+                'brand_id' => $brandId,
                 'thumbnail_img' => 'frontend/images/drikana/ring.svg',
                 'photos' => 'frontend/images/drikana/ring.svg',
-                'unit_price' => 98000000,
-                'purchase_price' => 90000000,
-                'discount' => 0, 'discount_type' => 'amount',
-                'description' => '<p>حلقه ازدواج کارتیه لاو طلای ۱۸ عیار، با حک لوگو، اصل با جعبه و برگ ضمانت.</p>',
-                'tags' => 'حلقه,ازدواج,کارتیه,طلا ۱۸',
-                'slug' => 'cartier-love-wedding-ring',
-                'featured' => 1, 'todays_deal' => 1, 'published' => 1, 'refundable' => 0, 'variant_product' => 0,
-                'current_stock' => 4, 'rating' => 4.9, 'num_of_sale' => 5,
+                'unit_price' => 3700000,
+                'purchase_price' => 3200000,
+                'discount' => 15, 'discount_type' => 'percent',
+                'description' => '<p>کیت مراقبت پوست شامل پاک‌کننده، سرم و کرم مرطوب‌کننده برای مراقبت روزانه.</p>',
+                'tags' => 'زیبایی,مراقبت پوست,کرم',
+                'slug' => 'daily-glow-skin-kit',
+                'featured' => 1, 'todays_deal' => 1, 'published' => 1, 'refundable' => 1, 'variant_product' => 0,
+                'current_stock' => 30, 'rating' => 4.9, 'num_of_sale' => 14,
+            ],
+            [
+                'name' => 'دوچرخه شهری مدل Urban Ride',
+                'category_id' => ($selectedCategories['sports'] ?? $fallbackCategory)->id ?? null,
+                'brand_id' => $brandId,
+                'thumbnail_img' => 'frontend/images/drikana/coin.svg',
+                'photos' => 'frontend/images/drikana/coin.svg',
+                'unit_price' => 18500000,
+                'purchase_price' => 16500000,
+                'discount' => 5, 'discount_type' => 'percent',
+                'description' => '<p>دوچرخه شهری سبک با ساختار مقاوم و مناسب سفرهای کوتاه و تفریحی.</p>',
+                'tags' => 'دوچرخه,ورزش,سفر',
+                'slug' => 'urban-ride-bike',
+                'featured' => 1, 'todays_deal' => 0, 'published' => 1, 'refundable' => 1, 'variant_product' => 0,
+                'current_stock' => 9, 'rating' => 4.5, 'num_of_sale' => 5,
             ],
         ];
 
         $now = now();
         foreach ($products as $p) {
-            if (DB::table('products')->where('slug',$p['slug'])->exists()) continue;
+            if (DB::table('products')->where('slug', $p['slug'])->exists()) {
+                continue;
+            }
+
             DB::table('products')->insert(array_merge([
                 'added_by' => 'admin',
                 'user_id' => $adminId,
@@ -139,12 +148,11 @@ class DrikanaSampleProductsSeeder extends Seeder
             ], $p));
         }
 
-        // Add some products to home_categories
         if (\Illuminate\Support\Facades\Schema::hasTable('home_categories') && DB::table('home_categories')->count() === 0) {
             $i = 0;
-            foreach ([$catRings, $catNeck, $catWatch, $catDia] as $c) {
-                if ($c) {
-                    DB::table('home_categories')->insert(['category_id'=>$c->id,'position'=>$i++,'subsubcategories'=>null,'created_at'=>$now,'updated_at'=>$now]);
+            foreach (array_values($selectedCategories) as $category) {
+                if ($category) {
+                    DB::table('home_categories')->insert(['category_id' => $category->id, 'position' => $i++, 'subsubcategories' => null, 'created_at' => $now, 'updated_at' => $now]);
                 }
             }
         }

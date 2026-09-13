@@ -41,24 +41,24 @@
 
 <style>
 /* ============================================ */
-/* تم سرمه‌ای، طلایی و سفید - طراحی لوکس و حرفه‌ای */
+/* تم عمومی بازار چندفروشنده‌ای */
 /* ============================================ */
 :root {
-    --color-navy: #0f0e1a;
-    --color-navy-light: #1a1735;
-    --color-navy-card: #1e1b3a;
-    --color-gold: #d4af37;
-    --color-gold-light: #f0d080;
-    --color-gold-glow: #e8c547;
+    --color-navy: #0f172a;
+    --color-navy-light: #1e293b;
+    --color-navy-card: #ffffff;
+    --color-gold: #2563eb;
+    --color-gold-light: #60a5fa;
+    --color-gold-glow: #3b82f6;
     --color-white: #ffffff;
-    --color-white-smoke: #f5f5f7;
-    --color-gray: #b0aec0;
-    --color-gray-dark: #6b6980;
-    --color-shadow: rgba(212, 175, 55, 0.15);
-    --shadow-gold: 0 4px 25px rgba(212, 175, 55, 0.25);
-    --shadow-gold-hover: 0 8px 40px rgba(212, 175, 55, 0.4);
-    --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f0d080 50%, #b8962e 100%);
-    --gradient-navy: linear-gradient(135deg, #0f0e1a 0%, #1a1735 50%, #2a2555 100%);
+    --color-white-smoke: #f8fafc;
+    --color-gray: #64748b;
+    --color-gray-dark: #475569;
+    --color-shadow: rgba(37, 99, 235, 0.12);
+    --shadow-gold: 0 8px 30px rgba(37, 99, 235, 0.14);
+    --shadow-gold-hover: 0 14px 40px rgba(37, 99, 235, 0.18);
+    --gradient-gold: linear-gradient(135deg, #2563eb 0%, #60a5fa 50%, #1d4ed8 100%);
+    --gradient-navy: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     --font-base: 'Vazirmatn', 'Segoe UI', sans-serif;
 }
 
