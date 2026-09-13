@@ -351,18 +351,6 @@
 </div>
 
 @push('styles')
-<style>
-    .table th {
-        background-color: #f8f9fa;
-        font-weight: 600;
-    }
-    .badge {
-        font-weight: 500;
-        padding: 5px 10px;
-    }
-    .btn-group-sm .btn {
-        padding: 0.25rem 0.5rem;
-    }
-</style>
+
 @endpush
 @endsection

@@ -28,6 +28,8 @@
 
     <!--active-shop Stylesheet [ REQUIRED ]-->
     <link href="{{ asset('css/active-shop.min.css')}}" rel="stylesheet">
+    <!-- High Fashion Admin Override -->
+    <link href="{{ asset('css/admin-luxury-override.css')}}" rel="stylesheet">
 
     <!--active-shop Premium Icon [ DEMONSTRATION ]-->
     <link href="{{ asset('css/demo/active-shop-demo-icons.min.css')}}" rel="stylesheet">

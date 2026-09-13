@@ -295,29 +295,7 @@ use Illuminate\Support\Str;
 </div>
 
 @push('styles')
-<style>
-    .card {
-        border: none;
-        border-radius: 0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        margin-bottom: 20px;
-    }
-    .card-header {
-        border-radius: 0;10px 0 0 !important;
-        font-weight: 600;
-    }
-    .table-borderless th {
-        color: #6c757d;
-        font-weight: 600;
-    }
-    .badge {
-        font-size: 0.85em;
-        padding: 0.35em 0.65em;
-    }
-    .fst-italic {
-        font-style: italic;
-    }
-</style>
+
 @endpush
 
 @push('scripts')

@@ -543,34 +543,7 @@
 @endsection
 
 @section('styles')
-<style>
-.timeline {
-    position: relative;
-    padding: 20px 0;
-}
-.timeline-item {
-    position: relative;
-    padding-right: 40px;
-    margin-bottom: 20px;
-}
-.timeline-badge {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-.timeline-content {
-    padding: 10px 15px;
-    background: #f8f9fa;
-    border-radius: 0;
-}
-</style>
+
 @endsection
 
 @section('scripts')

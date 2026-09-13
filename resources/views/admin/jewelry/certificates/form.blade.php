@@ -286,16 +286,7 @@
     </div>
 </div>
 
-<style>
-    .card {
-        border: 1px solid #e0e0e0;
-        border-radius: 0;
-    }
-    .card-header {
-        border-radius: 0;10px 0 0 !important;
-        font-weight: 600;
-    }
-</style>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

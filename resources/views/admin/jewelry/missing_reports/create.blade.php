@@ -222,18 +222,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<style>
-/* استایل برای نمایش بهتر اطلاعات */
-.card-header {
-    padding: 8px 15px;
-}
-.table-sm th, .table-sm td {
-    padding: 5px;
-    font-size: 0.9rem;
-}
-#jewelry_info {
-    max-height: 400px;
-    overflow-y: auto;
-}
-</style>
+
 @endsection

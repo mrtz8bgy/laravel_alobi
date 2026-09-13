@@ -186,20 +186,7 @@
 </div>
 
 @push('styles')
-<style>
-    .form-label {
-        font-weight: 600;
-        margin-bottom: 8px;
-    }
-    .form-control:focus {
-        border-color: #3498db;
-        box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
-    }
-    .invalid-feedback {
-        display: block;
-        margin-top: 5px;
-    }
-</style>
+
 @endpush
 
 @push('scripts')
