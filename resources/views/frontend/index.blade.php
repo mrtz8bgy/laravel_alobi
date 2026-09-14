@@ -155,7 +155,7 @@
                         <i class="la la-shopping-bag"></i> مشاهده محصولات
                     </a>
                     <a href="{{ route('jewelry.certificates.verify_page') }}" class="btn-lux btn-lux-outline">
-                        <i class="la la-certificate"></i> استعلام شناسنامه
+                        <i class="la la-certificate"></i> استعلام اصالت کالا
                     </a>
                 </div>
                 <div class="d-hero-stats">
@@ -165,7 +165,7 @@
                     </div>
                     <div class="d-hero-stat">
                         <strong>+۵۰K</strong>
-                        <span>کالا شناسنامه‌دار</span>
+                        <span>کالا اصالت دار</span>
                     </div>
                     <div class="d-hero-stat">
                         <strong>۱۰۰٪</strong>
@@ -207,6 +207,72 @@
         </div>
     </div>
 </section>
+
+<!-- ============================================ -->
+<!-- اسلایدر اصلی سایت -->
+<!-- ============================================ -->
+@php
+    $sliders = collect();
+    try {
+        if (\Illuminate\Support\Facades\Schema::hasTable('sliders')) {
+            $sliders = \App\Slider::where('published', 1)->orderBy('id', 'asc')->get();
+        }
+    } catch (\Exception $e) {
+        $sliders = collect();
+    }
+@endphp
+
+@if($sliders->count() > 0)
+<section class="d-main-slider">
+    <div class="container">
+        <div class="d-slider-wrapper">
+            <div class="d-slider-carousel" id="mainSlider">
+                @foreach($sliders as $key => $slider)
+                    <div class="d-slide-item">
+                        <a href="{{ $slider->link ?? '#' }}" class="d-slide-link">
+                            @if(file_exists(public_path($slider->photo)))
+                                <img 
+                                    src="{{ asset($slider->photo) }}" 
+                                    alt="اسلایدر {{ $key + 1 }}" 
+                                    class="d-slide-img"
+                                >
+                            @else
+                                <div style="width:100%; height:500px; background:#eee; display:flex; align-items:center; justify-content:center; color:#999;">
+                                    <span>عکس اسلایدر پیدا نشد: {{ $slider->photo }}</span>
+                                </div>
+                            @endif
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // اگه jQuery و Slick موجود بودن
+        if (typeof jQuery !== 'undefined' && jQuery.fn.slick) {
+            jQuery('#mainSlider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                arrows: true,
+                dots: true,
+                fade: true,
+                infinite: true,
+                speed: 800,
+                cssEase: 'ease-in-out',
+                pauseOnHover: false,
+                rtl: true,
+                prevArrow: '<button type="button" class="slick-prev"><i class="la la-angle-right"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="la la-angle-left"></i></button>'
+            });
+        }
+    });
+</script>
+@endif
 
 <!-- ============================================ -->
 <!-- سرویس‌های طلایی -->
@@ -834,6 +900,7 @@
 <!-- ============================================ -->
 <!-- بخش شناسنامه و امنیت -->
 <!-- ============================================ -->
+ 
 <section class="d-trust">
     <div class="container">
         <div class="d-trust-inner">
@@ -905,11 +972,11 @@
         </div>
     </div>
 </section>
-
+<!-- 
 <!-- ============================================ -->
 <!-- استعلام شناسنامه CTA -->
 <!-- ============================================ -->
-<section class="d-verify-cta">
+<!-- <section class="d-verify-cta">
     <div class="container">
         <div class="d-verify-box">
             <div class="d-verify-icon"><i class="la la-certificate"></i></div>
@@ -925,7 +992,7 @@
             </form>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- ============================================ -->
 <!-- سوالات متداول -->
@@ -983,7 +1050,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> 
 
 <div id="section_best_sellers"></div>
 

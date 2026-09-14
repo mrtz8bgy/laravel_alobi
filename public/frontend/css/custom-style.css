@@ -431,7 +431,8 @@ input:focus, textarea:focus, select:focus {
     max-height: 100%;
     width: auto;
     max-width: 90%;
-    border-radius: 0;
+    border-radius: 50%;
+    
 }
 
 .product-card-2 .price-box {

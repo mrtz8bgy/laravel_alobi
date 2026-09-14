@@ -468,6 +468,156 @@ a:hover {
 }
 
 /* ============================================ */
+/* اسلایدر اصلی */
+/* ============================================ */
+.d-main-slider {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.d-slider-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    background: #f5f5f5;
+    min-height: 300px;
+}
+
+.d-slider-carousel {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.d-slider-carousel > div {
+    outline: none;
+}
+
+.d-slide-item {
+    position: relative;
+    line-height: 0;
+    width: 100%;
+}
+
+.d-slide-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.d-slide-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.d-slide-link:hover .d-slide-img {
+    transform: scale(1.03);
+}
+
+/* دکمه‌های چپ و راست */
+.d-slider-wrapper .slick-prev,
+.d-slider-wrapper .slick-next {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.d-slider-wrapper .slick-prev {
+    left: 20px;
+}
+
+.d-slider-wrapper .slick-next {
+    right: 20px;
+}
+
+.d-slider-wrapper .slick-prev:hover,
+.d-slider-wrapper .slick-next:hover {
+    background: #c5a059;
+}
+
+.d-slider-wrapper .slick-prev:before,
+.d-slider-wrapper .slick-next:before {
+    color: #333;
+    font-size: 20px;
+    opacity: 1;
+    font-family: 'LineAwesome';
+}
+
+.d-slider-wrapper .slick-prev:hover:before,
+.d-slider-wrapper .slick-next:hover:before {
+    color: #fff;
+}
+
+/* نقطه‌های پایین */
+.d-slider-wrapper .slick-dots {
+    bottom: 20px;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.d-slider-wrapper .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.d-slider-wrapper .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.d-slider-wrapper .slick-dots li.slick-active button {
+    background: #c5a059;
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+    .d-slide-img {
+        height: 220px;
+    }
+    
+    .d-slider-wrapper .slick-prev,
+    .d-slider-wrapper .slick-next {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .d-slider-wrapper .slick-prev {
+        left: 10px;
+    }
+    
+    .d-slider-wrapper .slick-next {
+        right: 10px;
+    }
+}
+
+/* ============================================ */
 /* اسلایدر تمام عرض (۱۰۰٪) - با Slick */
 /* ============================================ */
 .fullwidth-slider-section {
@@ -953,7 +1103,7 @@ a:hover {
 .mobile-icon-title {
     font-size: 13px;
     font-weight: 600;
-    color: var(--color-white-smoke);
+    color: #b06f0b;
     margin: 0;
     letter-spacing: 0.3px;
 }
@@ -1124,7 +1274,7 @@ a:hover {
 .brand-name-horizontal {
     font-size: 15px;
     font-weight: 700;
-    color: var(--color-white-smoke);
+    color: #d6a11f;
     text-decoration: none;
     display: -webkit-box;
     -webkit-line-clamp: 2;
