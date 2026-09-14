@@ -18,10 +18,8 @@
     try {
         $megaCategories = \Illuminate\Support\Facades\Schema::hasTable('categories')
             ? \App\Category::with(['subcategories' => function($query) {
-                $query->where('published', 1)->with(['subsubcategories' => function($q){
-                    $q->where('published', 1);
-                }]);
-            }])->where('top', 1)->where('published', 1)->get()
+                $query->with(['subsubcategories']);
+            }])->where('top', 1)->orderBy('id', 'asc')->get()
             : collect();
     } catch (\Exception $e) { $megaCategories = collect(); }
 
@@ -42,10 +40,7 @@
 <link rel="stylesheet" href="{{ asset('frontend/css/index-page.css') }}">
 
 <!-- ============================================ -->
-<!-- مگا منوی دسته‌بندی - کاملاً مستقل -->
-
-<!-- مگا منوی  من در اینجا زیر دسته بندیها را نشان نمیدهد از تو میخواهم این قسمت را برام تکمیل کنی به طوری که زیر دسته بندی ها نمایش داده شوند -->
-
+<!-- مگا منوی دسته‌بندی -->
 <!-- ============================================ -->
 <section class="mega-menu-section">
     <div class="container-fluid px-0">
@@ -145,9 +140,9 @@
                 </h1>
                 <p>
                     خرید و فروش طلا، کالای لوکس، ساعت‌های لوکس و سنگ‌های قیمتی با
-                    <strong >شناسنامه معتبر</strong>،
-                    <strong >ضمانت اصالت</strong> و
-                    <strong >امکان رهگیری دائمی</strong>.
+                    <strong>شناسنامه معتبر</strong>،
+                    <strong>ضمانت اصالت</strong> و
+                    <strong>امکان رهگیری دائمی</strong>.
                     Alobi، جایی که ارزش‌ها ماندگارند.
                 </p>
                 <div class="d-hero-cta">
@@ -251,7 +246,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // اگه jQuery و Slick موجود بودن
         if (typeof jQuery !== 'undefined' && jQuery.fn.slick) {
             jQuery('#mainSlider').slick({
                 slidesToShow: 1,
@@ -315,15 +309,8 @@
 </section>
 
 <!-- ============================================ -->
-<!-- فلش دیل
-
+<!-- فلش دیل (تخفیف امروز) -->
 <!-- ============================================ -->
-<!-- فلش دیل (تخفیف امروز) - زیر بنر -->
-<!-- ============================================ -->
-@php
-    $num_todays_deal = count(filter_products(\App\Product::where('published', 1)->where('todays_deal', 1))->get());
-@endphp
-
 @if($num_todays_deal > 0)
 <section class="flash-deal-section">
     <div class="flash-deal-wrapper">
@@ -401,29 +388,6 @@
         </div>
     </div>
 </section>
-
-<!-- ============================================ -->
-<!-- آیکون‌های تبلیغاتی -->
-<!-- ============================================ -->
-<div class="mobile-icons-section">
-    <div class="mobile-icons-container">
-        @php
-            $banners = App\Banner::where('position', 1)->where('published', 1)->get();
-            $icons = ['💎', '👑', '🎁', '🔥', '✨', '💍', '⌚', '📿', '💼', '🛍️'];
-        @endphp
-        
-        @if(count($banners) > 0)
-            @foreach ($banners as $key => $banner)
-                <a href="{{ $banner->url }}" target="_blank" class="mobile-icon-item">
-                    <div class="mobile-icon-circle">
-                        <span class="mobile-icon-emoji">{{ $icons[$key % count($icons)] }}</span>
-                    </div>
-                    <p class="mobile-icon-title">ویژه</p>
-                </a>
-            @endforeach
-        @endif
-    </div>
-</div>
 
 <!-- ============================================ -->
 <!-- برند های معروف - اسکرول افقی -->
@@ -753,13 +717,19 @@
    @endif
 @endif
 
+@php
+    $position2Banners = App\Banner::where('position', 2)->where('published', 1)->get();
+    $bannerCount = $position2Banners->count();
+@endphp
+
+@if($bannerCount > 0)
 <div class="mb-5">
     <div class="container">
         <div class="row gutters-10">
-            @foreach (App\Banner::where('position', 2)->where('published', 1)->get() as $key => $banner)
-                <div class="col-lg-{{ 12/count(App\Banner::where('position', 2)->where('published', 1)->get()) }}">
+            @foreach ($position2Banners as $key => $banner)
+                <div class="col-lg-{{ 12 / $bannerCount }}">
                     <div class="media-banner mb-3 mb-lg-0">
-                        <a href="{{ $banner->url }}" target="_blank" class="banner-container">
+                        <a href="{{ $banner->url ?? '#' }}" target="_blank" class="banner-container">
                             <img src="{{ asset('frontend/images/placeholder-rect.jpg') }}" data-src="{{ asset($banner->photo) }}" alt="{{ env('APP_NAME') }} promo" class="img-fluid lazyload">
                         </a>
                     </div>
@@ -768,11 +738,13 @@
         </div>
     </div>
 </div>
+@endif
 
 <div id="section_best_sellers"></div>
 
 <!-- ============================================ -->
 <!-- Banners Section -->
+<!-- ============================================ -->
 <section class="d-banners" style="padding: 40px 0;">
     <div class="container">
         <div class="row">
@@ -785,38 +757,19 @@
                         </a>
                     </div>
                 @endforeach
-            @else
-                <!-- Mock Banners for Preview if empty -->
-                <div class="col-md-6 mb-3">
-                    <a href="#" class="d-block d-banner-card">
-                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop" alt="Premium Shoes">
-                        <div class="d-banner-overlay">
-                            <h3>کالکشن جدید کفش‌های لوکس</h3>
-                            <span>مشاهده محصولات &larr;</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <a href="#" class="d-block d-banner-card">
-                        <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=800&auto=format&fit=crop" alt="Luxury Watches">
-                        <div class="d-banner-overlay">
-                            <h3>ساعت‌های لاکچری سوییسی</h3>
-                            <span>تخفیف ویژه &larr;</span>
-                        </div>
-                    </a>
-                </div>
             @endif
         </div>
     </div>
 </section>
 
-
+<!-- ============================================ -->
 <!-- Super Deal Section -->
+<!-- ============================================ -->
 <section class="d-super-deals">
     <div class="container">
         <div class="d-sd-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
             <div style="display: flex; align-items: center; gap: 15px;">
-                <h2><i class="la la-bolt" ></i> پیشنهاد شگفت‌انگیز</h2>
+                <h2><i class="la la-bolt"></i> پیشنهاد شگفت‌انگیز</h2>
                 <div class="d-timer">
                     12 : 45 : 30
                 </div>
@@ -842,6 +795,7 @@
     </div>
 </section>
 
+<!-- ============================================ -->
 <!-- بخش دسته‌بندی‌های کالا و خدمات لوکس -->
 <!-- ============================================ -->
 <section class="d-categories">
@@ -868,11 +822,43 @@
                 <h4>ساعت لوکس</h4>
                 <span class="cat-count">رولکس، پتک و...</span>
             </a>
+            
+            {{-- ⭐ کارت الماس با آیکن‌های مگا منو (دقیقاً همون کد ولی بزرگ‌تر) --}}
             <a href="{{ route('categories.all') }}" class="d-cat-card">
-                <img src="{{ asset('frontend/images/alobi/diamond.svg') }}" alt="الماس" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
+                @php
+                    $megaIconsForCard = $megaCategories->filter(function($cat) {
+                        return $cat->icon && file_exists(public_path($cat->icon));
+                    })->take(8);
+                @endphp
+                
+                @if($megaIconsForCard->count() > 0)
+                    <div style="
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 3px;
+                        width: 90px;
+                        height: 90px;
+                        margin: 0 auto;
+                    ">
+                        @foreach($megaIconsForCard as $cat)
+                            <img 
+                                src="{{ asset($cat->icon) }}" 
+                                alt="{{ __($cat->name) }}"
+                                title="{{ __($cat->name) }}"
+                                style="width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(197,160,89,0.4)); transition: transform 0.3s ease;"
+                                onmouseover="this.style.transform='scale(1.15)'"
+                                onmouseout="this.style.transform='scale(1)'"
+                            >
+                        @endforeach
+                    </div>
+                @else
+                    <img src="{{ asset('frontend/images/alobi/diamond.svg') }}" alt="الماس" class="cat-ico" style="width:90px;height:90px;object-fit:contain;">
+                @endif
+                
                 <h4>الماس و سنگ قیمتی</h4>
                 <span class="cat-count">قیمتی و نیمه‌قیمتی</span>
             </a>
+            
             <a href="{{ route('categories.all') }}" class="d-cat-card">
                 <img src="{{ asset('frontend/images/alobi/crown.svg') }}" alt="تاج" class="cat-ico" style="width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(197,160,89,0.4));">
                 <h4>کالای لوکس سلطنتی</h4>
@@ -900,18 +886,17 @@
 <!-- ============================================ -->
 <!-- بخش شناسنامه و امنیت -->
 <!-- ============================================ -->
- 
 <section class="d-trust">
     <div class="container">
         <div class="d-trust-inner">
             <div class="d-trust-content">
-                <span class="kicker" style=" font-weight:700; letter-spacing:3px; font-size:13px;">
+                <span class="kicker" style="font-weight:700; letter-spacing:3px; font-size:13px;">
                     CERTIFICATE & SECURITY
                 </span>
                 <h2>
                     هر کالا، یک <span class="text-gold">شناسنامه معتبر</span>؛ آرامش خاطر شما
                 </h2>
-                <p style=" font-size:15px; line-height:2.1; margin-bottom:0;">
+                <p style="font-size:15px; line-height:2.1; margin-bottom:0;">
                     گواهی اصالت دیجیتال Alobi، سندی رسمی و غیرقابل جعل است که تمامی مشخصات فنی، جزئیات دقیق، متریال، برند و تاریخچه مالکیت کالا را در خود جای می‌دهد. هرگونه نقل و انتقال، تعمیر یا تغییر وضعیت در پرونده کالا به صورت دائمی ثبت می‌شود.
                 </p>
                 <div class="d-trust-features">
@@ -972,27 +957,6 @@
         </div>
     </div>
 </section>
-<!-- 
-<!-- ============================================ -->
-<!-- استعلام شناسنامه CTA -->
-<!-- ============================================ -->
-<!-- <section class="d-verify-cta">
-    <div class="container">
-        <div class="d-verify-box">
-            <div class="d-verify-icon"><i class="la la-certificate"></i></div>
-            <h2>
-                همین حالا <span class="text-gold">اصالت</span> کالا خود را بررسی کنید
-            </h2>
-            <p style=" margin:0;">
-                با وارد کردن شماره سریال شناسنامه، از مشخصات، اصالت و وضعیت کالا خود مطلع شوید.
-            </p>
-            <form method="GET" action="{{ route('jewelry.certificates.verify_page') }}" class="d-verify-form">
-                <input type="text" name="serial" placeholder="شماره سریال شناسنامه را وارد کنید..." required>
-                <button type="submit"><i class="la la-search la-flip-horizontal"></i> استعلام کن</button>
-            </form>
-        </div>
-    </div>
-</section> -->
 
 <!-- ============================================ -->
 <!-- سوالات متداول -->
@@ -1050,7 +1014,7 @@
             </div>
         </div>
     </div>
-</section> 
+</section>
 
 <div id="section_best_sellers"></div>
 
@@ -1090,19 +1054,16 @@
     setupScrollButtons('categoriesScrollWrapper', 'categoriesScrollLeft', 'categoriesScrollRight');
     setupScrollButtons('brandsScrollWrapper', 'brandsScrollLeft', 'brandsScrollRight');
     
-    // ===== مگا منو - کنترل کامل با هاور و کلیک =====
+    // ===== مگا منو =====
     (function() {
         var megaTrigger = document.getElementById('megaMenuTrigger');
         var megaBtn = document.getElementById('megaMenuBtn');
         var megaItems = document.querySelectorAll('.mega-menu-item');
-        var isMobile = window.innerWidth <= 992;
         
-        // تابع برای تنظیم رویدادها بر اساس سایز صفحه
         function setupMegaMenu() {
-            isMobile = window.innerWidth <= 992;
+            var isMobile = window.innerWidth <= 992;
             
             if (isMobile) {
-                // حالت موبایل - فقط کلیک
                 megaTrigger.removeEventListener('mouseenter', onMouseEnter);
                 megaTrigger.removeEventListener('mouseleave', onMouseLeave);
                 
@@ -1114,7 +1075,6 @@
                     });
                 }
                 
-                // کلیک روی آیتم‌های دارای زیرمنو
                 megaItems.forEach(function(item) {
                     var link = item.querySelector('.mega-menu-link');
                     var hasSubMenu = item.querySelector('.mega-sub-menu');
@@ -1129,18 +1089,8 @@
                     item.classList.remove('active');
                 });
             } else {
-                // حالت دسکتاپ - هاور
                 megaTrigger.addEventListener('mouseenter', onMouseEnter);
                 megaTrigger.addEventListener('mouseleave', onMouseLeave);
-                
-                // حذف رویدادهای کلیک در دسکتاپ
-                if (megaBtn) {
-                    megaBtn.removeEventListener('click', function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        megaTrigger.classList.toggle('active');
-                    });
-                }
                 
                 megaItems.forEach(function(item) {
                     var link = item.querySelector('.mega-menu-link');
@@ -1153,15 +1103,6 @@
                     item.addEventListener('mouseover', onItemMouseEnter);
                     item.addEventListener('mouseleave', onItemMouseLeave);
                 });
-            }
-        }
-        
-        function setMobileSubmenuState(item, isOpen) {
-            if (!item) return;
-            if (isOpen) {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
             }
         }
 
@@ -1195,25 +1136,21 @@
                 if (parent) {
                     var hasSubMenu = parent.querySelector('.mega-sub-menu');
                     if (!hasSubMenu) {
-                        // آیتم زیرمنو ندارد، صفحه را بارگذاری کن
                         window.location.href = this.href;
                         return;
                     }
 
-                    // بستن تمام آیتم‌های دیگر
                     megaItems.forEach(function(other) {
                         if (other !== parent) {
                             other.classList.remove('active');
                         }
                     });
 
-                    // تبدیل وضعیت آیتم فعلی
                     parent.classList.toggle('active');
                 }
             }
         }
         
-        // بستن منو با کلیک خارج
         document.addEventListener('click', function(e) {
             if (megaTrigger && !megaTrigger.contains(e.target)) {
                 megaTrigger.classList.remove('active');
@@ -1223,7 +1160,6 @@
             }
         });
         
-        // تنظیم مجدد در تغییر سایز
         window.addEventListener('resize', function() {
             setupMegaMenu();
             if (megaTrigger) {
@@ -1234,7 +1170,6 @@
             }
         });
         
-        // اجرای اولیه
         setupMegaMenu();
     })();
     
